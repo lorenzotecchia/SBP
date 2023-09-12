@@ -1,0 +1,1 @@
+A **cut** of $G = (V,E)$ is a partition of the vertex [[Fundamentals#set|set]] $V$ into two parts, $S$ and $\overline{S} = V - S$. Each cut defines the set of edges $S, \overline{S} \subseteq E$ having one endpoint in $S$ and the other in $\overline{S}$.

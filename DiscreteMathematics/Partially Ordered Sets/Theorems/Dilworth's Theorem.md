@@ -1,0 +1,1 @@
+If $P$ is a finite [[Poset]], then the *maximum* size of an [[Antichain]] in $P$ equals the *minimum* number of [[Chain]]s needed to cover the elements of $P$.

@@ -1,0 +1,1 @@
+The **product** $P \bigtimes Q$ of two [[Poset]]s $P,Q$ is the poset on {$(x,y): x\in P, y, \in Q$} defined by $(x,y) \leq (x',y')$ if and only if $x\leq x'$  and $y\leq y'$.

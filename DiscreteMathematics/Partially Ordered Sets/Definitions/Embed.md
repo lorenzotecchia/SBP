@@ -1,0 +1,1 @@
+If $Q$ is [[Isomorphic]] to a [[Subposet]] of $P$, then $P$ **contains** or $Q$ or $Q$ ***embeds*** in $P$.

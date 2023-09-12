@@ -1,0 +1,1 @@
+Let $P$ be a [[Poset]]. Its **height** $h(P)$ is the size of a largest [[Chain]] in $P$. its length  is one less than its height.

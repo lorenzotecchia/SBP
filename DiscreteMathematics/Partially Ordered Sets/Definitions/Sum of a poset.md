@@ -1,0 +1,1 @@
+The **sum** of the [[Poset]]s $P+Q$ consist of disjoint copies of $P,Q$ with no comparabilities between them.

@@ -1,0 +1,1 @@
+Let $P$ be a [[poset]]. Its **width** $\omega(P)$ it the size of a largest [[antichain]] in $P$. 

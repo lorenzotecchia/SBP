@@ -1,0 +1,1 @@
+An element of a [[Poset]] is **minimal** if no other element is less than it.

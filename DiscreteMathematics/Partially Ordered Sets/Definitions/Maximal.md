@@ -1,0 +1,1 @@
+An element of a [[Poset]] is **maximal** if no other element is greater than it

@@ -1,0 +1,1 @@
+A **chord** of a [[cycle]] $C$ is an edge not in $C$ whose endpoint are in $C$.

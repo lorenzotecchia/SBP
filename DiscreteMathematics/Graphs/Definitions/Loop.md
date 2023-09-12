@@ -1,0 +1,1 @@
+In a [[graph]] a ***loop*** is when an edge joins a vertex on itself.

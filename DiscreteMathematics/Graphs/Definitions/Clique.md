@@ -1,0 +1,1 @@
+A set of pairwise [[Adjacent|adjacent]]  vertices is a **clique**. It's a **k-clique** when it has size $k$.

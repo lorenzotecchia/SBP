@@ -1,0 +1,1 @@
+A **perfect [[graph]]** is a graph in which the chromatic number equals the size of the maximum [[clique]], both in the graph itself and in every induced [[subgraph]].

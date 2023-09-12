@@ -1,0 +1,1 @@
+A [[graph]] is **simple** if doesn't contain any **[[loop]]s** or **parallel edges**.

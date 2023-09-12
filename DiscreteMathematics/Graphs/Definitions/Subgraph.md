@@ -1,0 +1,1 @@
+A **subgraph** of a [[Graph]] $G$ is a graph $H$ such that $V(H) \subseteq V(g)$ and $E(H) \subseteq E(G)$.

@@ -1,0 +1,1 @@
+A set of pairwise [[Isolated]] vertices is an ***independent set***, also called a stable set.

@@ -1,0 +1,1 @@
+A complete [[graph]] is a graph whose vertices are pairwise [[adjacent]].

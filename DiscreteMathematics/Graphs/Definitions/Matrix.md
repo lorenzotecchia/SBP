@@ -1,0 +1,1 @@
+For an ordering $v_{1} \dots v_{n}$ of $V(G)$, the **adjacent matrix** of a [[graph]] $A(G)$ is the $0,1$-matrix having$A_{i,j}= 1$ if and only if $v_{i}\leftrightarrow v_{j}$.

@@ -1,0 +1,2 @@
+ A **matching** in a [[graph]] $G$ is a set of pairwise non-[[incident]] edges, called **independent graphs**. A matching [[covers]] the vertices in its edges. A matching that covers all of $V(G)$ is a **perfect matching** in $G$. The **matching number** $\alpha^{'}(G)$ is the maximum size(number of edges) of a matching in $G$.
+ 

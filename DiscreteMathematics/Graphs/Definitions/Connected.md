@@ -1,0 +1,1 @@
+A [[graph]] is **connected** if it contains a *u,v-path* for all $u,v \in V(G)$.

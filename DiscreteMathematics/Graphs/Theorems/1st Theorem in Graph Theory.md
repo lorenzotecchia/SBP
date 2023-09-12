@@ -1,0 +1,1 @@
+The number of odd vertices (of odd degree) in a [[graph]] is even.

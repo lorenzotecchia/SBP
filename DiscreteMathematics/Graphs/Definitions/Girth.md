@@ -1,0 +1,1 @@
+The **girth** of a [[graph]] with a [[cycle]] is the length of a shortest cycle in the graph. With no cycle the girth is infinite.

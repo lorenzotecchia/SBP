@@ -1,0 +1,1 @@
+An **induced subgraph** of $G$, induced by vertex set $S \subseteq V(G)$, is the [[Subgraph]] $H$ with vertex set $S$ such that $E(H)=\{uv \in E(G): u,v \in S\}$. A *graph* contains a **subgraph**.

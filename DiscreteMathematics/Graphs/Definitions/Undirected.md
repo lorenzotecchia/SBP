@@ -1,0 +1,1 @@
+A [[graph]] with any directed edges

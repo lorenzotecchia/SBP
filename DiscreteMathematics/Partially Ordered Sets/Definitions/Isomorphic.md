@@ -1,0 +1,1 @@
+[[Poset]]s $P$ and $Q$ are **isomorphic** if some bijection from the set $P$ to the set $Q$ preserves order relation.

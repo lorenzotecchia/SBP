@@ -1,0 +1,1 @@
+In [[graph]] theory, ***reachability*** refers to the ability to get from one vertex to another within a graph. A vertex $s$ can reach a vertex $t$ (and $t$ is reachable from $s)$ if there exists a sequence of [[adjacent]] vertices (i.e. a [[Walk|walk]]) which starts with $s$ and ends with $t$.

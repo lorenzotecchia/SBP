@@ -1,0 +1,1 @@
+The **comparability digraph** of a [[poset]] P is the digraph whose vertices are the elements of $P$ and whose edges are the ordered pairs $xy$ such that $x \leq_{p} y$. The **comparability digraph** is the graph whose vertices are elements of P and whose edges are the unordered pairs of distinct vertices that are comparable in $P$.
