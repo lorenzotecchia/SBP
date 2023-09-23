@@ -29,4 +29,5 @@ $$\sum^{n}_{i=1}T_{insert}(A,i) = \sum^{n}_{i=1}\Theta (k^{A}_{i}) = \Theta(\sum
 ---
 ## Implementazione in C
 ```C
+// da implementare
 ```

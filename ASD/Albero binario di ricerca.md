@@ -23,6 +23,6 @@ $$\forall x \in T, \;\;\forall y \in T_{x.sx},\;\; \forall z \in T_{x.dx}\;\;\lo
 
 ---
 ## Implementazione in C
-	```C
+```C
+// da implementare
 ```
-

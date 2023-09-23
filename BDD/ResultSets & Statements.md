@@ -1,8 +1,4 @@
 ---
-Comments: Java
-Number: 21
-Reviewed: Yes
-Status: Done
 author: Simone Parente Martone
 ---
 - Indice

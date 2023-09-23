@@ -1,9 +1,4 @@
 ---
-Comments: il 90% delle cose qui sono prese dal libro
-Date: October 6, 2022
-Number: 8
-Reviewed: No
-Status: Done
 author: Simone Parente Martone
 ---
 # Lezione 8

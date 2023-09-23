@@ -1,9 +1,4 @@
 ---
-Comments: Meglio vedere dalle slide
-Date: November 22, 2022
-Number: 19
-Reviewed: Yes
-JDBC: Java DataBase Connectivity
 author: Simone Parente Martone
 ---
 

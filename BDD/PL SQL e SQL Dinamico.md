@@ -1,8 +1,4 @@
 ---
-Comments: aggiungere esempio quasi alla fine, fare esercizi e rivedere
-Number: 22
-Reviewed: No
-Status: Highlight
 author: Simone Parente Martone
 ---
 # PL/SQL

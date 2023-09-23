@@ -80,7 +80,7 @@ In questo caso utilizziamo come discriminante il fatto che la prima chiamata ven
 
 Il ***return*** viene simulato assegnando il valore da restituire in una variabile (ret, ad esempio)
 
-![[appuntiIngenito (dragged).pdf]]
+![[appuntiIngenito (dragged) copy 5.pdf]]
 
 call è inizialmente `TRUE` perché sta simulando la prima chiamata, oltre al fatto che gli stack sono inizialmente tutti vuoti.
 
@@ -89,6 +89,14 @@ C’è lavoro da fare finché ci sono ancora valori negli stack. In questo cas
 L’$if$ in riga $25$ simula il caso in cui $x.dx = \bot$. Questo perché il caso in cui è il sinistro ad essere $\bot$ viene gestito dall’if in riga $7$, ma non viene gestito il caso del figlio destro.  
 Questa simulazione viene fatta quando si sta ritornando dalla chiamata ricorsiva sul figlio sinistro, per questo motivo si trova all’interno dell $if\;last = x.sx$ 
 
+### Se la funzione è tail recursive
+>[!summary] 
+> - Inizializzo un accumulatore prima della $while$
+> - Uso la negazione del caso base come condizione del $while$ 
+> - Uso il corpo della funzione ricorsiva(escludendo la chiamata ricorsiva della funzione) come il corpo del $while$
+> -  Alla fine del $while$ aggiungo all'accumulatore il caso base e ritorno l'accumulatore come output
+
+### In generale
 >[!summary] 
 > Ricapitolando:
 > - Individuare gli stack

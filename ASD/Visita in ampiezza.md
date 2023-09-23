@@ -5,7 +5,14 @@ tags:
   - operation/graph
   - to-do/implementation
 ---
-Se il [[grafo]] è rappresentato con delle [[Grafo rappresentazione#^94590e|liste]], non è possibile esplorarlo in [[ampiezza]] senza una [[coda]]
+Dato un [[grafo]] $G = (V,E)$ e un vertice distinto $s$, detto **sorgente**, la ***visita in ampiezza*** ispezione sistematicamente gli archi di $G$ per "scoprire" tutti i vertici che sono raggiungibili da $s$.
+[[Calcolo delle distanze|Calcola la distanza]](il numero minimo di archi) da $s$ a ciascun vertice raggiungibile.
+Genera anche un [[Tree|albero]] $BF$ con radice $s$ che contiene tutti i vertici raggiungibili.
+
+>[!note] 
+> L'algoritmo [[opera]] su grafi orientati e non orientati
+
+Se il grafo è rappresentato con delle [[Grafo rappresentazione#^94590e|liste]], non è possibile esplorarlo in [[ampiezza]] senza una [[coda]]
 I nodi del grafo assumeranno, nel corso della visita, tre stati:
 - Visitato  
 - Scoperto non visitato (coda)

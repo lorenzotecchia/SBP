@@ -21,7 +21,7 @@ In particolare, se ad una certa altezza ho il minimo numero di nodi, allora ho l
 
 Si osserva dunque, che se si dimostra che per gli **AVL** minimi $h = \Theta(\log(n))$ allora lo è anche per quelli non minimi (ovvero per tutti gli **AVL**).
 
-![[appuntiIngenito (dragged).pdf]]
+![[appuntiIngenito (dragged) copy 2.pdf]]
 
 ---
 ## Inserimento di un nodo

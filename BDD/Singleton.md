@@ -1,8 +1,4 @@
 ---
-Comments: Java
-Number: 20
-Reviewed: Yes
-Status: Done
 author: Simone Parente Martone
 ---
 # Singleton

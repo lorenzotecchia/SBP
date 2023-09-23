@@ -4,12 +4,13 @@ tags:
   - algorithm/sort
   - to-do/implementation
 ---
+***Heap sort*** è un [[algoritmo]] di [[ordinamento]].
 >[!todo] 
 >- [ ] Implementazione in C
 
 ![[Pasted image 20230828175727.png]]
 
-Un array è già rappresentato in memoria come un [[Tree|albero]] quindi è possibile passare da una [[Struttura dati|struttura]] all'altra.
+Un [[array]] è già rappresentato in memoria come un [[Tree|albero]] quindi è possibile passare da una [[Struttura dati|struttura]] all'altra.
 
 ---
 - Come prima cosa viene eseguito _BuildHeap_, che trasforma la sequenza in input in [[Proprietà Heap#^fd5f61|max-heap]]. 
@@ -61,4 +62,5 @@ $$=\log(\sqrt{2\pi n }(\frac{n}{e})^{n})= \log(\sqrt{2\pi}(\sqrt{n})(\frac{n^{n}
 ---
 ## Implementazione in C
 ```C
+// da implementare
 ```
