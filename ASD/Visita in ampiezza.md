@@ -10,9 +10,13 @@ Dato un [[grafo]] $G = (V,E)$ e un vertice distinto $s$, detto **sorgente**, la 
 Genera anche un [[Tree|albero]] $BF$ con radice $s$ che contiene tutti i vertici raggiungibili.
 
 >[!note] 
-> L'algoritmo [[opera]] su grafi orientati e non orientati
+> L'[[algoritmo]] opera su grafi orientati e non orientati
 
 Se il grafo è rappresentato con delle [[Grafo rappresentazione#^94590e|liste]], non è possibile esplorarlo in [[ampiezza]] senza una [[coda]]
+
+>[!important] 
+> L'algoritmo scopre tutti i vertici che si trovano a distanza $k$ da $s$, prima di scoprire i vertici a distanza $k+1$. 
+
 I nodi del grafo assumeranno, nel corso della visita, tre stati:
 - Visitato  
 - Scoperto non visitato (coda)

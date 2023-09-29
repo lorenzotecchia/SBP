@@ -5,6 +5,9 @@ tags:
   - dataStructure/abr
   - to-do/implementation
 ---
+>[!todo] 
+>- [ ] Implementazione in C
+
 Un albero **red-black** è un [[albero binario di ricerca]] con un bit aggiuntivo di memoria per ogni nodo: il colore del nodo, che può essere RED o BLACK.
 
 Inoltre i dati sono presenti solo nei nodi interni:
@@ -18,7 +21,7 @@ $$\forall x \in T, \exists h \in \mathbb{N}: \forall \pi \in Path(x) \lvert \pi 
 4. Ogni cammino dalla radice ad una foglia deve contenere lo stesso numero di nodi **neri**.
 ---
 ### [[Altezza]] nera 
-Definiamo altezza nera di un nodo $x$, indicata con $bh(x)$ (black height), il numero di nodi neri lungo un cammino semplice che inizia dal nodo $x$ e finisce a una foglia.
+Definiamo altezza nera di un nodo $x$, indicata con $bh(x)$ (black height), il numero di nodi neri lungo un [[Cammino semplice|cammino semplice]] che inizia dal nodo $x$ e finisce a una foglia.
 
 Il nodo $x$ è escluso dato che non influisce sull’altezza nera, che sia rosso o nero l’altezza nera rimane la stessa.
 
@@ -36,7 +39,7 @@ Il numero di nodi interni è: (Internal Nodes) $IN(x) \geq 2^{bh(h)}-1$
 
 ---
 ### Teorema albero red-black
-![[appuntiIngenito (dragged).pdf]]
+![[appuntiIngenito (dragged) copy 3.pdf]]
 
 ---
 ## Inserimento di un nodo
@@ -68,7 +71,7 @@ La cancellazione di un nodo **rosso** non crea problemi, perché questo avrà 
 
 Invece, la cancellazione di un nodo **nero** porta ad uno sbilanciamento dell’**altezza nera**.
 
-Per risolvere momentaneamente il problema dello sbilanciamento dell’**altezza nera**si propaga il colore **nero**.
+Per risolvere momentaneamente il problema dello sbilanciamento dell’**altezza nera** si propaga il colore **nero**.
 
 Ovvero, il figlio del nodo da eliminare (a seconda del caso $SkipRight$ o $SkipLeft$):
 - se è rosso, lo si colora di nero
@@ -157,10 +160,6 @@ Gli alberi red-black rappresentano uno dei modi in cui gli alberi di ricerca ven
 Negli ***alberi red-black***, i nodi contengono anche il loro colore, oltre che il puntatore al figlio destro e sinistro, e le variabili per i dati.
 
 ---
-
->[!todo] 
->- [ ] Implementazione in C
-
 ```C
 // da implementare
 ```

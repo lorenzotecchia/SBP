@@ -2,7 +2,7 @@
 tags: [git, devops]
 author: Lorenzo Tecchia
 ---
-# Git commands and functionalities
+	Git commands and functionalities
 > [!abstract] 
 > This is a collection of notes extrapolated from the book: **Git in practice**
 

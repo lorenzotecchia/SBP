@@ -28,6 +28,10 @@ Essendo $i$ incrementato all’interno di un `repeat until` (quindi almeno una v
 2. $\forall p \leq i \leq q$    $\forall q+1 \leq j \leq r$,   $A[i] \leq A[j]$ 
 ---
 ## [[Analisi asintotica|Analisi]]
+>[!important] 
+> Per sviluppare una nozione chiara del caso medio di Quicksort, dobbiamo fare un'ipotesi su quanto frequentemente prevediamo di incontrare i vari input
+
+
 ![[appuntiIngenito (dragged) 3.pdf]]
 
 ---
