@@ -18,4 +18,3 @@ Se $E$ e $F$ sono due eventi qualsiasi, allora:$$\mathbb{p}(E \cup F) = \mathbb{
 > Ci riferiamo al ***Principio di Inclusione-Esclusione(IN-EX)***
 
 
-
