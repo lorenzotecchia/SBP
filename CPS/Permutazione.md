@@ -7,8 +7,6 @@ Ogni $n-$disposizione semplice è detta essere una **permutazione** (semplice) 
 >[!important] Corollario 1 al [[Disposizione#^98a51f|Teorema 1]]
 > l numero $P_{n}$ di tutte le permutazioni semplici di $S$ è ottenuto ponendo $k = n$ nella formula per il calcolo di $D_{n,k}$ e, quindi:$$P_{n}= D_{n,n}= \frac{n!}{(n-n)!}= \frac{n!}{0!} = n!$$ dove il simbolo con il punto esclamativo è detto [[fattoriale]].
 
-
-
 >[!note] 
 > Gli anagrammi delle parole aventi lettere tutte distinte tra loro forniscono un’applicazione del concetto di permutazione.
 
