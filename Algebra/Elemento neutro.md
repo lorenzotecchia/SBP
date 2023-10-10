@@ -1,3 +1,8 @@
+---
+author: Simone Parente, Mario Penna
+tags:
+  - definition/property
+---
 Data la [[Struttura algebrica|struttura algebrica]] $(S, +, \star$);
 $\epsilon \in S$  è un elemento neutro $\Leftrightarrow \forall a \in S: (a \star \epsilon = \epsilon \star a = a)$.
 ---

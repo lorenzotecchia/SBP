@@ -1,5 +1,8 @@
 ---
+author: Simone Parente, Mario Penna
 tags:
+  - definition/property
+  - recap
 ---
 ![[Prima Proprietà]]
 

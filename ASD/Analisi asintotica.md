@@ -72,8 +72,8 @@ Infatti il $\lim_{n \rightarrow 0} \frac{f(n)}{g(n)} = \infty$ perché, al limi
 ![[Pasted image 20230905183731.png]]
 ### Altre proprietà
 ![[Pasted image 20230905183946.png|600]]
-## Esercizio esempio
->[!Esercizio]
+## Esempio maggiorazione
+>[!example] 
 >Dimostrare o confutare la seguente relazione: $\log_{2}(n^{2n})+n -\log_{2}(n)=\Theta(n \log_2(n))$ 
 
 1. Applicare i limiti su entrambe le funzioni, per verificare l'andamento asintotico delle due: in particolare verificare(in questo caso per la notazione $\Theta$) che il limite abbia valore reale e che non sia né $0$ né $\infty$ per escludere le notazioni di $O$ grande e $\varOmega$ grande rispettivamente.
@@ -106,3 +106,17 @@ Nel caso dell'esempio $$c_{1}\;n \log_{2}(n) \leq 2n\log_{2}(n)+n-n < 2n\log_{2}
 4. Svolgendo troveremo che $c_{1}=2$ e $c_{2}=3$ e mettendo in intersezione le due proprietà per cui valgono entrambe le maggiorazioni troveremo che $n_{0} \geq 4$
 5. Risultato:$$2\;n\log_{2}(n)\leq 2n\log_{2}(n)+n-\log_{2}(n) \leq 3\;\log_{2}(n)\;\;\;\forall n \geq 4$$
 
+## Esempio positività
+>[!example] 
+> Trovare le costanti o confutare :$$\log^{2n}(n) + n -log(n)=\Theta(\log(n^{n}))$$
+
+Spesso non è semplice riuscire a trovare adeguate e/o semplici maggiorazioni per tutte le equazioni. Quindi si ricorre ad un metodo diverso, in generale più **meccanico**
+1. Eseguiamo il limite come sempre per verificare che la notazione $\Theta$ possa essere applicata
+	- Ciò che è stato fatto verificando che il limite abbia un valore $l$ è stato effettivamente trovare un asintoto orizzontale, appunto una retta per la quale il nostro limite del rapporto tende
+2. Adesso andiamo a studiare la derivata del nostro rapporto, studiandone la positività, per capire il nostro valore $l$ se sia costante $c_{1}$ o $c_{2}$ della nostra notazione $\Theta$
+	- Andando a studiare tale positività, in particolare, ci andremo ad accorgere che: 
+		- se la nostra funzione tende a crescere verso l'asintoto orizzontale allora $l$ sarà costante $c_{2}$ (superiore)
+		- se la nostra funzione tende a decrescere verso l'asintoto orizzontale allora $l$ sarà costante $c_{1}$ (inferiore)
+3.  Dopo aver trovato il valore $l$, andare a sostituire un valore maggiore(minore) di quest ultimo all'interno della nostra funzione rapporto. Il risultato di tale applicazione, è una delle possibili costanti che possiamo usare per la rimanente costante per la notazione $\Theta$ 
+>[!note] 
+> In generale tutti gli accorgimenti e i consigli che valgono per il procedimento precedentemente spiegato in questo paragrafo valgono per il procedimento corrente
