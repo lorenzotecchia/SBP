@@ -6,7 +6,7 @@ tags:
   - to-do/implementation
 ---
 Gli ***AVL*** sono [[Albero binario di ricerca|alberi binari di ricerca]] auto bilancianti. Per cui le proprietà:
-- $\forall x \in T, \lvert h(T_{x.sx})- h(T_{x.dx})\rvert \leq 1$ dove $T$ è l'albero, ossia l'altezza dei sotto alberi differisce al più di uno. 
+- $\forall x \in T, \lvert h(T_{x.sx})- h(T_{x.dx})\rvert \leq 1$ dove $T$ è l'albero, ossia l'[[altezza]] dei sotto alberi differisce al più di uno. 
 ![[Pasted image 20230831140231.png]]
 ---
 ### Alberi AVL minimi 
@@ -21,14 +21,14 @@ In particolare, se ad una certa altezza ho il minimo numero di nodi, allora ho l
 
 Si osserva dunque, che se si dimostra che per gli **AVL** minimi $h = \Theta(\log(n))$ allora lo è anche per quelli non minimi (ovvero per tutti gli **AVL**).
 
-![[appuntiIngenito (dragged) copy 2.pdf]]
+![[AVLminimiIngenito.pdf]]
 
 ---
 ## Inserimento di un nodo
 >[!important] 
 > L'inserimento di un nodo, può rompere la struttura di un AVL.
 
-L'algoritmo di inserimento, quindi dovrà anche risistemare l'albero affinché conservi la proprietà di **AVL**.
+L'[[algoritmo]] di inserimento, quindi dovrà anche risistemare l'albero affinché conservi la proprietà di **AVL**.
 ![[Pasted image 20230831144205.png]]
 - **Caso 1: Inserisco il nodo nel sotto-albero $\alpha$**
 	- ![[Pasted image 20230831154929.png|300]]
@@ -53,7 +53,7 @@ L'algoritmo di inserimento, quindi dovrà anche risistemare l'albero affinché c
 		- Almeno uno dei due sotto-alberi sarà alto $h − 2$ ; ad esempio, se fossero entrambi alti $h − 3$ vuol dire che $h(z) = h − 2$ , il che non è vero dato che $h(z)=h−1$
 		- Inoltre, non possono essere più bassi di $h − 3$: ad esempio, se uno dei due fosse alto $h − 4$ , e l’altro per forza sarà alto $h − 2$, vuol dire che non è un **AVL**
 	- ![[Pasted image 20230831164608.png|300]]
-		- Supponiamo di aggiungere un nodo in $\beta_{1}$ (_stesso ragionamento per $\beta_{2}$_)
+		- Supponiamo di aggiungere un nodo in $\beta_{1}$ (_stesso ragionamento_ per $\beta_{2}$)
 		- Inserendo in $\beta$ , avrò il caso in cui sia $\beta_{1}$ sia $\beta_{2}$ sono alti $h−2$ altrimenti il problema si troverà in un altro punto, che andrà risolto comunque con uno dei due casi.
 		- In questo caso servono due rotazioni: una verso sinistra su $y$ e successivamente una verso destra su $x$
 >[!important] È importante l'ordine con cui si effettuano le rotazioni altimenti non funziona
@@ -74,7 +74,7 @@ Riparare, e quindi mantenere, la struttura di **AVL** dopo un inserimento, ha te
 >La cancellazione porta gli stessi problemi dell'inserimento e si risolvono allo stesso modo
 
 ![[Pasted image 20230831170902.png]]
-![[appuntiIngenito (dragged).pdf]]
+![[appuntiIngenito (dragged) copy 2.pdf]]
 
 ---
 ## Funzionamento algoritmi per rotazioni

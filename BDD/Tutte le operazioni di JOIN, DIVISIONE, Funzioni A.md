@@ -1,9 +1,5 @@
 ---
-Date: October 20, 2022
-Number: 14
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Operazioni di Join
 ## Theta Join

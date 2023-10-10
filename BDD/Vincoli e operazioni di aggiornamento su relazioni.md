@@ -1,9 +1,5 @@
 ---
-Date: September 30, 2022
-Number: 6
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 ## Inserimento
 Una Insert potrebbe violare tutti e quattro i tipi di vincoli

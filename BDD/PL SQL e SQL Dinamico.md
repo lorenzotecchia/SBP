@@ -1,5 +1,5 @@
 ---
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # PL/SQL
 

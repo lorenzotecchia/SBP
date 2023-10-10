@@ -1,5 +1,5 @@
 ---
-author: Simone Parente Martone
+author: Simone Parente
 ---
 
 È un API standard per operare con basi di dati relazionali in JAVA, base per altri package di più alto livello

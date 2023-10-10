@@ -1,9 +1,5 @@
 ---
-Date: May 4, 2022
-Number: 0
-Reviewed: No
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Database Employee
 ---

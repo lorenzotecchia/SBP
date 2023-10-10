@@ -1,10 +1,5 @@
 ---
-Date: October 25, 2022
-Number: 16
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
----
+author: Simone Parente 
 - Indice
 
 # Query complesse

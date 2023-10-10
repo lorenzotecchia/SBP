@@ -1,9 +1,5 @@
 ---
-Date: September 20, 2022
-Number: 1
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 ## Gerarchia dei sistemi
 

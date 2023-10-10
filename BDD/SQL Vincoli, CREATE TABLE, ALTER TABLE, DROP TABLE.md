@@ -1,9 +1,5 @@
 ---
-Date: October 11, 2022
-Number: 10
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 - Indice
 # Structured Query Language

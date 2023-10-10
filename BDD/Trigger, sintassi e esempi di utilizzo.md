@@ -1,9 +1,5 @@
 ---
-Date: November 10, 2022
-Number: 18
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Trigger
 

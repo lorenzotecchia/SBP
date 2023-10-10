@@ -1,9 +1,5 @@
 ---
-Date: September 27, 2022
-Number: 4
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Lezione 4
 

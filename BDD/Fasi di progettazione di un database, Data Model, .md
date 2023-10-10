@@ -1,9 +1,5 @@
 ---
-Date: September 22, 2022
-Number: 2
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Fasi della progettazione di un database
 

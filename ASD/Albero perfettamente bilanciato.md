@@ -1,6 +1,9 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, dataStructure, to-do]
+tags:
+  - definition
+  - to-do
+  - dataStructure/abr
 ---
 >[!note] 
 >APB: Albero Perfettamente Bilanciato oppure PBT: Perfect Balanced Tree

@@ -1,9 +1,5 @@
 ---
-Date: October 4, 2022
-Number: 7
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Lezione 7
 

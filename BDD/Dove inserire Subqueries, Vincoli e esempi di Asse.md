@@ -1,9 +1,5 @@
 ---
-Date: November 8, 2022
-Number: 17
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Dove annidare le query
 

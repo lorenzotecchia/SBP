@@ -1,9 +1,5 @@
 ---
-Date: September 29, 2022
-Number: 5
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Schema logico
 

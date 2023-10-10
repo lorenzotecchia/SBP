@@ -1,9 +1,5 @@
 ---
-Date: October 14, 2022
-Number: 12
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 - Indice
 

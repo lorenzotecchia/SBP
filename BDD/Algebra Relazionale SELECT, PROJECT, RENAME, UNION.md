@@ -1,9 +1,5 @@
 ---
-Date: 2001-01-01
-Number: 11
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Algebra relazionale
 ---

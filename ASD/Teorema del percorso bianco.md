@@ -21,7 +21,7 @@ Al tempo $d(v)$, ovvero quando $v$ viene scoperto, $w$ è discendente di $v$ se
 Dato che $w$ è un discendete di $v$, vuol dire che esiste un suo predecessore $p(w) = z$.  
 
 Questo vuol dire che anche $z$ è un discendente di $v$ .  
-Per il teorema della struttura a parentesi, $z$ inizia dopo e termina prima di $v \;\;\; d(v)\;< \;d(z)\;<\;f(z)\;<\;f(v)$
+Per il [[teorema della struttura a parentesi]], $z$ inizia dopo e termina prima di $v \;\;\; d(v)\;< \;d(z)\;<\;f(z)\;<\;f(v)$
 
 Ma per come è formato l’algoritmo, $z$ non termina se non esplora tutta la sua stella uscente, quindi esplora per forza anche
 $w\;\;\; d(v)\; < \;d(z)\; < d(w)\; < \;f(w)\; <\; f(z)\; <\; f(v)$

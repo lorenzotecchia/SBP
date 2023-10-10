@@ -1,9 +1,5 @@
 ---
-Date: September 23, 2022
-Number: 3
-Reviewed: Yes
-Status: Done
-author: Simone Parente Martone
+author: Simone Parente
 ---
 # Architetture per i DBMS
 
