@@ -22,4 +22,5 @@ tags:
 ## Implementazione
 ```C
 // da implementare
+
 ```
