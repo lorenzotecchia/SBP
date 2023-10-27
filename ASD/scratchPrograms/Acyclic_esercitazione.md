@@ -17,6 +17,15 @@ def Acyclic(G):
 
 ```python
 def DFSAcyclic(G, v):
-    
+    c(v) = gr
+    for each w in Adj[v]:
+        if c(w) = bn:
+            acyclic = DFSAcyclic(G,w)
+            if !acyclic:
+                return False
+        else if c(w) = gr:
+            return False
+    c(v) = nr
+    return True
 ```
 
