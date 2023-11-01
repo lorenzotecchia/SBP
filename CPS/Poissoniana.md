@@ -1,7 +1,9 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, probability, aleatoryVariable]
+tags: [definition, probability, aleatoryVariable,to-do]
 ---
+>[!todo] Inserire grafico
+
 Una variabile aleatoria di *Poisson* o poissoniana di parametri $\lambda, \lambda > 0$, se la sua funzione di massa di probabilità è data da $$\mathbb{P}(X=i) = \frac{\lambda^{i}}{i!}e^{-\lambda}\;\;\;\;\; i = 0,1,2 \dots$$ È possibile verificare che l'equazione soprastante rappresenta una funzione di massa perché la componente dell'equazione $\sum_{i=0}^{\infty}\frac{\lambda^{i}}{i!}$ è la funzione generatrice dell'esponenziale da cui possiamo ricavare $$\sum_{i=0}^{\infty}\mathbb{P}(X = i) = e^{-\lambda}\sum_{i=0}^{\infty}\frac{\lambda^{i}}{i!} = 1$$
 La poissoniana può essere utilizzata come approssimazione di una binomiale di parametri $(n,p)$, quando $n$ è molto grande e $p$ è molto piccolo. Per convincerci di questo fatto, sia $X$ una variabile aleatoria binomiale di parametri $(n,p)$, e si ponga $\lambda = np$. Allora $$\begin{align}
 	\mathbb{P}(X = i) =& \frac{i!}{(n-i)!i!}p^{i}(1-p)^{n-i} \\

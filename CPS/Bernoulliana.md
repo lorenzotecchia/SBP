@@ -1,6 +1,8 @@
 ---
-tags: [aleatoryVariable, probability, definition]
+tags: [aleatoryVariable, probability, definition, to-do]
 ---
+>[!todo] Inserire grafico
+
 Supponendo che venga realizzata una prova, o un esperimento, il cui esito può essere solo un "successo" o un "fallimento". Se definiamo la [[variabile aleatoria]] $X$ in modo che sia $X=1$ nel primo caso e $X = 0$ nel secondo, la funzione di massa di probabilità di $X$ è data da $$\begin{align}
 \mathbb{P}(X=0)&=1-p \\
 \mathbb{P}(X = 1)&= p
