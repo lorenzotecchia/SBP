@@ -1,52 +1,30 @@
-# per il cacolo delle componenti fortemente connesse bisonga:
-# 1. Eseguire l'ordinamento topologico in profondita
-# 2. Calcolare il trasposto di G
-# 3. Eseguire un DFS leggermente modificata G^T e sullo stack S restituito dall'ordinamento 
-#    topologico
-
-def SCC(G):
-    S = TopologicalOrdering(G)
-    G_T = Transpose(G)
-    scc = DFS_SCC(G_T, s)
-    return scc
+# CFC:
+# 1. Ordinamento Topologico
+# 2. Transposizione del grafo
+# 3. DFS modificata
 
 def TopologicalOrdering(G):
-    c = Init(G)
+    ge = EnterDegree(G)
+    Q = InitQueue(G, ge)
+    while !empty(Q):
+        (Q, v) = Head&Dequeue(Q)
+        for w in Adj[v]:
+            ge(w) = ge(w) - 1
+            if ge(w) == 0:
+                Q = Enqueue(Q, w)
+        p = Append(p, v)
+    return p
+
+def EnterDegree(G):
     for v in V:
-        if c(v) == bn:
-            s = DFSTopologicalOrdering(G, S, v, c)
-    return S
-
-def DFSTopologicalOrdering(G, S, v, c):
-    c(v) = gr
-    for w in Adj[v]:
-        if c(v) == bn:
-            DFSTopologicalOrdering(G, S, w, c)
-    c(v) = nr
-    s = Push(S, v)
-    return S
-
-def Transpose(G):
-    Init(G_T)
-    Vertix(G_T) = Vertix(G)
+        ge(v) = 0
     for v in V:
-        for w in Adj[w]:
-            Edges(G_T) = Insert(Edges(G_T), (w,v))
-    return (Vertix(G_T), Edges(G_T))
+        for w in Adj[v]:
+            ge(w) = ge(w) + 1
+    return ge
 
-def DFS_SCC(G, S):
-    (c, scc) = Init(G)
-    while !empty(S):
-        (S, v) = Top&Pop(S)
-        if c(v) == bn:
-            (c, scc) = DFS_SCC_Visit(G, c, scc, v, v)
-    return scc
-
-def DFS_SCC_Visit(G, c, scc, v , w):
-    c(w) = gr
-    scc(w) = v
-    for z in Adj[w]:
-        if c(z) == bn:
-            (c, scc) = DFS_SCC_Visit(G, c, scc, v, z)
-    c(w) = nr
-    return (c, scc)
+def InitQueue(G, ge):
+    for v in V:
+        if ge(v) == 0:
+            Q = Enqueue(Q, v)
+    return Q
