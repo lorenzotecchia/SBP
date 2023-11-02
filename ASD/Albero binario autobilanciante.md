@@ -21,7 +21,7 @@ In particolare, se ad una certa altezza ho il minimo numero di nodi, allora ho l
 
 Si osserva dunque, che se si dimostra che per gli **AVL** minimi $h = \Theta(\log(n))$ allora lo è anche per quelli non minimi (ovvero per tutti gli **AVL**).
 
-![[AVLminimiIngenito.pdf]]
+![[appuntiIngenito.pdf#page=37]]
 
 ---
 ## Inserimento di un nodo
@@ -74,7 +74,7 @@ Riparare, e quindi mantenere, la struttura di **AVL** dopo un inserimento, ha te
 >La cancellazione porta gli stessi problemi dell'inserimento e si risolvono allo stesso modo
 
 ![[Pasted image 20230831170902.png]]
-![[appuntiIngenito (dragged) copy 2.pdf]]
+![[appuntiIngenito.pdf#page=41]]
 
 ---
 ## Funzionamento algoritmi per rotazioni

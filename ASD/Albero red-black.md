@@ -39,7 +39,7 @@ Il numero di nodi interni è: (Internal Nodes) $IN(x) \geq 2^{bh(h)}-1$
 
 ---
 ### Teorema albero red-black
-![[appuntiIngenito (dragged) copy 3.pdf]]
+![[appuntiIngenito.pdf#page=45]]
 
 ---
 ## Inserimento di un nodo
