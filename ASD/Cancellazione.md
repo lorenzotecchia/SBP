@@ -5,7 +5,7 @@ tags:
   - dataStructure/abr
   - to-do/implementation
 ---
-- Se il nodo da cancellare non **ha figli**, si elimina il nodo stesso
+ Se il nodo da cancellare non **ha figli**, si elimina il nodo stesso
 - Se il nodo $x$ da eliminare **ha un solo figlio**, basta collegare il figlio di $x$ al padre di $x$
 	- ![[Pasted image 20230830085528.png]]
 - Se il nodo $x$ da eliminare **ha entrambi i figli**, ci sono due possibili modi per eliminare il nodo:
@@ -36,6 +36,7 @@ Questa è la funzione che verrà chiamata per eliminare il nodo contente il dato
 - La funzione $DeleteNode$ restituirà un nodo che sarà restituito alla chiamata ricorsiva di $Delete$. Questo verrà inserito al posto del nodo da eliminare
 
 ![[Pasted image 20230830100219.png]]
+[[Minimo-Massimo#^get-delete-min|Get&DeleteMin]]
 
 ---
 ## Implementazione in C

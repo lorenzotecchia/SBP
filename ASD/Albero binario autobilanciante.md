@@ -93,7 +93,7 @@ Riparare, e quindi mantenere, la struttura di **AVL** dopo un inserimento, ha te
 | SX  | SX   |
 
 ---
-- Restituisce dell'**AVL** con radice in $x$, se questa è $\bot$ allora restituisce $-1$
+- Restituisce l'altezza dell'**AVL** con radice in $x$, se questa è $\bot$ allora restituisce $-1$
 ![[Pasted image 20230831172645.png]]
 - Essendo un semplice $if$ la funzione ha tempo costante $\Theta(1)$
 - ---

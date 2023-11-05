@@ -10,7 +10,7 @@ tags:
 ---
 ### $Get\&DeleteMIN$
 Come prima, lavoriamo con il MIN del ramo destro e definiamo la funzione che restituisce il minimo ed [[Cancellazione|elimina]] il nodo.
-![[Pasted image 20230830092431.png]]
+![[Pasted image 20230830092431.png]]^get-delete-min
 - Le istruzioni $4,5,6$ definiscono una funzione chiamata $\textbf{SkipRight}$
 - Il padre $skippa$ al figlio destro rispetto ad $a$.
 	- Sostituisce suo figlio sinistro, con il figlio destro del sinistro, questo succede solo al nodo che contiene il minimo 
