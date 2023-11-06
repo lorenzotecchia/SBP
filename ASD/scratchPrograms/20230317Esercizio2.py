@@ -7,7 +7,7 @@ def Algo(T, k):
         Algo(T->dx, k)
     return altezza_max
 
-def Algo_recursive(T, k):
+def Algo_iterative(T, k):
     cT = T
     start = True
     last = NULL
@@ -25,7 +25,7 @@ def Algo_recursive(T, k):
                 start = False
         else: # !start
             cT = top(stT)
-            if last == cT -> sx:
+            if last == cT -> sx or last == cT -> dx:
                 pop(stT)
                 last = cT
             else:
@@ -33,6 +33,3 @@ def Algo_recursive(T, k):
                 cT = cT->dx
                 start = True
     return altezza_max
-            
-
-
