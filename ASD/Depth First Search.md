@@ -18,10 +18,10 @@ author: Lorenzo Tecchia
     E così via fino ad arrivare a $b$ che ha da visitare ancora $d$.
 - Il nodo $d$ tenta di visitare $f$ ma che è già stato visitato, termina la sua visita, viene colorato di **nero** e passa il controllo a $b$.
 - Anche $b$ ha terminato e viene colorato di **nero**.
-- Non essendoci più nodi da visitare, l’algoritmo termina.
+- Non essendoci più nodi da visitare, l’[[algoritmo]] termina.
 ## Funzionamento dell'algoritmo
 ![[Pasted image 20230908170736.png|500]]
-- La funzione $\textbf{DFS}$ esegue la visita su tutti i nodi bianchi del grafo.
+- La funzione $\textbf{DFS}$ esegue la visita su tutti i nodi bianchi del [[grafo]].
 - La funzione di visita $\textbf{DFSVisit}$ partirà da un certo nodo e scorrerà fino in fondo, colorando i nodi che incontra.
 - Di conseguenza, il $for each$ in $\textbf{DFS}$ non visiterà nuovamente i nodi già visitati da qualche altro nodo durante la visita $\textbf{DFSVisit}$
 ![[Pasted image 20230908170944.png|500]]
