@@ -9,6 +9,11 @@ tags:
 [[Algoritmo]] che determina se un [[grafo]] è ***aciclico*** (non ha [[Cycle|cicli]])
 
 ![[Pasted image 20230909172052.png|500]]
+```python
+def Acyclic(G):
+	c = Init(G)
+	for ee
+```
 ![[Pasted image 20230909172107.png|500]]
 
 ### La struttura è identica ad una $\textbf{DFS}$.

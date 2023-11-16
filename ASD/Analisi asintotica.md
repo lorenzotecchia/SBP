@@ -43,6 +43,38 @@ Infatti il $\lim_{n \rightarrow \infty}\frac{f(n)}{g(n)} = L$
 ![[Pasted image 20230905174711.png]]
 >[!important] In altre parole
 > $\Theta(g(n))$ limita sia superiormente che inferiormente $f(n)$
+#### Dimostrazione 
+Supponiamo che $g(n)$ ad un certo punto sia sempre positivo(supposizione più realistica essendo una funzione di tempo), quindi è possibile dividere la realzione per $g(n)$.
+Sia $h(n) = \frac{f(n)}{g(n)}$, dopo la divisione avremmo che:$$c_{1}\leq h(n) \leq c_{2}$$
+Ne segue che, essendo $h(n)$ sempre compreso tra $2$ costanti positive:$$\lim_{n \rightarrow \infty} h(n) = k,\text{con}\;\; c_{1}\leq k \leq c_{2}$$(In modo del tutto analogo si trattano le altre due implicazioni).
+Non resta che dimostrare che le due constanti $c_{1}, c_{2}$ che delimitano l'andamento $h(n)$ esistano.
+Supponiamo a tal scopo che $\lim_{n \rightarrow \infty}\frac{f(n)}{g(n)} = k$ e che quindi $k$ sia asintotico orizzontale per il rapporto $h(n) = \frac{f(n)}{g(n)}$.
+Per tale asintoto esistono solo $2$ casi:
+1. $h(n)$ tende a $k$ dall'alto
+2. $h(n)$ tende a $k$ dal basso
+##### Caso 1 h(n) dall'alto
+$n_{0}$ sarà il punto da cui la funzione $h(n)$ sarà sempre decrescente (è irrilevante il punto preciso di $n_{0}$ l'importante è che esista e da quel punto in poi la funzione descresca).
+Prendiamo ora la retta costante pari al valore di $h(n_{0})$, ed ora possiamo osservare che da $n_0$ in poi il rapporto è tale che $c_{1}=k \leq h(n) \leq h(n_{0}) = c_{2}$
+![[Pasted image 20231116164426.png|250]]
+>[!note]
+>Le precedenti costanti sono state trovate avendo support che il rapporto $\frac{f(n)}{g(n)}$ esista e che la funzione (dopo lo studio della derivata prima di tale rapporto) sia decrescente per un intervallo $[n_{0}, +\infty)$
+##### Caso 2 h(n) dal basso
+Supposto che lo studio della derivata prima abbia portato alla conferma dell'esistenza di un intervallo per cui la funzione è sempre crescente abbiamo già trovato le nostre costanti.
+infatti per $c_{2}$ è ovvio che basti prendere l'asintoto $k$ mentre per $c_{1}$ bisogna scegliere un $n_{0}$ da $[n_{0}, + \infty$ la funzione sia sempre crescente
+![[Pasted image 20231116165310.png|250]]
+>[!note]
+> Si noti che stavolta non basta solo che l'intervallo $[n_{0}, \infty)$ sia crescente, ma deve anche essere sempre positiva (scegliere un punto in cui $\exists n \leq n_{0}\;\;:\;\; h(n)$ sia negativa andrebbe contro la nostra definizione di $\Theta$)
+> Una volta determinato $n_{0}$, allora: $$c_{1}= h(n_{0})$$
+#### Caso oscillatorio
+Se la situazione è quella della rappresentazione nella [[Analisi asintotica#^caso-oscillatorio|figura]] (l'ampiezza dell'oscillazione deve essere $0$ ad un certo punto altrimenti $\lim_{n \rightarrow \infty}h(n) \neq k$) determinare le costanti è molto complesso. Bisogna scegliere un punto di minimo locale($n_{0}$) e un punto di massimo locale ($m_{0}$) in modo tale che i successivi minimi saranno sempre al di sopra del minimo locale scelto e i successivi massimi più bassi del massimo locale scelto; $n_{0}$ sarà il punto maggiore (nel nostro caso è il minimo locale) tra i $2$. Una volta scelto questi due punti le costanti saranno $c_{1} = h(n_{0})$ e $c_{2} = h(m_0)$.
+
+![[Pasted image 20231116170752.png|250]]^caso-oscillatorio
+
+>[!important]
+> Questo tipo di funzioni sono molto rare e pertanto nei nostri studi ci imbatteremmo solo nei primi due casi
+
+>[!example] # Esempio
+> 
 ### Notazione $o$ piccolo
 - Indichiamo con $o(g(n))$ l’insieme delle funzioni:
 $$o(g(n))= \left\{ f(n): \forall c \in \mathbb{R}^{+}\;\; \land \;\; \exists n_{0}\in \mathbb{N} \; \text{tale che}\; \forall n\geq n_{0},\; f(n)\leq c \;g(n)\right\}$$
@@ -70,6 +102,14 @@ Infatti il $\lim_{n \rightarrow 0} \frac{f(n)}{g(n)} = \infty$ perché, al limi
 ![[Pasted image 20230905183705.png|500]]
 ### Transitiva
 ![[Pasted image 20230905183731.png]]
+>[!example] Esempio proprietà transitiva
+> Questa proprietà risulta essere utile quando bisogna confrontare $2$ funzioni molto *distanti* tra loro e quindi difficili da confrontare. 
+> Grazie alla transitività è possibile scegliere una funzione nel mezzo e confrontarla con entrambe (se risulta vera per una e falsa per l'altra allora non si arriva a nulla).
+> Consideriamo ad es. $f(n) = n^{2}-3n + 4$ e $h(n) = 2n^{2}+7n -10$
+> Supponiamo che $g(n) = n^{2}$ e dimostriamo che $c_{1}n^{2} n^{2}-3n + 4 \leq c_{2}n^{2}$
+> Scegliendo $c_{2}= 1$ abbiamo:$$n^{2}-3n + 4 \leq n^{2}, \text{verificata per }n \geq \frac{4}{3}$$ mentre per $c_{1} = \frac{1}{2}$ si ha $\frac{n^{2}}{2} \leq n^{2}-3n +4 \iff 0 \leq \frac{n^{2}}{2}- 3n +4 \iff 3n -4 \leq \frac{n^{2}}{2}\;\; \text{verificata per}\;\; \forall n \geq 1$
+> Analogamente si tratta il caso $g(n) = O(h(n))$ e di conseguenza si ha anche che $f(n) = O(h(n))$
+> Questo esempio è banale, in quante fin dall'inizio si vedeva che le $2$ funzioni crescessero allo stesso modo, ma per funzioni esponenziali o logaritmiche potrebbe non esserlo, e quindi, risulta utile applicare questa proprietà transitiva come fatto in questo esempio
 ### Altre proprietà
 ![[Pasted image 20230905183946.png|600]]
 ## Esempio maggiorazione
