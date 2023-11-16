@@ -74,7 +74,15 @@ Se la situazione è quella della rappresentazione nella [[Analisi asintotica#^ca
 > Questo tipo di funzioni sono molto rare e pertanto nei nostri studi ci imbatteremmo solo nei primi due casi
 
 >[!example] # Esempio
-> 
+> Importante notare che: $$\lim_{n \rightarrow \infty} \frac{f(n)}{g(n)} = \infty \iff \lim_{n \rightarrow \infty} \frac{g(n)}{f(n)} =\infty \iff \lim_{n \rightarrow \infty} = k > 0 \iff \lim_{n \rightarrow \infty} \frac{g(n)}{f(n)} = \frac{1}{k} > 0$$
+> Questo dimostra che studiare il limite del rapporto o il limite del suo reciproco ci porta alla stessa conclusione.
+> 1. Siano $f(n) = n$ e $g(n) = 4n -10$
+> > Avremo $\lim_{n \rightarrow \infty} \frac{g(n)}{f(n)} = \lim_{n \rightarrow \infty} 4 - \frac{10}{4} = 4 \rightarrow g(n) = \Theta(f(n)) \rightarrow f(n) = \Theta(g(n))$
+> > Stabiliamo quindi le costanti per tale relazione. Sia $h(n) = 4- \frac{10}{n}$ e facendone la derivata $\rightarrow$:$$\frac{d}{dn}(4-\frac{10}{n})= \frac{d}{dn}4 -\frac{d}{dn}\frac{10}{n} = -10 \frac{d}{dn}n^{-1}=\frac{10}{n^{2}}$$
+> > Avremo quindi una funzione che è sempre crescente (essendo la derivata positiva)
+> > Scegliamo ora un $n_{0}$ per cui la funzione sia sempre crescente e positiva(se ad es. scegliessimo 1 avremo $h(n) < 0$)
+> > Sia $n_{0} = 3$. Da questo ricaviamo che:$$c_{1}= h(3) = \frac{2}{3}\;\text{e}\;c_{2}=4$$ Dunque $\forall n \leq 3, \;2f(n)\leq g(n) \leq \frac{2}{3}f(n)$; ovvero $\frac{3}{2}g(n)\leq f(n) \leq \frac{1}{2}g(n)$
+> Se invece $f(n) = n$ e $g(n) = 4n + 10$ risulta $\lim_{n \rightarrow \infty} \frac{g(n)}{f(n)} = 4$; quindi, le $2$ funzioni sono sempre in relazione $\Theta$ tra di loro. In questo caso la funzione risulta decrescente essendo $h^{I}(n) = -\frac{10}{n^{2}}$
 ### Notazione $o$ piccolo
 - Indichiamo con $o(g(n))$ l’insieme delle funzioni:
 $$o(g(n))= \left\{ f(n): \forall c \in \mathbb{R}^{+}\;\; \land \;\; \exists n_{0}\in \mathbb{N} \; \text{tale che}\; \forall n\geq n_{0},\; f(n)\leq c \;g(n)\right\}$$
@@ -112,6 +120,7 @@ Infatti il $\lim_{n \rightarrow 0} \frac{f(n)}{g(n)} = \infty$ perché, al limi
 > Questo esempio è banale, in quante fin dall'inizio si vedeva che le $2$ funzioni crescessero allo stesso modo, ma per funzioni esponenziali o logaritmiche potrebbe non esserlo, e quindi, risulta utile applicare questa proprietà transitiva come fatto in questo esempio
 ### Altre proprietà
 ![[Pasted image 20230905183946.png|600]]
+>[!important] # capitolo 6.3 file ASD
 ## Esempio maggiorazione
 >[!example] 
 >Dimostrare o confutare la seguente relazione: $\log_{2}(n^{2n})+n -\log_{2}(n)=\Theta(n \log_2(n))$ 
