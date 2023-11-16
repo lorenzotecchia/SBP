@@ -26,7 +26,7 @@ In particolare $f$:
 ### Notazione $O$ grande
 ![[Pasted image 20230905172827.png|300]]
 - Indichiamo con $O(g(n))$ l’insieme delle funzioni:
-$$O(g(n))= \left\{ f(n): \exists c \in \mathbb{R}^{+}\;\; \land \;\; \exists n_{0}\in \mathbb{N} \; \text{tale che}\; \forall n\geq n_{0}, f(n)\leq c\;g(n)\right\}$$
+$$O(g(n))= \left\{ f(n): \exists c \in \mathbb{R}^{+}\;\; \land \;\; \exists n_{0}\in \mathbb{N} \; \text{tale che}\; \forall n\geq n_{0}, f(n)\leq c\;g(n)\right\}$$^O-grande
 >[!hint] In altre parole
 > $O(g(n))$ limita superiormente $f(n)$
 ### Notazione $\varOmega$ grande
