@@ -8,11 +8,15 @@ tags:
 ---
 [[Algoritmo]] che determina se un [[grafo]] è ***aciclico*** (non ha [[Cycle|cicli]])
 
-![[Pasted image 20230909172052.png|500]]
 ```python
 def Acyclic(G):
 	c = Init(G)
-	for ee
+	for v in V:
+		if c(v) == bn:
+			acyclic = DFSAcyclicc(G, v)
+			if !acyclic:
+				return False
+	return True
 ```
 ![[Pasted image 20230909172107.png|500]]
 
