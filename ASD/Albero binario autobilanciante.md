@@ -94,7 +94,10 @@ Riparare, e quindi mantenere, la struttura di **AVL** dopo un inserimento, ha te
 
 ---
 - Restituisce l'altezza dell'**AVL** con radice in $x$, se questa è $\bot$ allora restituisce $-1$
-![[Pasted image 20230831172645.png]]
+```python
+def HgtAVL(x):
+	return (x = False ? -1 : x.ht)
+```
 - Essendo un semplice $if$ la funzione ha tempo costante $\Theta(1)$
 - ---
 - Aggiorna l’altezza dell’**AVL** con radice in $x$ (utilizzata dopo una rotazione)
