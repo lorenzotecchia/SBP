@@ -124,7 +124,7 @@ def HgtAVL(x):
 ```python
 def UpdateHgtAVL(x):
 	hl = HgtAVL(x.sx) # Prendo l'altezza del figlio sinistro
-	hr = HgtAVL(x.dx) #  Prendo l'altezza del figlio destro
+	hr = HgtAVL(x.dx) # Prendo l'altezza del figlio destro
 	x.ht = max{hl, hr}
 	
 ```
@@ -195,12 +195,50 @@ def AVLInsert(x, d):
 - Se inserisco a sinistra, rendo potenzialmente il sotto-albero sinistro più profondo del destro, effettuo quindi un $\textbf{LeftBalanceAVL}$.
 - Discorso speculare se inserisco destra.
 ---
-![[Pasted image 20230831174227.png|400]]
+
+```python
+def AVLDelete(x, d):
+	if x != NULL:
+		if d < x.dato:
+			x.sx = AVLDelete(x.sx, d)
+			x = RBalanceAVL(x)
+		else if d > x.dato:
+			x.dx = AVLDelete(x.dx, d)
+			x = LBalanceAVL(x)
+		else
+			x = DeleteNodeAVL(x)
+	return x
+
+```
 - Simile alla cancellazione in un BST ma con la differenza che bisogna bilanciare l’albero.
 - Se cancello a destra, rendo potenzialmente il sotto-albero destro più basso (o meno alto) e di conseguenza rendo il sinistro più profondo, effettuo quindi un $\textbf{LeftBalanceAVL}$.
 - Discorso speculare se cancello sinistra.
 ---
-![[Pasted image 20230831174642.png]]
+
+```python
+def DeleteNodeAVL(x):
+	if x.sx = NULL:
+		x = SkipRight(x)
+	else if x.dx = NULL:
+		x = SkipLeft(x)
+	else
+		x.dato = GetDeleteMinAVL(x.dx, x)
+		x = LBalanceAVL(x)
+	return x
+```
+
+```python
+def GetDeleteMinAVL(x, p):
+	if x.sx = NULL:
+		d = x.dato
+		y = SkipRight(x)
+	else
+		d = GetDeleteMinAVL(x.sx, x)
+		y = RBalanceAVL(x)
+	SwapChild(p, x, y)
+	return d
+			
+```
 
 ---
 >[!todo] 
