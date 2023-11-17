@@ -118,9 +118,37 @@ Infatti il $\lim_{n \rightarrow 0} \frac{f(n)}{g(n)} = \infty$ perché, al limi
 > Scegliendo $c_{2}= 1$ abbiamo:$$n^{2}-3n + 4 \leq n^{2}, \text{verificata per }n \geq \frac{4}{3}$$ mentre per $c_{1} = \frac{1}{2}$ si ha $\frac{n^{2}}{2} \leq n^{2}-3n +4 \iff 0 \leq \frac{n^{2}}{2}- 3n +4 \iff 3n -4 \leq \frac{n^{2}}{2}\;\; \text{verificata per}\;\; \forall n \geq 1$
 > Analogamente si tratta il caso $g(n) = O(h(n))$ e di conseguenza si ha anche che $f(n) = O(h(n))$
 > Questo esempio è banale, in quante fin dall'inizio si vedeva che le $2$ funzioni crescessero allo stesso modo, ma per funzioni esponenziali o logaritmiche potrebbe non esserlo, e quindi, risulta utile applicare questa proprietà transitiva come fatto in questo esempio
+### Monotonicità
+$$f(n) = \Theta(g(n)) \Longrightarrow \log(f(n)) = \Theta(\log(g(n)))$$
+Per dimostrare la precedente implicazione utilizziamo la proprietà della monotonicità dei logaritmi, ovvero:$$x \leq x \Longrightarrow log(x) \leq \log(x)$$
+Da $f(n) = \Theta(g(n))$ per definizione $\exists n_{0}, c_{1},c_{2}: \forall n \geq n_{0},\;\; c_{1}g(n) \leq f(n) \leq c_{2}g(n)$ ma quindi:$$\log(c_{1}g(n)) \leq \log(f(n)) \leq \log(c_{2}g(n))$$
+
+A questo punto possiamo utilizzare un'altra proprietà dei logaritmi:$$\log(xy) = \log(x) + \log(y) \rightarrow \log(c_{1}) + \log(g(n)) \leq \log(f(n)) \leq \log(c_{2}) + \log(g(n))$$
+>[!note] Questo non basta
+> Se $c_{1}$ e/o $c_{2}$ sono compresi tra $0$ e $1$ il logaritmo sarà negativo.
+
+Esiste però la seguente proprietà:
+$$\forall h(n), \;\; \log(h(n)) + k = \Theta(\log(h(n)))$$
+>[!note] Le costanti non sono le stesse per qualsiasi $k$
+> A noi non interessa soltanto che queste esista ma che inoltre sia valido, $\forall k \in \mathbb{Z}$
+
+Sfruttando la seguente proprietà: $$\begin{align}\exists n_1>0, \exists c_1^{\prime}, c_2^{\prime}>0: \forall n \geq n_1, c_1^{\prime} \log (g(n)) \leq \log c_1+\log (g(n)) \leq c_2^{\prime} \log (g(n))\\ \text{e} \\
+\exists n_2>0, \exists c_1^{\prime \prime}, c_2^{\prime \prime}>0: \forall n \geq n_2, c_1^{\prime \prime} \log (g(n)) \leq \log c_2+\log (g(n)) \leq c_2^{\prime \prime} \log (g(n))\end{align}$$
+Usando le definizioni precedenti:$$\begin{align}
+\exists n_3=\max \left\{n_0, n_1, n_2\right\}, \exists c_1, c_1^{\prime}, c_2, c_2^{\prime \prime}>0: \forall n \geq n_3, c_1^{\prime} \log (g(n)) \leq \log c_1+\log (g(n)) \leq \\
+\log (f(n)) \leq \log c_2+\log (g(n)) \leq c_2^{\prime \prime} \log (g(n))\end{align}$$
+Da cui per la transitività del minore ed uguale otteniamo:$$
+\exists n_3>0, \exists c_1^{\prime}, c_2^{\prime \prime}>0: \forall n \geq n_3, c_1^{\prime} \log (g(n)) \leq \log (f(n)) \leq c_2^{\prime \prime} \log (g(n))$$
+Quindi l'implicazione è dimostrata sotto la supposizione che $\forall h(n), \;\; \log(h(n)) + k = \Theta(\log(h(n)))$, ma ciò è evidente, essendo:$$
+\lim _{n \rightarrow \infty} \frac{k+\log (h(n))}{\log (h(n))}=\lim _{n \rightarrow \infty} \frac{k}{\log (h(n))}+\lim _{n \rightarrow \infty} \frac{\log (h(n))}{\log (h(n))}=1>0$$
+>[!example] # Confutazione di una implicazione
+> Essendo il logaritmo una funzione si potrebbe pensare di generalizzare un'implicazione precedente dicendo:$$
+\forall h(n), f(n)=\Theta(g(n)) \Longrightarrow h(f(n))=\Theta(h(g(n)))$$ Questo risulta però falso, e per confutarlo basta descriver un esempio per cui la precedente implicazione non sia vera.
+> A tal proposito siano $f(n) = n$ e $g(n) = 2n$ è evidente che siano in relazione $\Theta$ tra loro, infatti per $c_{1}= \frac{1}{2}$ e $c_{2}= 1$ abbiamo che:$$\forall n \geq 1, \frac{1}{2} 2 n \leq n \leq 1 \cdot 2 n$$
+> Sia la nostra funzione $h(n) = 2^{n}$, risulta quindi $2^{f(n)}= 2^{n}$ e $2^{g(n)} = 2^{2n}$, ma calcolando il limite di tale rapporto:$$\lim _{n \rightarrow \infty} \frac{2^n}{2^{2 n}}=\lim _{n \rightarrow \infty} \frac{2^n}{2^n \cdot 2^n}=\lim _{n \rightarrow \infty} \frac{1}{2^n}=0$$
+> Essendo il limite una costante diversa da $k > 0$ concludiamo che le due funzioni non sono in relazione $\Theta$ tra di loro e dunque abbiamo dimostrato falsa l'implicazione (basta un contro esempio per dire che la relazione è falsa, mentre per dire che è vera bisogna dimostrarla per ogni valido input).
 ### Altre proprietà
 ![[Pasted image 20230905183946.png|600]]
->[!important] # capitolo 6.3 file ASD
 ## Esempio maggiorazione
 >[!example] 
 >Dimostrare o confutare la seguente relazione: $\log_{2}(n^{2n})+n -\log_{2}(n)=\Theta(n \log_2(n))$ 
