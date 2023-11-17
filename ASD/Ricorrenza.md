@@ -69,9 +69,25 @@ Dunque:
  |   $\dots$   | $\dots$                                     |
 
  >[!example] # Primo esempio sulle equazioni di ricorrenza
- > Per quanto riguarda l'altezza dell'albero bisogna :$$\begin{align}
+ > Per quanto riguarda l'altezza dell'albero bisogna ragionare sul  contributo delle foglie, che sappiamo essere $1 \rightarrow$ Tale contributo può essere relazionato alla dimensione dell'input di un livello $i$ (nel nostro caso $\frac{n}{4^{i}}$). Per calcolare l'altezza dell'albero:$$\begin{align}
 \frac{n}{4^i}=1 \Longrightarrow n=4^i \Longrightarrow \log _4 n=i \log _4 4 \stackrel{\log _a}{\Longrightarrow} \stackrel{x=\frac{\log _n x}{\log _n a}}{\Longrightarrow} \frac{\log _2 n}{\log _2 4}=i \Longrightarrow \frac{\log n}{2 \log 2}=i\\ \Longrightarrow i=\frac{\log n}{2}\end{align}$$
- > 
+ > Visto che l'altezza dell'albero è $h = \frac{1}{2}\log(n)$, il numero delle foglie sarà il numero dei figli elevato all'altezza dell'albero. 
+ > Nel nostro caso:$$\begin{align}
+T(n)=\text { contributo c.b. }\cdot  n_f+\sum_{i=0}^{h-1}\left(\begin{array}{c}
+\text { termine } \\
+\text { generale }
+\end{array}\right)=\sqrt{n}+\sum_{i=0}^{\frac{\log n}{2}-1}\left(\frac{n^2}{8^i}\right) \Longrightarrow \\ \sqrt{n}+n^2 \sum_{i=0}^{\frac{\log n}{2}-1}\left(\frac{1}{8^i}\right)^i\end{align}$$
+> Ma essendo $0 < \frac{1}{8}< 1$ si tratta di una serie geometrica convergente $\rightarrow$ Questo ci semplifica lo studio della sommatoria grazie al seguente ragionamento:$$
+\underbrace{\sum_{i=0}^0 x^i}_{x^0=1} \leq \sum_{i=0}^z x^1 \leq \underbrace{\sum_{i=0}^{\infty} x^i}_{\frac{1}{1-x}} \Longrightarrow 1 \leq \underbrace{\sum_{i=0}^z x^i}_{\text {tende ad una costante }} \leq \frac{1}{1-x}$$
+> Visto che la nostra serie tende ad una costante $k$ avremo che:$$
+T(n)=\sqrt{n}+k n^2=k n^2+n^{\frac{1}{2}}=\Theta\left(n^2\right)$$
+> Volendo utilizzare la forma chiusa invece delle proprietà di converga avremo che:$$\begin{align}
+\sum_{i=0}^{\frac{\log n}{2}-1}\left(\frac{1}{8}\right)^i=\frac{\left(\frac{1}{8}\right)^{\frac{\log n}{2}}-1}{\frac{1}{8}-1}=\frac{-\left(\frac{1}{8}\right)^{\frac{\log n}{2}}}{-\frac{1}{8}+1}=\frac{1-\left(\frac{1}{8}\right)^{\frac{\log n}{2}}}{\frac{7}{8}}=\frac{8}{7}\left(1-\left(\frac{1}{8}\right)^{\frac{\log n}{2}}\right)=\frac{8}{7} \\ \left(1-\left(\frac{1^3}{2^3}\right)^{\frac{\log n}{2}}\right)= \frac{8}{7}\left(1-\left(\left(\frac{1}{2}\right)^{\log n}\right)^{\frac{3}{2}}\right)=\frac{8}{7}\left(1-\frac{1}{\left(2^{\log n}\right)^{\frac{3}{2}}}\right)=\frac{8}{7}\left(1-\frac{1}{\sqrt{n^3}}\right)\end{align}$$
+>
+> La funzione $f(n) = 1 - \frac{1}{1\sqrt{n^{3}}}$ tenderà a $1$ per $n \rightarrow \infty$; pertanto $\frac{8}{7}$ sarà il limite superiore della nostra sommatoria.
+> Per $n = 1$ risulta $f(1) = 0$, ma allora la nostra sommatoria tenderà ad una costante $c$ tale che $0 \leq c \leq \frac{8}{7}$ dunque:$$
+T(n)=\sqrt{n}+c n^2 \Theta\left(n^2\right)$$
+
 ## Risoluzioni
 ### Sostituzione
 Nel ***metodo di sostituzione***, ipotizziamo un limite e poi usiamo l'induzione matematica per dimostrare che la nostra ipotesi sia corretta
