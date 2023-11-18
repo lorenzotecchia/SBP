@@ -18,7 +18,7 @@ Per la [[visita in ampiezza]] c'è bisogno di una [[struttura dati]] accessori: 
 ### Implementazione dell'[[algoritmo]]
 
 ```python 
-def BFV(X, F, a):
+def BFV(x, F, a):
 	if x != NULL:
 		Q = Enqueue(EmptyQueue, x)
 		while(!isEmpty(Q))

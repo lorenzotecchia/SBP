@@ -50,24 +50,34 @@ Se non avessimo trasposto il grafo, nella prima visita, il nodo $a$ avrebbe trov
 
 ```Python
 def DFS1(G):
-	init(G)
+	Init(G)
 	StackRET = NULL
 	for v in V:
 		if c(v) == bn:
 			StackRET = DFS1_Visit(G, v, StackRET)
 	return StackRET
+```
 
+```python
 def DFS1_Visit(G, v, Stack):
 	c(v) = gr
 	for w in Adj[v]:
 		if w == bn:
 			Stack = DFS1_Visit(G, w, Stack)
 	c(v) = nr
-	push(v, Stack)
+	Push(v, Stack)
 	return Stack
 ```
 
-![[Pasted image 20230910163935.png|450]]
+```python 
+def Transpose(G):
+	VGt = VG
+	for v in VG:
+		for w in Adj[v]:
+			EGt = Insert(EGt, (w,v))
+	return (VGt, EGt)
+```
+
 - I vertici rimangono gli stessi, quindi faccio una semplice copia.
 - Gli archi sono rappresentati dagli adiacenti di un vertice, in questo caso da $v$ a $w$.
 - Basterà quindi inserire nell’insieme degli archi del grafo trasposto $E_{G^{T}}$ , l’arco che va da $w$ a $v$.
@@ -81,11 +91,28 @@ Ad esempio, la componente $j, k, l, m$ ha come rappresentate $j$ solo perché c
 - $scc(l):j\;\;\;\;\;l$ si trova nella componente con rappresentante $j$
 - $scc(m):j\;\;\;\;\;m$ si trova nella componente con rappresentante $j$
 
+```python
+def DFS_SCC(G, S):
+	(c,scc) = Init(G)
+	while isNotEmpty(S):
+		(S,v) = TopAndPop(S)
+		if c(v) = bn:
+			(c,scc) = DFS_SCC_Visit(G,c,scc,v,v)
+	return scc
+```
 
-![[Pasted image 20230910164803.png|600]]
 - $Init$ imposta i colori dei vertici a bianco e dichiara un vettore $scc$
 - Scorre i vertici dello stack, ovvero i vertici dell’ordinamento topologico ordinati in ordine inverso sul tempo di fine visita, ed esegue una $\textbf{DFS}$ su di essi.
-![[Pasted image 20230910164902.png|600]]
+```python
+def DFS_SCC_Visit(G, c, scc, v, w)
+	(c(w), scc(w)) = (gr , v)
+	for z in Adj[w]:
+		if c(z) = bn:
+			(c,scc) = DFS_SCC_Visit(G, c, scc, v, z)
+	c(w) = nr
+	return (c, scc)
+```
+
 - Il parametro $v$ è il vertice rappresentante della componente.
 - Il parametro $w$ è il vertice attuale.
 - Lo scopo è quello di scendere in profondità impostando la componente rappresentante di ogni vertice della componente, ovvero $scc(w) \leftarrow v$ 

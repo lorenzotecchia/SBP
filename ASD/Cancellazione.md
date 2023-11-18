@@ -35,7 +35,31 @@ Questa è la funzione che verrà chiamata per eliminare il nodo contente il dato
 - Sia $Skip$ che [[Minimo-Massimo#$Get &DeleteMIN$|Get&Delete]] restituiscono un nodo a $DeleteNode$  
 - La funzione $DeleteNode$ restituirà un nodo che sarà restituito alla chiamata ricorsiva di $Delete$. Questo verrà inserito al posto del nodo da eliminare
 
-![[Pasted image 20230830100219.png]]
+```python 
+def Delete(x, d)
+	if x = NULL:  # dato non trovato
+		return NULL
+	# cerco il nodo che contiene il dato
+	if d > x.dato:
+		x.dx = Delete(x.dx, d)
+	else if d < x.dato:
+		x.sx = Delete(x.sx, d)
+	else   # nodo trovato  
+		return DeleteNode(x)
+	return x
+```
+
+```python
+def DeleteNode(x):
+	if x.sx = NULL:
+		return SkipRight(x)
+	else if x.dx = NULL:
+		return SkipLeft(x)
+	else
+		x.dato = GetAndDeleteMin(x.dx, x)
+		return x
+```
+
 [[Minimo-Massimo#^get-delete-min|Get&DeleteMin]]
 
 ---

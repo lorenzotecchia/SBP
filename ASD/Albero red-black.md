@@ -200,18 +200,18 @@ def DeleteNodeRB(x):
 	else if d > x.dato:
 		x = SkipLeftRB(x)
 	else
-		x.dato = GetDeleteMinRB(x.dx, x)
+		x.dato = GetAndDeleteMinRB(x.dx, x)
 		x = RDelBalanceRB(x)
 	return x
 ```
 
 ```python
-def GetDeleteMinRB(x, p):
+def GetAndDeleteMinRB(x, p):
 	if x.sx != NULL:
 		d = x.dato
 		y = SkipRightRB(x)
 	else
-		d = GetDeleteMinRB(x.sx, x)
+		d = GetAndDeleteMinRB(x.sx, x)
 		y = LDelBalanceRB(x)
 	SwapChild(p, x, y)
 	return d
