@@ -47,8 +47,6 @@ z(n) \\
 > - $f_{i}(n) = \frac{n}{4}$(suddivisione input)
 > - $g(n) = n^{2}$(tempo di esecuzione della altre istruzioni)
 > Avremo la seguente equazione asintotica:$$T(n)= \begin{cases}1 & \text { se } n \leq 1 \\ 2 T\left(\frac{n}{4}\right)+n^2 & \text { se } n>1\end{cases}$$
-> Che viene rappresentata dal seguente albero di ricorrenza:
-> ![[Pasted image 20231117153222.png]]
 > Dall'albero di ricorrenza capiamo che il termine generale di un input al livello i-esimo è $\frac{n}{4^{i}}$(termine che ci permette di calcolare l'altezza dell'albero)
 > Si noti che vale la seguente proprietà: $$f_i(n)=f_j(n), \forall 1 \leq i, j \leq z(n)$$
 > Quindi ogni nodo di ciascun livello ha lo stesso input $\rightarrow$
@@ -58,6 +56,8 @@ z(n) \\
 > - E così via
 > È conveniente mantenere i risultati il più generale possibile(senza semplificare) in modo da non perdere le relazioni tra i livelli e poterne ricavare più semplicemente la somma
 > Per il calcolo totale possiamo isolare i livelli (quindi calcolare il contributo di ongi livello) e in seguito effettuare un'unica somma in verticale(è necessario conoscere l'altezza dell'albero). 
+
+![[Pasted image 20231117153222.png]]
 Dunque:
 
  |   Livello   | Contributo                                  |
@@ -88,6 +88,108 @@ T(n)=\sqrt{n}+k n^2=k n^2+n^{\frac{1}{2}}=\Theta\left(n^2\right)$$
 > Per $n = 1$ risulta $f(1) = 0$, ma allora la nostra sommatoria tenderà ad una costante $c$ tale che $0 \leq c \leq \frac{8}{7}$ dunque:$$
 T(n)=\sqrt{n}+c n^2 \Theta\left(n^2\right)$$
 
+---
+
+>[!example] # Secondo esempio sulle equazioni di ricorrenza
+> $$T(n)\left\{\begin{array}{l}
+1 \text { se } n \leq 2 \\
+3 T(\sqrt{n})+1 \text { se n }>2
+\end{array}\right.$$
+> Da questa funzione, possiamo immaginare di avere una altezza dell'albero minore rispetto all'esempio precedente(la funzione cresce più lentamente di $\frac{n}{4} \rightarrow$ il numero di figli non influisce sull'altezza dell'albero ma solo sulla sua ampiezza). Ciò significa che arriverà al caso base più velocemente.
+
+![[Pasted image 20231118161216.png]]
+
+| Livello | Input per ogni nodo   | Contributo per ogni nodo | Contributo del livello |
+| ------- | --------------------- | ------------------------ | ---------------------- |
+| $0$     | $n$                   | $1$                      | $1$                    |
+| $1$     | $n^{\frac{1}{2}}$     | $1$                      | $3$                    |
+| $2$     | $n^{\frac{1}{2^{2}}}$ | $1$                      | $3^{2}$                |
+| $3$     | $n^{\frac{1}{2^{3}}}$ | $1$                      | $3^{3}$                | 
+
+>[!example] # Secondo esempio sulle equazioni di ricorrenza
+> Dunque, il contributo per il livello $i$ è $3^{i}$, mentre il suo input è $\frac{1}{2^{i}}$.
+> Andiamo quindi a calcolare l'altezza dell'albero confrontandolo con il massimo input per cui è verificato il caso base (quindi sarà il contributo del caso base per la dimensione del massimo input $1 \cdot 2$):
+> $$(n)^{\frac{1}{2^i}}=2 \Longrightarrow \log (n)^{\frac{1}{2^i}} \Longrightarrow \frac{1}{2^i} \log n=1 \Longrightarrow \log n=2^i \Longrightarrow \log (\log n)=i$$
+> ***NOTA:*** $\log(n) > \log(\log(n)) \rightarrow$ La supposizione fatta all'inizio è ora evidentemente vera, infatti $\log(\log(n))$ è esponenzialmente minore di $\log(n)$.
+> Per quanto riguarda il numero di foglie avremo $3^{h} = 3^{\log(\log(n))} = (\log(n))^{\log(3)}$ e dunque:
+> $$\begin{gathered}
+T(n)=(\log n)^{\log 3}+\sum_{i=0}^{\log (\log n)-1} 3^i=(\log n)^{\log 3}+\frac{3^{\log (\log n)}-1}{2}=(\log n)^{\log 3}+\frac{1}{2}(\log n)^{\log 3}-\frac{1}{2}= \\
+\Theta\left((\log n)^{\log 3}\right)
+\end{gathered}$$
+
+---
+
+>[!example] # Terzo esempio sulle equazioni di ricorrenza
+> Prendiamo la seguente equazione di ricorrenza che ha $f_{1}= \frac{n}{2}$ e $f_{2}=\frac{n}{3}$:
+> $$T(n)=\left\{\begin{array}{l}
+1 \text { se } n \leq 1 \\
+T\left(\frac{n}{2}\right)+T\left(\frac{n}{3}\right)+n \text { se } n>1
+\end{array}\right.$$
+> Applichiamo quindi la tecnica dell'albero di ricorrenza
+
+![[Pasted image 20231118162359.png]]
+
+| Livello     | $n$                                                                    |
+| ----------- | ---------------------------------------------------------------------- |
+| Livello $1$ | $\frac{n}{2}+ \frac{n}{3} = \frac{5}{6}n$                              |
+| Livello $2$ | $\frac{n}{4}+ \frac{n}{6} + \frac{n}{6} \frac{+n}{9} = \frac{25}{36}n$ |
+| Livello $3$ | $\frac{n}{8} + \frac{3}{12}n + \frac{3}{18}n + \frac{n}{28} = \frac{5^{3}}{6^{3}}n$                                                                       |
+
+>[!example] # Terzo esempio sulle equazioni di ricorrenza
+> Come si può notare anche dalla forma approssimata dell'albero, è evidente che ci saranno dei rami (sequenze discendenti di nodi) di questo arrivano che arrivano prima alle foglie e percorsi che arrivano dopo. Nello specifico il ramo più a sinistra decresce più lentamente del ramo più a destra $\rightarrow$ Al livello $3$ infatti avremo input di $\frac{n}{8}$ per primo e $\frac{n}{27}$ per secondo.
+> Dall'associazione del contributo totale di ogni livello (sommando il contributo di ogni nodo) possiamo trarre che per un livello $i$ avremo $\left(\frac{5}{6}\right)^{i}n$ come termine genrale
+> A questo punto non possiamo procedere come negli esempi precedenti $\rightarrow$ È importante notare che la relazione calcolata precedentemente vale solo per i livelli **pieni**, ovvero quei livelli che hanno il numero massimo di nodi possibile.
+> L'albero in questione non è pieno, tuttavia prendendo solo i livelli pieni, è evidente che è possibile ottenere un nuovo albero con un tempo di esecuzione minore rispetto a quello da calcolare $\rightarrow$ Sarà quindi un limite inferiore asintotico per $T(n)$
+> Analogamente, otterremo un notevole limite asintotico, se approssimando per eccesso, *fingiamo* che tutti i livelli del nostro albero siano pieni. Vale il termine generale:
+> ![[Pasted image 20231118163442.png]]
+> I $2$ diversi alberi avranno uno l'altezza del percorso più breve e l'altro quella del percorso più lungo.
+> Per il calcolo di questi valori si utilizza sempre lo stesso metodo visto finora:
+> - L'altezza del percorso più lungo, poiché si divide sempre per $2$, si otterrà con la seguente relazione $\frac{n}{2^{i}} = 1 \Longrightarrow \log(n) = 2^{i} = \log(n)$
+> - L'altezza del percorso breve sarà invece $\log(n) = 3^{i} \Longrightarrow i = \log_{3}(n)$
+> A questo punto è possibile calcolare i tempi di esecuzione delle $2$ approssimazioni
+> ***NOTA*** Non useremo la forma completa poiché con buona approssimazione possiamo considerare il contributo dell'ultimo livello come se fosse un livello interno (andiamo ad approssimare per eccesso il contributo delle foglie):
+> $$\begin{gathered}
+T^i(n)=\sum_{i=0}^{\log _3 n}\left(\frac{5}{6}\right)^i=n \sum_{i=0}^{\log _3 n}\left(\frac{5}{6}\right)^i \underbrace{\Longrightarrow}_{\text {serie geometrica con ragione }<1} T^i(n)=\Theta(n) \\
+T^{i i}(n) \sum_{i=0}^{\log n}\left(\frac{5}{6}\right)^i n=n \sum_{i=0}^{\log n}\left(\frac{5}{6}\right)^i=\Theta(n)
+\end{gathered}$$
+> Entrambe sono comprese tra 1 e $\frac{1}{1-\frac{5}{6}}=6$
+> Ma allora $T(n) = \Theta(n)$ essendo limitata sia superiormente che inferiormente da funzioni lineari
+
+---
+
+>[!example] # Quarto esempio sulle equazioni di ricorrenza
+> $$
+T(n)=\left\{\begin{array}{l}
+1 \text { se } n \leq 1 \\
+T\left(\frac{n}{2}\right)+T\left(\frac{n}{3}\right)+n \text { se } n>1
+\end{array}\right.$$
+
+![[screenShot 2023-11-18 at 16.42.32.png]]
+
+| Livello | Contributo                      |
+| ------- | ------------------------------- |
+| $0$     | $n$                             |
+| $1$     | $\frac{4}{3}n$                  |
+| $2$     | $\left(\frac{4}{3}\right)^{2}n$ |
+| $3$     | $\left(\frac{4}{3}\right)^{3}n$ |
+| $\dots$ | $\dots$                         |
+| $i$     | $\left(\frac{4}{3}\right)^{i}n$ | 
+
+>[!example] # Quarto esempio sulle equazioni di ricorrenza
+> Anche se questo albero di ricorrenza ha una diversa struttura rispetto l'esempio precedente, i problemi sono gli stessi, e quindi anche il modo per risolverli:
+> L'altezza dell'albero pieno che farà da limite inferiore asintotico sarà quello con percorso più breve, dunque
+> $$n=3^h \rightarrow h=\log _3 n$$
+> Invece l'albero che farà da limite superiore avrà altezza $\log(n)$. Dunque:
+> $$T^i(n)=\sum_{i=0}^{\log _3 n}\left(\frac{4}{3}\right)^i n \wedge T^{i i}(n) \sum_{i=0}^{\log n}\left(\frac{4}{3}\right)^i n$$
+> A differenza dell'esempio precedente, la serie geometrica in questione non ha ragione compresa tra $0$ e $1$; pertanto bisognerà usare la forma chiusa della serie geometrica:
+> $$\begin{aligned}
+& T^{\prime}(n)=n \sum_{i=0}^{\log _3 n}\left(\frac{4}{3}\right)^i=n \frac{\left(\frac{4}{3}\right)^{\log _3 n+1}-1}{\frac{4}{3}-1}=3 n\left(\frac{4}{3} \cdot\left(\frac{4}{3}\right)^{\log _3 n}-1\right)=3 n\left(\frac{4}{3} \cdot n^{\log _3 \frac{4}{3}}-1\right) \\
+& =4 n \cdot n^{\log _3 \frac{4}{3}}-3 n=4 \underbrace{\left(n^{\log _3\left(\frac{4}{3}+1\right)}\right)}_{\text {cresce pi velocemente di un } \Theta(n)}-3 n=\Theta\left(n^{\log _3\left(\frac{4}{3}+1\right)}\right) \\
+& T^{\prime \prime}(n)=n \sum_{i=0}^{\log }\left(\frac{4}{3}\right)^i=\Theta\left(n^{\log \left(\frac{4}{3}+1\right)}\right) \\
+&\end{aligned}$$
+> Per quanto siano molto vicine queste funzioni hanno **esponente diverso**$\rightarrow$ Per tanto la relazione:
+> $$T^{\prime}(n) \leq T(n) \leq T^{\prime \prime}(n)$$
+> Possiamo soltanto dire che $T(n)=\Omega\left(n^{\log \left(\frac{4}{3}+1\right)}\right)$ e $T(n)=O\left(n^{\log \left(\frac{4}{3}+1\right)}\right)$(nulla di più).
 ## Risoluzioni
 ### Sostituzione
 Nel ***metodo di sostituzione***, ipotizziamo un limite e poi usiamo l'induzione matematica per dimostrare che la nostra ipotesi sia corretta
@@ -108,12 +210,7 @@ Ad ogni passo quindi:
 - Verifichiamo il contributo dei nodi
 - Calcoliamo il numero di rami ad ogni chiamata ricorsiva
 - Calcoliamo il totale moltiplicando il contributo dei nodi per il numero di rami
-#### Esempio
-| Livello | Input             | Contributo        | Rami                                                   | Totale                                   |
-| ------- | ----------------- | ----------------- | ------------------------------------------------------ | ---------------------------------------- |
-| 0       | $n$               | $n$               | 1                                                      | n                                        |
-| 1       | $n^{\frac{1}{3}}$ | $n^{\frac{1}{3}}$ | $n^{\frac{2}{3}}$                                      | $n^{\frac{1}{3}}\cdot n^{\frac{2}{3}}=n$ |
-| 2       | $n^{\frac{1}{9}}$ | $n^{\frac{1}{3}}$ | $n^{\frac{2}{3}}\cdot n^{\frac{2}{9}}=n^{\frac{8}{9}}$ |$n^{\frac{1}{9}}\cdot n^{\frac{8}{9}}=n$                                          |
+
 ### Metodo dell'esperto
 Il ***metodo dell'esperto*** fornisce i limiti per ricorrenze nella forma $$T(n)=a\;T(n/b)+f(n)$$
 dove $a\geq 1, b > 1$ e $f(n)$ è una funzione data.
