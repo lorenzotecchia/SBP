@@ -10,10 +10,32 @@ tags:
 Insertion sort è un [[algoritmo]]  di [[ordinamento]] abbastanza efficiente per l'ordinamento di array di piccole dimensioni.
 
 #### Pseudo codice
-![[Pasted image 20230826171202.png]]
+###### Algoritmo Ricorsivo
+```python
+def InsertionSort(A, n):
+	if n > 1:
+		InsertionSort(A, n-1)
+		Insert(A, n-1)
+```
+###### Algoritmo Iterativo
+```python
+def InsertionSort(A, n):
+	for i = 1 in range(n-1):
+		Insert(A, i)
+```
+
+```python
+def Insert(A, i):
+	x = A[i]
+	j = i - 1
+	while (j >= 0 and A[j] > x):
+		A[j+1] = A[j]
+		j--
+	A[j+1] = x
+```
 ---
 #### Correttezza
-----
+---
 #### [[Analisi asintotica|Analisi]] dell'algoritmo iterativo
 $$\sum^{n}_{i=1}T_{insert}(A,i) = \sum^{n}_{i=1}\Theta (k^{A}_{i}) = \Theta(\sum^{n}_{i=1}k^{A}_{i})$$
 - Se $k^{A}_{i} = i$ (_caso peggiore_)
