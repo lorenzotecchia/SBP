@@ -9,14 +9,12 @@ tags:
 ```python
 def BFS(G, v):
 	Init(G, c)
-	Q = Enqueue(Q, v)
-	c(v) = gr
+	(Q, c(v)) = (Enqueue(Q, v), gr)
 	while isNotEmpty(Q):
 		(Q,v) = HeadAndDequeue(Q)
 		for u in Adj[v]:
 			if c(v) = bn:
-				Q = Enqueue(Q, u)
-				c(u) = gr
+				(Q, c(u)) = (Enqueue(Q, u), gr)
 		c(v) = nr	
 ```
 
@@ -25,7 +23,6 @@ def Init(G, c):
 	for v in V:
 		c(v) = bn
 ```
-![[Pasted image 20230908122516.png|600]]
 #### Colori
 - $bn$ Bianco: non scoperto
 - $gr$ Grigio: scoperto ma non visitato

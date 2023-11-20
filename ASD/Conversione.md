@@ -73,16 +73,6 @@ Nelle non-tail recursive salviamo le variabili in uno **stack**. Non è possibi
 ## Traduzione di un algoritmo
 Questo è un algoritmo che lavora su un [[Tree|albero]]; non c’è semantica, serve solo come esempio per vedere la traduzione da ricorsivo a iterativo.
 
-```python
-def RecFun(x, i, j):
-	a = Fi(i, j)
-	if x = NULL:
-		m = Fnull(a)
-	else
-		(Kl, Hl) = Fpre(x, a)
-		Zl = RecFun(x.sx, i, Kl)
-		
-```
 ![[Pasted image 20230911154113.png|400]]
 $F$, in generale, è una certa funzione che elabora i dati e restituisce un valore, il pedice di ognuna serve solo per dare un minimo di significato.
 - $F_{ini}\;\;$ **ini**ziale, viene eseguita all'inizio della funzione ricorsiva

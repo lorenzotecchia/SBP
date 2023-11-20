@@ -21,17 +21,17 @@ Per la [[visita in ampiezza]] c'è bisogno di una [[struttura dati]] accessori: 
 def BFV(x, F, a):
 	if x != NULL:
 		Q = Enqueue(EmptyQueue, x)
-		while(!isEmpty(Q))
+		repeat
 			x = HeadAndDequeue(Q)
 			a = F(x.dato, a)
 			if x.sx != NULL:
 				Q = Enqueue(Q, x.sx)
 			if x.dx != NULL:
 				Q = Enqueue(Q, x.dx)
+		until(isEmpty(Q))
 	return a
 ```
 
-![[Pasted image 20230829172608.png]]
 - $Q$ è la coda, struttura d'appoggio
 - $Enqueue$ inserisce la radice $x$ in $EmptyQueue$ 
 - $EmptyQueue$ è una generica coda vuota

@@ -10,7 +10,7 @@ tags:
 ## [[Algoritmo]]
 
 ```python 
-def Algorithm MergeSort(A, n):
+def algorithmMergeSort(A, n):
 	MergeSort(A, 0, n-1)
 ```
 

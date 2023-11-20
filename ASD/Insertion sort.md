@@ -8,7 +8,6 @@ tags:
 >- [ ] Implementazione in C
 
 Insertion sort è un [[algoritmo]]  di [[ordinamento]] abbastanza efficiente per l'ordinamento di array di piccole dimensioni.
-
 #### Pseudo codice
 ###### Algoritmo Ricorsivo
 ```python
