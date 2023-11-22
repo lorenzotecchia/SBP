@@ -210,7 +210,11 @@ Si noti che $\sum\limits_{q=1}^{n-1}(T_{M}(q))$ e $\sum\limits_{q=1}^{n-1}(T_{M}
 T_M(n) & =\frac{1}{n}\left(O\left(n^2\right)+2 \sum_{q=1}^{n-1} T_M(q)+\sum_{q=1}^{n-1} \Theta(n)\right)=\frac{1}{n}(\underbrace{O\left(n^2+\Theta\left(n^2\right)\right)}_{\Theta\left(n^2\right)}+2 \sum_{q=1}^{n-1} T_M(q)) \\
 & =\frac{\Theta\left(n^2\right)}{n}+\frac{2}{n} \sum_{q=1}^{n-1} T_M(q)=\Theta(n)+\frac{2}{n} \sum_{q=1}^{n-1} T_M(q)
 \end{aligned}$$
+>[!done] Conclusioni
+> Abbiamo dimostrato che nel caso medio `QuickSort` ha un comportamento ottimo $\rightarrow$ Il tempo di esecuzione è quasi sempre $\Theta(n\log(n))$ rendendo nella pratica uno dei migliori algoritmi di ordinamento.
 
+
+ 
 
 ---
 ## Implementazione in C

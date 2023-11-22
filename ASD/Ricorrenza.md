@@ -190,28 +190,49 @@ T\left(\frac{n}{2}\right)+T\left(\frac{n}{3}\right)+n \text { se } n>1
 > Per quanto siano molto vicine queste funzioni hanno **esponente diverso**$\rightarrow$ Per tanto la relazione:
 > $$T^{\prime}(n) \leq T(n) \leq T^{\prime \prime}(n)$$
 > Possiamo soltanto dire che $T(n)=\Omega\left(n^{\log \left(\frac{4}{3}+1\right)}\right)$ e $T(n)=O\left(n^{\log \left(\frac{4}{3}+1\right)}\right)$(nulla di più).
-## Risoluzioni
+# Validare equazioni di ricorrenza
+[[Quick sort]]
+Dimostriamo che $T_{M}(n) = O(n)$ così da confermare $T_{M}(n) = \Theta(n \log(n))$; bisogna verificare (utilizzando l'induzione) che 
 ### Sostituzione
-Nel ***metodo di sostituzione***, ipotizziamo un limite e poi usiamo l'induzione matematica per dimostrare che la nostra ipotesi sia corretta
-#### Esempio
-### Albero delle ricorrenze
-Il ***metodo dell'albero delle ricorrenze o albero di [[ricorsione]]*** converte la ricorrenza in un albero i cui nodi rappresentano i costi ai vari livelli della ricorsione; per risolvere la ricorrenza, adotteremo delle tecniche che limitano le sommatorie.
->[!tip] 
-> Di solito, in questo caso, è buona norma andare a disegnare l'albero delle ricorrenze fino ad un livello che ci permetta di interpretare l'andamento
+Nel ***metodo di sostituzione***, ipotizziamo un limite e poi usiamo l'induzione matematica per dimostrare che la nostra ipotesi sia corretta $$
+\exists c, n_0>0: \forall n \geq n_0, T_M(n) \leq c(n \log n)$$
+Il caso induttivo sarà evidentemente valido per $n\geq 2$, essendo il caso $n=1$ non verificato; visto che $\log(1) = 0$ risulta che $T_{M}\leq 0$(ciò è assurdo), e di conseguenza il caso base è $n=2$.
+Grazie al fatto che $1 \leq q \leq n-1$ possiamo scrivere $T_{M}(q) \leq c(q\log(q))$ (questa sarà la nostre ipotesi induttiva); per transitività risulta:$$
+T_M(n)=\Theta(n)+\frac{2}{n} \sum_{q=1}^{n-1} T_M(q) \leq \Theta(n)+\frac{2}{n} \sum_{q=1}^{n-1} c(q \log q)$$
+Assumiamo per il momento che sia vera la seguente proprietà (che andremo a dimostrare successivamente):$$\sum_{q=1}^{n-1}(q \log q) \leq \frac{n^2 \log n}{2}-\frac{n^2}{8}$$
+Da ciò segue:$$T_M(n) \leq \Theta(n)+\frac{2 c}{n} \sum_{q=1}^{n-1}(q \log q) \leq \Theta(n)+\frac{2 c}{n}\left(\frac{n^2 \log n}{2}-\frac{n^2}{8}\right)=\Theta(n)+c(n \log n)-\frac{c n}{4}$$
+A questo punto se dimostriamo che $\Theta(n) - \frac{cn}{4} \leq 0$ allora risulterà (dopo la verifica del caso base) che $T_{M}(n) \leq c(n\log(n))$
+Sappiamo che $\Theta(n)$ è assimilabile ad un $kn$, allora risulta che $kn \leq \frac{cn}{4}$
 
-Quando si risolve un'equazione di ricorrenza con albero delle ricorrenza, vanno tenute a mente le seguenti informazioni:
-1. Numero del livello
-2. Input
-3. Contributo ad ogni livello
-4. Numero di rami
-5. Totale
-Ad ogni passo quindi:
-- Sostituiamo l'input 
-- Verifichiamo il contributo dei nodi
-- Calcoliamo il numero di rami ad ogni chiamata ricorsiva
-- Calcoliamo il totale moltiplicando il contributo dei nodi per il numero di rami
+La costante $k$ è fissata della relazione $Theta$, ma la costante $c$ può essere scelta arbitrariamente. Basta scegliere pertanto $c \geq 4k$ per concludere che:$$T_M(n)=O(n \log n) \text { per } n \geq 2$$
+### Validazione per il caso base $b=2$
+$$
+T_M(2)=\Theta(1)+\frac{2}{2} \sum_{q=1}^2 T_M q=\Theta(1)+T_M(1)=\underbrace{\Theta(1)}_{\begin{array}{c}
+\text { costo di } \\
+\text { partiziona }
+\end{array}}+\underbrace{\Theta(1)}_{\begin{array}{c}
+\text { cel'equazione dise } \\
+\text { cricorrenza }
+\end{array}}=k+a$$
+Per $c \geq k +a$ anche il caso base è verificato.
 
-### Metodo dell'esperto
-Il ***metodo dell'esperto*** fornisce i limiti per ricorrenze nella forma $$T(n)=a\;T(n/b)+f(n)$$
-dove $a\geq 1, b > 1$ e $f(n)$ è una funzione data.
-#### Esempio
+Se scelgo un $c= max\{k+a, 4k\}$ vale sia il caso base che quello induttivo e quindi risulta dimostrata nella nostra tesi $T_{M}(n) = O(n\log(n))$, da cui per il teorema secondo il quale un algoritmo di ordinamento non può essere meno di $n\log(n)$, segue:$$T_{M}(n) = \Theta(n\log(n))$$
+### Maggiorazione di una sommatoria
+$$\sum_{q=1}^{n-1}(q \log q) \leq \frac{n^2 \log n}{2}-\frac{n^2}{8}$$
+
+Dimostriamo la precedente assunzione, il modo più semplice per maggiorare $\sum\limits_{q=1}^{n-1}$ è sfruttare il fatto che $q < n$(ricavato da $1 \leq q \leq n-1$) e quindi $\log(n) \Longrightarrow q \log(q ) \leq q \log(n)$, dunque:$$\sum_{q=1}^{n-1}(q \log q) \leq \sum_{q=1}^{n-1}(q \log n)=\log n \sum_{q=1}^{n-1} q=\log n \cdot \frac{n(n-1)}{2}=\frac{n^2 \log n}{2}=\frac{n \log n}{2}$$
+Tuttavia $frac{n\log\n}{2} \leq \frac{n^{2}{8}}\rightarrow$ Significa che la nostra maggioranza è stata eccessiva. Quello che possiamo fare è spezzare la sommatoria in due parti così da fare approssimazioni più precise:$$
+\begin{aligned}
+& \sum_{q=1}^{n-1}=\underbrace{\sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1}(q \log q)}_{q \leq\left\lceil\frac{n}{2}\right\rceil}+\underbrace{\sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1}(q \log q)}_{\text {approssimiamo }} \leq \sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1}\left(q \log \frac{n}{2}\right)+\sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1}(q \log q)= \\
+& =\log \frac{n}{2} \sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q+\log n \sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1} q=(\log n-1) \sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q+\log n \sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1} q= \\
+& =\underbrace{\log n \sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q+\log n \sum_{q=\left\lceil\frac{n}{2}\right\rceil}^{n-1} q}_{\text{uniamo le due sommatorie}}-\sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q=\log n \sum_{q=1}^{n-1} q-\sum_{q=1}^{\left\lceil\frac{n}{2}\right\rceil-1} q \\
+\end{aligned}$$
+Ora $\log(n)\sum\limits_{q=1}^{n-1}(q)$ l'abbiamo già risolta; visto che stiamo maggiorando non c'è problema a sottrarre qualcosa di più piccolo e quindi sfruttiamo il fatto che $\lceil \frac{n}{2} \rceil \geq \frac{n}{2}$
+$$
+\begin{aligned}
+\sum_{q=1}^{n-1} \leq\left(\frac{n^2 \log n}{2}-\frac{n \log n}{2}\right)-\sum_{q=1}^{\frac{n}{2}-1} q & =\frac{n^2 \log n}{2}-\frac{n \log n}{2}-\frac{\frac{n}{2}\left(\frac{n}{2}+1\right)}{2}= \\
+& =\frac{n^2 \log n}{2}-\frac{n \log n}{2}-\frac{n^2}{8}+\frac{n}{4} \leq \frac{n^2 \log n}{2}-\frac{n^2}{8}
+\end{aligned}$$
+Poiché $\frac{n\log(n)}{2} \geq \frac{n}{4}$ e quindi $\frac{n}{4} - \frac{n\log(n)}{2} \leq 0$, togliendo un valore negativo la maggioranza resta valida.
+
+
