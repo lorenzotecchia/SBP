@@ -8,9 +8,9 @@ Un [[Tree|albero]] di decisione è un [[Albero binario#^ff6165|albero binario c
 L’[[ordinamento]], in un’albero di decisione, consiste nel tracciare un [[Path|percorso]] a partire dalla radice fino ad una foglia; ogni nodo attraversato rappresenta un confronto e la foglia contiene la sequenza ordinata.
 
 ---
-Un algoritmo di ordinamento per confronti, dev’essere in grado di generare tutte le $n!$ permutazioni dell’array in input, dato che solo una di questa sarà la sequenza ordinata. ^cfb8cd
+Un [[algoritmo]] di ordinamento per confronti, dev’essere in grado di generare tutte le $n!$ permutazioni dell’array in input, dato che solo una di questa sarà la sequenza ordinata. 
 
-Di conseguenza, l’albero di decisione avrà $n!$ foglie, dato che ogni foglia rappresenta la sequenza ordinata in base alla sequenza in input.
+Di conseguenza, l’albero di decisione avrà $n!$([[Fattoriale|fattoriale]]) foglie, dato che ogni foglia rappresenta la sequenza ordinata in base alla sequenza in input.
 
 La lunghezza di un percorso è paragonabile al tempo di esecuzione dell’algoritmo d’ordinamento: 
 - il percorso più lungo è il caso peggiore dell’algoritmo  
@@ -18,7 +18,7 @@ La lunghezza di un percorso è paragonabile al tempo di esecuzione dell’algor
 
 Prendiamo ad esempio, una sequenza ($k_1, k_2, k_3$) questo è il suo albero di decisione
 ![[Pasted image 20230829131540.png]]
-Un albero di altezza $h$ possiede $2^{h}$ foglie.
+Un albero di [[altezza]] $h$ possiede $2^{h}$ foglie.
 Essendo l'albero di decisione completo fino all'altezza $h-1$, e avendo $n!$ foglie, si ha che :
 $$2^{h-1} \leq n! \leq 2^{h} \rightarrow h-1 \leq \log(n-1) \leq h \rightarrow \log(n!) \rightarrow
 $$
@@ -36,7 +36,7 @@ Ne consegue che l'altezza di un albero di decisione non può essere meno di $\lo
 n !=\prod_{i=1}^n i \Longrightarrow \log (n !)=\log \left(\prod_{i=1}^n i\right) \stackrel{\log (a \cdot b)=\log a+\log (b)}{=} \log (n !)=\sum_{i=1}^n \log i \leq h$$
 Essendo interessati ad una stima di questa sommatoria, proviamo a maggiorarla. Cerchiamo quindi qualcosa di più piccolo in modo da poter avere $h \geq \sum\limits_{i=1}^{n}\log(i) \geq ( )$. Sappiamo che:$$
 \sum_{i=1}^n \log i \leq \sum_{i=1}^n \log n=n \log n \Longrightarrow \sum_{i=1}^n \log i=O(n \log n)$$
-(non molto utile $\rightarrow$ il nostro scopo è garantire che $h$ abbia un limite inferiore asintotico).
+(non molto utile $\rightarrow$ il nostro scopo è garantire che $h$ abbia un [[limite inferiore]] asintotico).
 $$
 \sum_{i=1}^n \log i \geq \underbrace{\sum_{i=\left\lceil\frac{n}{2}\right\rceil}^n \log i}_{\begin{array}{c}
 \text { sommo meno } \\

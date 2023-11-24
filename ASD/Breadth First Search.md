@@ -28,12 +28,12 @@ def Init(G, c):
 - $gr$ Grigio: scoperto ma non visitato
 - $nr$ Nero: visitato
 
-***Init:*** prende in ingresso un [[grafo]] $G$ e un [[array]] $c$ il quale tiene traccia del colore del nodo $v$ Imposta a bianco di tutti i nodi del grafo $G$
+***Init:*** prende in ingresso un [[grafo]] $G$ e un [[Ricerca binaria]] $c$ il quale tiene traccia del colore del nodo $v$ Imposta a bianco di tutti i nodi del grafo $G$
 
 Dato che un grafo non ha un nodo radice dal quale partire, basta quindi un nodo arbitrario v dal quale partire.
 La funzione ***BFS*** quindi prende in ingresso il grafo e il nodo dal quale partire:
 
-1. Si inizializza il [[array|vettore]] dei colori dei vertici $c$ con il colore che identifica che il nodo non è stato scoperto, ovvero
+1. Si inizializza il [[Ricerca binaria|vettore]] dei colori dei vertici $c$ con il colore che identifica che il nodo non è stato scoperto, ovvero
     ***il bianco*** (avendo prima specificato il significato dei tre colori).
 2. Ogni volta che si incontra un nodo ***bianco*** vuol dire che lo si vuole visitare, quindi lo inserisco in coda e imposto il colore a ***grigio***; ovvero lo scopro ma non lo visito, lo visiterò quando arriverà il suo turno.  
     Quindi come seconda cosa, scopro $v$. Lo metto in [[coda]] e lo coloro di ***grigio***.

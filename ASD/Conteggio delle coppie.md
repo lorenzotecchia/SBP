@@ -19,7 +19,7 @@ def contaCoppie(N):
 	return ris
 ```
 
->[!note] La correttezza di questo algoritmo è ovvia, intuitivamente è la soluzione peggiore per poter risolvere il problema, generiamo anche coppie inutili.
+>[!note] La correttezza di questo [[algoritmo]] è ovvia, intuitivamente è la soluzione peggiore per poter risolvere il problema, generiamo anche coppie inutili.
 > Parliamo, appunto di ***soluzione naive***.
 
 Risulta naturale notare delle imprecisioni nel conteggio delle operazioni elementari in alcune linee (ad esempio alla riga $7$ oltre alla scrittura c’è anche una lettura), ma come sarà evidente, ciò non influisce sull’analisi (si potrebbe provare a rieseguire i seguenti calcoli con altri valori).
@@ -32,7 +32,7 @@ La riga $3$ si ripete $n + 1 \cdot \left(\sum\limits^{i=1}_{n+1}\right)\text{vol
 
 La riga $4$ invece, $n+1$ volte per ogni volta che si ripete il precedente quindi: $\sum\limits^{i=1}_{n}(\sum\limits^{j=1}_{n+1}1)$. Il totale, quindi sarà $2 \cdot (n+1)$
 
-La riga $5$ si ripete $\sum\limits_{i=1}^{n}\left(\sum\limits_{j=1}^{n+1}1\right)= n^{2}, \text{dunque} 3n^2$
+La riga $5$ si ripete $\sum\limits_{i=1}^{n}\left(\sum\limits_{j=1}^{n+1}1\right)= n^{2}, \;\;\text{dunque}\;\; 3n^2$
 
 La riga $6$ sicuramente si ripete un numero di volte compreso tra $0$ e $n^2$, quindi il valore della linea di codice è $0 \leq x \leq n^{2}$.
 
@@ -40,7 +40,7 @@ La riga $6$ sicuramente si ripete un numero di volte compreso tra $0$ e $n^2$, q
 Ora non ci resta che analizzare la complessità totale:$$\begin{align}T_1(n) &= 1 + 2(n+1) + 2n(n+1)+3n^{2}+x+1 \\
 &= 1 +2n+2+2n^{2}+2n+3n^{2}+x+1 \\ &= 5n^{2}+4n+4+x
 \end{align}$$
-È importante notare che il valore di $x$ non influisce sul risultato dell'analisi poiché l'espressione sarà sempre del tipo $an^{2}+bn + c$, dunque è una funzione parabolica. Avrà quindi tempo di esecuzione **quadratico** sulla dimensione dell'input.
+È importante notare che il valore di $x$ non influisce sul risultato dell'analisi poiché l'espressione sarà sempre del tipo $an^{2}+bn + c$, dunque è una [[funzione]] parabolica. Avrà quindi tempo di esecuzione **quadratico** sulla dimensione dell'input.
 
 ### Soluzione 2
 Visto che una coppia vale come contributo al risultato solo quando il secondo elemento è maggiore del primo è evidente che possiamo migliorare il precedente algoritmo nel seguente modo:
