@@ -35,6 +35,7 @@ Dato un grafo pesato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un perco
 #### Corollario 1
 Dato un grafo pesato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$ , allora  $\delta(v_1, v_k)\leq\delta(v_1, v_{k-1})+w(v_{k-1}, v_k)$
 
+
 ---
 #### Lemma 2
 Dato un grafo pesato $G =(V, E, w)$ e $s \in V$. Per ogni arco $(u, v)\in E$ vale che:
@@ -47,6 +48,15 @@ Dato un grafo pesato $G =(V, E, w)$ e  un arco $(u, v) \in E$, immediatamente do
 ---
 #### Lemma 4
 Dato un grafo pesato $G =(V, E, w)$ e posti $d[v]= \infty$,  $\forall v \in V \setminus \{s\}$ e $d[s] = 0$ lungo una qualsiasi sequenza di operazioni di rilassamento vale sempre: $d[v]\geq \delta(s, v)$  $\forall v \in V$
+
+#### Dimostrazione
+Dimostrazione per induzione sul numero delle operazioni di rilassamento $i$:
+-Caso base : $i =0$, è ovvio, perchè non viene eseguita nessuna operazione di rilassamento.
+-Caso induttivo: $i >0$, prima della $i-esima$ operazione vale ,per ipotesi induttiva, che: $\forall v \in V, \ d[v]\geq\delta(s, v)$
+
+Consideriamo un arco $(x, y)\in E$, su cui eseguo $Relax(x, y, w)$; poichè l'operazione di rilassamento modifica soltanto $d[y]$, sicuramente $\forall v \in V \setminus\{y\}$vale: $d[v]\geq\delta(s, v)$
+
+Due casi:
 
 ---
 #### Corollario 2
