@@ -31,21 +31,35 @@ Dato un grafo pesato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un perco
 >[!note] 
 > Ogni percorso minimo tra due vertici contiene a sua volta percorsi minimi.
 
+---
 #### Corollario 1
 Dato un grafo pesato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$ , allora  $\delta(v_1, v_k)\leq\delta(v_1, v_{k-1})+w(v_{k-1}, v_k)$
 
+---
 #### Lemma 2
 Dato un grafo pesato $G =(V, E, w)$ e $s \in V$. Per ogni arco $(u, v)\in E$ vale che:
 $\delta(s, v)\leq\delta(s, u)+w(u, v)$.
 
+---
 #### Lemma 3
 Dato un grafo pesato $G =(V, E, w)$ e  un arco $(u, v) \in E$, immediatamente dopo l'esecuzione di $Relax(u, v, w)$ varrà che: $d[v]\leq d[u]+ w(u, v)$.
 
+---
 #### Lemma 4
 Dato un grafo pesato $G =(V, E, w)$ e posti $d[v]= \infty$,  $\forall v \in V \setminus \{s\}$ e $d[s] = 0$ lungo una qualsiasi sequenza di operazioni di rilassamento vale sempre: $d[v]\geq \delta(s, v)$  $\forall v \in V$
 
+---
+#### Corollario 2
+Siano $s,v \in V$ e sia $s$ la sorgente. Se $v$ è raggiungibile da $s$, in ogni momento lungo una sequenza arbitraria di rilassamenti vale: $d[v]=\delta(s, v)$.
+Consideriamo le stime iniziali: $d[s]=0,\ d[v]=\infty$
 
+Di conseguenza, se $v$ non è raggiungibile da $s$, allora $\delta(s, v)=\infty$ e $d[v]\geq\delta(s, v),\ \forall v \in V$
 
+---
+#### Lemma 5
+Dato un grafo pesato $G =(V, E, w)$ e sia $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$, inizializzando $d[s]= 0,\ d[v]=\infty$. Presa un'arbitraria sequenza di rilassamento che contiene $Relax(v_{k-1},v_k,w)$, se prima dell'esecuzione di $Relax$ $d[v_{k-1}]=\delta(s, v_{k-1})$, allora dopo l'esecuzione di $Relax$ vale: $d[v_k]=\delta(s, v_k)$
+
+---
 #### Algoritmo di Bellman-Ford
 ```python
 def Bellman_Ford(G, s):
