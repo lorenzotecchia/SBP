@@ -13,6 +13,13 @@ $$\delta(u, v) = \begin{cases}\min \{w(p): u \rightarrow v\} & \text { se esiste
 
 Un percorso minimo da $u$ a $v$ è un qualsiasi percorso con peso $w(p)=\delta(u, v)$
 
+>[!important] 
+> L'obiettivo degli algoritmi seguenti è quello di, dato un grafo $G =(V, E, w)$, trovare il percorso minimo da un vertice sorgente $s\in V$ ad un qualsiasi vertice $v\in V$.
+
+#### Archi a peso negativo
+Da scrivere
+
+#### Inizializzare
 ##### Operazione di rilassamento
 
 ```python
@@ -22,14 +29,15 @@ def Relax(u, v, w):
 		Pred[v] = u
 ```
 
-Viene eseguito in tempo costante
+- Viene eseguita in tempo costante
 
 ---
 #### Lemma 1
-Dato un grafo pesato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$ in G, $\forall 1 \leq i  \leq j  \leq k$,  $π_{ij} =v_iv_{i+1}\dots v_j$ è il percorso minimo da $v_i$ a $v_j$.
+Dato un grafo pesato ed orientato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$ in G,  $\forall \ 1 \leq i  \leq j  \leq k$,  $π_{ij} =v_iv_{i+1}\dots v_j$ è il sotto-percorso  da $v_i$ a $v_j$. 
+Allora $π_{ij}$ è un percorso minimo da $v_i$ a $v_j$.
 
 >[!note] 
-> Ogni percorso minimo tra due vertici contiene a sua volta percorsi minimi.
+> Ogni percorso minimo tra due o più vertici contiene a sua volta percorsi minimi.
 
 ---
 #### Corollario 1
@@ -47,14 +55,14 @@ Dato un grafo pesato $G =(V, E, w)$ e  un arco $(u, v) \in E$, immediatamente do
 
 ---
 #### Lemma 4
-Dato un grafo pesato $G =(V, E, w)$ e posti $d[v]= \infty$,  $\forall v \in V \setminus \{s\}$ e $d[s] = 0$ lungo una qualsiasi sequenza di operazioni di rilassamento vale sempre: $d[v]\geq \delta(s, v)$  $\forall v \in V$
+Dato un grafo pesato $G =(V, E, w)$ e posti $d[v]= \infty$,  $\forall v \in V \setminus \{s\}$ e $d[s] = 0$ lungo una qualsiasi sequenza di operazioni di rilassamento vale sempre: $d[v]\geq \delta(s, v), \ \forall v \in V$
 
 #### Dimostrazione
 Dimostrazione per induzione sul numero delle operazioni di rilassamento $i$:
--Caso base : $i =0$, è ovvio, perchè non viene eseguita nessuna operazione di rilassamento.
--Caso induttivo: $i >0$, prima della $i-esima$ operazione vale ,per ipotesi induttiva, che: $\forall v \in V, \ d[v]\geq\delta(s, v)$
+- Caso base : $i =0$, è ovvio, perchè non viene eseguita nessuna operazione di rilassamento.
+- Caso induttivo: $i >0$, prima della $i-esima$ operazione vale ,per ipotesi induttiva, che: $\forall v \in V, \ d[v]\geq\delta(s, v)$
 
-Consideriamo un arco $(x, y)\in E$, su cui eseguo $Relax(x, y, w)$; poichè l'operazione di rilassamento modifica soltanto $d[y]$, sicuramente $\forall v \in V \setminus\{y\}$vale: $d[v]\geq\delta(s, v)$
+Consideriamo un arco $(x, y)\in E$, su cui eseguo $Relax(x, y, w)$; poichè l'operazione di rilassamento modifica soltanto $d[y]$, sicuramente $\forall v \in V \setminus\{y\}$ vale: $d[v]\geq\delta(s, v)$
 
 Due casi:
 
