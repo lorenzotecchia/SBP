@@ -16,11 +16,33 @@ Un percorso minimo da $u$ a $v$ è un qualsiasi percorso con peso $w(p)=\delta(u
 >[!important] 
 > L'obiettivo degli algoritmi seguenti è quello di, dato un grafo $G =(V, E, w)$, trovare il percorso minimo da un vertice sorgente $s\in V$ ad un qualsiasi vertice $v\in V$.
 
+---
 #### Archi a peso negativo
-Da scrivere
+Se un grafo $G = (V, E, w)$ contiene archi a peso negativo ma non contiene cicli a peso negativo raggiungibili da $s$, allora $\forall \ v \in V$, il peso del percorso minimo rimane ben definito.
+Invece, se il grafo contiene cicli a peso negativo raggiungibili da $s$, non è possibile definire un percorso minimo, perchè possiamo trovare sempre un percorso a peso minore seguendo il precedente percorso minimo e passando per un ciclo negativo.
+Quindi, se nel grafo è presente un ciclo a peso negativo raggiungibile da $s$, definiamo $\delta(s, v) = -\infty$.
 
-#### Inizializzare
-##### Operazione di rilassamento
+>[!note] 
+> Un percorso minimo non può contenere nemmeno cicli positivi, perchè togliendo un ciclo da un percorso minimo, trovo un altro percorso minimo.
+
+---
+#### Inizializzazione delle stime
+
+Gli algoritmi che risolvono il problema del percorso minimo usano la tecnica di rilassamento degli archi. Per ogni vertice $v \in V$, viene conservato un attributo, $d[v]$, che indica il limite superiore del peso del percorso minimo da $s$ a $v$, cioè la sua stima.
+
+```python
+def Init(G, s):
+	for v in V
+		d[v]= ∞
+		Pred[v] = NULL	
+	d[s] = 0	
+```
+
+- La stima del vertice sorgente viene inizializzata a 0, mentre per ogni vertice $v\in V$, viene inizializzata a $\infty$.
+- Il vettore $Pred[v]$ contiene il predecessore di $v$ nel percorso minimo.
+---
+#### Operazione di rilassamento
+L'operazione di rilassamento di un arco $(u, v)\in E$ consiste nel verificare se si può migliorare il cammino minimo per $v$ trovato fino a quel momento passando per $u$, e in questo caso, nell'aggiornare $d[v]$ e $Pred[v]$. Altrimenti, il valore di $d[v]$ resta invariato.
 
 ```python
 def Relax(u, v, w):
@@ -30,6 +52,11 @@ def Relax(u, v, w):
 ```
 
 - Viene eseguita in tempo costante
+
+![[Pasted image 20231127100941.png|500]]
+>[!example] 
+> - Nel caso (a), $d[v]\geq d[u] + w(u, v)$, quindi con l'operazione di rilassamento il valore di $d[v]$ decresce.
+> - Nel caso (b), $d[v] \leq d[u] + w(u, v)$ prima di rilassare l'arco, quindi l'operazione di rilassamento lascia d[v] invariato.
 
 ---
 #### Lemma 1
