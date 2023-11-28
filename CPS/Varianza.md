@@ -15,7 +15,7 @@ Ovvero: $$Var(X) = E[X^{2}]- E[X]^{2}$$
 >[!important]
 > In altri termini, la varianza di $X$ è uguale al [[valore atteso]] del quadrato di $X$ (anche detto il momento secondo), meno il quadrato della media di $X$. Nella pratica questa formula è spesso il miglior modo di calcolare $Var(X)$.
 
->[!example] Si calcoli la varianza del punteggio di un dado non truccato
+>[!example]- Si calcoli la varianza del punteggio di un dado non truccato
 > Sia $X$ il punteggio realizzato dal dado. Siccome $\mathbb{P}(X = i) = \frac{1}{6}$, per $i = 1,2, \dots, 6$ otteniamo $$
 \begin{aligned}
 E\left[X^{2}\right] & =\sum_{i=1}^{6} i^{2} P(X=i) \\
@@ -25,16 +25,16 @@ E\left[X^{2}\right] & =\sum_{i=1}^{6} i^{2} P(X=i) \\
 \operatorname{Var}(X)=E\left[X^{2}\right]-E[X]^{2}=\frac{91}{6}-\left(\frac{7}{2}\right)^{2}=\frac{35}{12}$$
 
 >[!example] **Varianza della [[funzione]] indicatrice di un evento**
-> Sia $I$ la funzione indicatrice di un evento A: $$
+> Sia $I$ la funzione indicatrice di un [[evento]] A: $$
 I:= \begin{cases}1 & \text { se } A \text { si verifica } \\ 0 & \text { se } A \text { non si verifica }\end{cases}$$
 > Allora notando che $I^{2}= I$ sempre (infatti i valori possibili di $I$ sono solamente $0$ e $1$, che soddisfano $1^{2} = 1$ e $0^{2}= 0$), $$
 \begin{array}{rlr}
 \operatorname{Var}(I) & =E\left[I^{2}\right]-E[I]^{2} & \\
 & =E[I]-E[I]^{2} & \\
 & =E[I](1-E[I]) & \\
-& =P(A)(1-P(A)) & \text { perché } I^{2}=I \text { con [[probabilità]] } 1 \\
+& =P(A)(1-P(A)) & \text { perché } I^{2}=I \text { con probabilità } 1 \\
 & =P[I]=P(A) \text { dall'Esempio 4.4.2 }
-\end{array}$$
+\end{array}$$[[Probabilità| ]]
 > >[!important] 
 > > Una utile identità che riguarda la varianza è la seguente. Per ogni coppia di costanti reali $a$ e $b$, $$var(aX +b) = a^{2}Var(X)$$^proprieta-varianza
 > > Per dimostrarla, poniamo $\mu := E[X]$ e ricordiamo che $E[aX +b] = aE[X]+b = a\mu + b$, in modo tale che $$
@@ -47,9 +47,11 @@ I:= \begin{cases}1 & \text { se } A \text { si verifica } \\ 0 & \text { se } A 
 \end{aligned}$$
 >> Se si sostituiscono valori particolari di $a$ e $b$ nell'equazione che vogliamo provare, si ottengono diversi risultati interessanti. Ad esempio se poniamo $a=0$ troviamo che $$Var(b) = 0$$ cioè che le costanti hanno varianza nulla. Scegliendo $a=1$ invece, si ottiene che $$Var(X +b) = Var(X)$$ ovvero che sommare una costante non cambia la varianza di una variabile aleatoria. Infine con $b=0$ diventa $$Var(aX) = a^{2}Var(X)$$
 
+^2cf295
+
 
 
 La quantità $\sqrt{Var(X)}$ è detta **deviazione standard** della variabile aleatoria $X$^deviazione-standard
 
->[!note]
+>[!note]-
 > In termini fisici, se la media è il baricentro di una distribuzione di masse, la varianza è il suo **momento di inerzia**

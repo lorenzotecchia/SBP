@@ -55,7 +55,7 @@ def Relax(u, v, w):
 - Viene eseguita in tempo costante
 
 ![[Pasted image 20231127100941.png|500]]
->[!example] 
+>[!example]-
 > - Nel caso (a), $d[v]\geq d[u] + w(u, v)$, quindi con l'operazione di rilassamento il valore di $d[v]$ decresce.
 > - Nel caso (b), $d[v] \leq d[u] + w(u, v)$ prima di rilassare l'arco, quindi l'operazione di rilassamento lascia d[v] invariato.
 

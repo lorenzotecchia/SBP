@@ -51,7 +51,7 @@ Abbiamo dimostrato quindi che per il caso peggiore un algoritmo di ordinamento, 
 
 #### Dimostrazione per il caso medio
 Il caso medio risulta più complesso $\rightarrow$ Per poter calcolare il tempo di esecuzione dovremo fare una media aritmetica tra la lunghezza del percorso esterno (somma dei percorsi della radice e ciascuna foglia) e il numero delle foglie dell'albero.
->[!example]
+>[!example]-
 > $T_{M}(n) = \frac{LPE}{\# \text{foglie}}$
 > Calcoliamo la $LPE$ da sinistra a destra: $$T_{M}(3) = \frac{3+2+3+3+3+3}{3!} = \frac{17}{6}$$
 > ![[Pasted image 20231122151405.png|300]]

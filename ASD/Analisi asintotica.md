@@ -73,7 +73,7 @@ Se la situazione è quella della rappresentazione nella [[Analisi asintotica#^ca
 >[!important]
 > Questo tipo di funzioni sono molto rare e pertanto nei nostri studi ci imbatteremmo solo nei primi due casi
 
->[!example] # Esempio
+>[!example]- # Esempio
 > Importante notare che: $$\lim_{n \rightarrow \infty} \frac{f(n)}{g(n)} = \infty \iff \lim_{n \rightarrow \infty} \frac{g(n)}{f(n)} =\infty \iff \lim_{n \rightarrow \infty} = k > 0 \iff \lim_{n \rightarrow \infty} \frac{g(n)}{f(n)} = \frac{1}{k} > 0$$
 > Questo dimostra che studiare il limite del rapporto o il limite del suo reciproco ci porta alla stessa conclusione.
 > 1. Siano $f(n) = n$ e $g(n) = 4n -10$
@@ -136,7 +136,7 @@ $$
 c_1^{\prime \prime} h(n) \leq f(n) \leq c_2^{\prime \prime} h(n) \quad f(n)=\Theta(h(n))
 $$
 
->[!example] Esempio proprietà transitiva
+>[!example]- Esempio proprietà transitiva
 > Questa proprietà risulta essere utile quando bisogna confrontare $2$ funzioni molto *distanti* tra loro e quindi difficili da confrontare. 
 > Grazie alla transitività è possibile scegliere una funzione nel mezzo e confrontarla con entrambe (se risulta vera per una e falsa per l'altra allora non si arriva a nulla).
 > Consideriamo ad es. $f(n) = n^{2}-3n + 4$ e $h(n) = 2n^{2}+7n -10$
@@ -189,13 +189,13 @@ Quindi l'implicazione è dimostrata sotto la supposizione che $\forall h(n), \;\
 >[!warning] 
 > Oltre ai valori delle costanti $c_{1}$ e $c_{2}$ bisogna anche andare a prendere un valore $n_{0}$ anch'esso $> 0$ per il quale vale la "costrizione" asintotica della notazione $\Theta$.
 
->[!tip] 
+>[!tip]-
 > Le due costanti $c_{1}$ e $c_{2}$ non rappresentano per forza due valori univoci, possono corrispondere anche a valori estremali con i quali possiamo andare a definire gli intervalli nei quali andare a prendere le costanti.
 
 3. Analizzare separatamente i due lati della disequazione, per ottenere le costanti.
 	- Se devo dimostrare che esiste un numero $x \leq a$  e conosco una relazione per cui un numero $b$ sia minore di $a$ in questo modo: $b < a$; allora posso estendere la mia relazione con $x$ sapendo che poi la seguente varrà in ogni caso: $x \leq b < a$.
 
->[!tip] 
+>[!tip]-
 > È spesso molto utile andare a maggiorare o minorare i termini della funzione all'interno della disequazione, per rendere più manipolabili i termini della stessa.
 
 Nel caso dell'esempio $$c_{1}\;n \log_{2}(n) \leq 2n\log_{2}(n)+n-n < 2n\log_{2}(n)+n-\log_{2}(n)$$
@@ -210,7 +210,7 @@ Nel caso dell'esempio $$c_{1}\;n \log_{2}(n) \leq 2n\log_{2}(n)+n-n < 2n\log_{2}
 5. Risultato:$$2\;n\log_{2}(n)\leq 2n\log_{2}(n)+n-\log_{2}(n) \leq 3\;\log_{2}(n)\;\;\;\forall n \geq 4$$
 
 ## Esempio positività
->[!example] 
+>[!example]-
 > Trovare le costanti o confutare :$$\log^{2n}(n) + n -log(n)=\Theta(\log(n^{n}))$$
 
 Spesso non è semplice riuscire a trovare adeguate e/o semplici maggiorazioni per tutte le equazioni. Quindi si ricorre ad un metodo diverso, in generale più **meccanico**

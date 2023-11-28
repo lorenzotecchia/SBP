@@ -3,7 +3,7 @@ author: Lorenzo Tecchia
 tags: [example, algorithm]
 ---
 Vogliamo descrivere un algoritmo che accetta come input un intero $n \geq 1$ e produce in output il numero di coppie ordinate $(i,j)$ tali che $i,j \in \mathbb{N}$ e $1 \leq i \leq j \leq \mathbb{N}$
-> [!example]
+> [!example]-
 > Input $\rightarrow n = 4$ 
 > 	$(1,1), (1,2), (1,3), (1,4),(2,2),(2,3) \dots$
 > Output $\rightarrow  10$

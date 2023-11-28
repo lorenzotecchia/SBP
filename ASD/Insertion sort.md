@@ -56,7 +56,7 @@ Questo ciclo può essere diverso per istanze con stessa dimensione a causa del c
 
 Ne consegue che no possiamo associare un valore a $T(n)$ poiché non è detto che abbia lo stesso tempo di ogni istanza di $n$ elementi.
 
->[!example] 
+>[!example]-
 > Per $(4,3,2,1)$ non verrà mai eseguito il corpo del ciclo, mentre per $(3,4,2,1)$ le istruzioni nel corpo saranno eseguire $6$ volte.
 
 Questa irregolarità costringe a fare i seguenti ragionamenti:
@@ -94,9 +94,10 @@ Bisogna ora verificare che esista un input tale per cui $\forall j, t_{j}=j$. Qu
 ---
 ### Caso migliore
 Con sequenze ordinate accade che $\forall j\;:\;2 \leq j \leq n$ risulta che $t_{j} = 1$.
->[!example]
+>[!example]-
 > Per $(3,7,8,10)$ la seconda condizione del `while` risulterà falsa per ciascun $j \rightarrow$ ci saranno quindi $4$ esecuzioni:$$
 T_{\min }(N)=9 N-7+4 \sum_{j=2}^N 1+4 \sum_{j=2}^N 0=9 N-7+4(N-1)=13 N-11=\Theta(N)$$ 
+
 ---
 ### Caso medio
 Ora resta capire con quanta frequenza avvenga il caso migliore e il caso peggiore, poiché non è in genere detto che il comportamento dell'algoritmo sia quadratico (per ora sappiamo che ci sono degli input che impiegano tempo quadratico e degli input che sono lineari).
