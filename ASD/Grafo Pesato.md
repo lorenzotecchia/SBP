@@ -6,8 +6,8 @@ tags:
   - dataStructure
   - operation/graph
 ---
-Un grafo pesato è un grafo $G =(V, E, w)$, dove  $w: E\rightarrow \mathbb{R}$ è una funzione che associa un numero reale chiamato peso ad ogni arco.
-Sia $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso in G, allora il peso di questo percorso è uguale a: $$w(π)=\sum_{i=1}^{k-1}\limits w(v_i,v_{i+1})$$
+Un ***grafo pesato*** è un [[grafo]] $G =(V, E, w)$, dove  $w: E\rightarrow \mathbb{R}$ è una funzione che associa un numero reale chiamato peso ad ogni arco.
+Sia $π=v_1v_{2\dots}v_{k-1}v_k$ un [[Path|percorso]] in G, allora il peso di questo percorso è uguale a: $$w(π)=\sum_{i=1}^{k-1}\limits w(v_i,v_{i+1})$$
 Definiamo il peso del percorso minimo da $u$  a $v$: 
 $$\delta(u, v) = \begin{cases}\min \{w(p): u \rightarrow v\} & \text { se esiste un percorso da u a v}\\ \infty & \text { altrimenti }\end{cases} $$
 
@@ -98,6 +98,9 @@ Di conseguenza, se $v$ non è raggiungibile da $s$, allora $\delta(s, v)=\infty$
 Dato un grafo pesato $G =(V, E, w)$ e sia $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$, inizializzando $d[s]= 0,\ d[v]=\infty$. Presa un'arbitraria sequenza di rilassamento che contiene $Relax(v_{k-1},v_k,w)$, se prima dell'esecuzione di $Relax$ $d[v_{k-1}]=\delta(s, v_{k-1})$, allora dopo l'esecuzione di $Relax$ vale: $d[v_k]=\delta(s, v_k)$.
 ---
 #### Algoritmo di Bellman-Ford
+
+L'algoritmo di Bellman-Ford 
+
 ```python
 def Bellman_Ford(G, s):
 	Init(G, s)
@@ -109,9 +112,13 @@ def Bellman_Ford(G, s):
 			return False
 	return True
 ```
+- 
+
+##### Analisi
+
 ---
 #### Algoritmo di Dijkstra
-L'algoritmo di Dijkstra risolve il problema dei cammini minimi con sorgente singola su un grafo orientato e pesato $G =(V, E, w)$, nel caso in cui tutti i pesi degli archi siano non negativi. Assumiamo quindi che $w(u, v)\geq 0, \ \forall \ (u,v)\in E$.
+L' [[algoritmo]] di Dijkstra risolve il problema dei cammini minimi con sorgente singola su un grafo orientato e pesato $G =(V, E, w)$, nel caso in cui tutti i pesi degli archi siano non negativi. Assumiamo quindi che $w(u, v)\geq 0, \ \forall \ (u,v)\in E$.
 
 L'algoritmo conserva un insieme S, che contiene i vertici il cui peso di cammino minimo è già stato determinato, cioè, per tutti i vertici $v\in S$, vale: $d[v]= \delta(s, v)$. L'algoritmo seleziona ripetutamente il vertice $u\in V\setminus S$ con la minima stima di cammino minimo, inserisce $u$ in $S$, e rilassa tutti gli archi uscenti da $u$.
 
@@ -130,4 +137,11 @@ def Dijkstra(G, s):
 			Relax(u, v, w)
 ```
 
+- La riga $4$ inizializza la coda a priorità $Q$ con tutti i vertici in $V$.
+- Ogni volta che viene eseguito il ciclo $while$ delle righe $5-10$, un vertice $u$ , con la minima stima tra i vertici di $Q$, viene estratto da $Q = V-S$  e  inserito in $S$. 
+- Le righe $9-10$, rilassano ogni arco uscente da $u$ e se il cammino minimo per $v$ può essere migliorato passando per $u$, aggiornano la stima $d[v]$ e il predecessore $Pred[v]$.
+- Dopo la riga $4$, nessun vertice viene inserito in $Q$, infatti ogni vertice che esce da $Q$ viene inserito in $S$ esattamente una volta, quindi il ciclo $while$ viene eseguito $|V|$ volte.
+
+##### Analisi
+- Poiché l'algoritmo sceglie sempre il vertice in $Q$ "più vicino" da inserire in $S$, diciamo che esso utilizza una strategia [[greedy]].
 - 
