@@ -27,6 +27,7 @@ Risulta naturale notare delle imprecisioni nel conteggio delle operazioni elemen
 L’analisi precedente non basta a descrivere il comportamento dell’algoritmo (alcune linee sono ripetute più volte). Ne consegue che il calcolo totale del contributo di ogni linea sarà il prodotto tra il numero di operazioni elementari e il numero di ripetizioni della linea (ad esempio per la linea $2$ e $7$ il risultato sarà $1 \cdot 1 = 1$).
 
 La riga $3$ si ripete $n + 1 \cdot \left(\sum\limits^{i=1}_{n+1}\right)\text{volte}$
+
 >[!note]
 > L'ultimo confronto è quello usato per uscire dal ciclo, quindi il contributo totale della linea è $2\cdot(n+1)$
 
