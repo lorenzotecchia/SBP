@@ -66,24 +66,18 @@ Allora $π_{ij}$ è un percorso minimo da $v_i$ a $v_j$.
 >[!note] 
 > Ogni percorso minimo tra due o più vertici contiene a sua volta percorsi minimi.
 
-<<<<<<< HEAD:ASD/Grafi Pesati.md
 #### Corollario 1
 Dato un grafo pesato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$ , allora  $\delta(v_1, v_k)\leq\delta(v_1, v_{k-1})+w(v_{k-1}, v_k)$
-=======
 - #### Corollario 1
 Dato un grafo pesato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$ , allora  $\delta(v_1, v_k)\leq\delta(v_1, v_{k-1})+w(v_{k-1}, v_k)$
 
->>>>>>> refs/remotes/origin/main:ASD/Grafo Pesato.md
 - #### Lemma 2
 Dato un grafo pesato $G =(V, E, w)$ e $s \in V$. Per ogni arco $(u, v)\in E$ vale che:
 $\delta(s, v)\leq\delta(s, u)+w(u, v)$.
 
 - #### Lemma 3
 Dato un grafo pesato $G =(V, E, w)$ e  un arco $(u, v) \in E$, immediatamente dopo l'esecuzione di $Relax(u, v, w)$ varrà che: $d[v]\leq d[u]+ w(u, v)$.
-<<<<<<< HEAD:ASD/Grafi Pesati.md
-=======
 
->>>>>>> refs/remotes/origin/main:ASD/Grafo Pesato.md
 - #### Lemma 4
 Dato un grafo pesato $G =(V, E, w)$ e posti $d[v]= \infty$,  $\forall v \in V \setminus \{s\}$ e $d[s] = 0$ lungo una qualsiasi sequenza di operazioni di rilassamento vale sempre: $d[v]\geq \delta(s, v), \ \forall v \in V$
 ##### Dimostrazione
@@ -94,25 +88,13 @@ Dimostrazione per induzione sul numero delle operazioni di rilassamento $i$:
 Consideriamo un arco $(x, y)\in E$, su cui eseguo $Relax(x, y, w)$; poichè l'operazione di rilassamento modifica soltanto $d[y]$, sicuramente $\forall v \in V \setminus\{y\}$ vale: $d[v]\geq\delta(s, v)$
 
 Due casi:
-<<<<<<< HEAD:ASD/Grafi Pesati.md
-#### Corollario 2
-=======
-
 - #### Corollario 2
->>>>>>> refs/remotes/origin/main:ASD/Grafo Pesato.md
 Siano $s,v \in V$ e sia $s$ la sorgente. Se $v$ è raggiungibile da $s$, in ogni momento lungo una sequenza arbitraria di rilassamenti vale: $d[v]=\delta(s, v)$.
 Consideriamo le stime iniziali: $d[s]=0,\ d[v]=\infty$
 
 Di conseguenza, se $v$ non è raggiungibile da $s$, allora $\delta(s, v)=\infty$ e $d[v]\geq\delta(s, v),\ \forall v \in V$
-<<<<<<< HEAD:ASD/Grafi Pesati.md
 - #### Lemma 5
 Dato un grafo pesato $G =(V, E, w)$ e sia $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$, inizializzando $d[s]= 0,\ d[v]=\infty$. Presa un'arbitraria sequenza di rilassamento che contiene $Relax(v_{k-1},v_k,w)$, se prima dell'esecuzione di $Relax$ $d[v_{k-1}]=\delta(s, v_{k-1})$, allora dopo l'esecuzione di $Relax$ vale: $d[v_k]=\delta(s, v_k)$
-
-=======
-
-- #### Lemma 5
-Dato un grafo pesato $G =(V, E, w)$ e sia $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$, inizializzando $d[s]= 0,\ d[v]=\infty$. Presa un'arbitraria sequenza di rilassamento che contiene $Relax(v_{k-1},v_k,w)$, se prima dell'esecuzione di $Relax$ $d[v_{k-1}]=\delta(s, v_{k-1})$, allora dopo l'esecuzione di $Relax$ vale: $d[v_k]=\delta(s, v_k)$.
->>>>>>> refs/remotes/origin/main:ASD/Grafo Pesato.md
 ---
 #### Algoritmo di Bellman-Ford
 ```python
@@ -146,5 +128,3 @@ def Dijkstra(G, s):
 		for v in Adj[u]:
 			Relax(u, v, w)
 ```
-
-- 
