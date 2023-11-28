@@ -21,5 +21,5 @@ Solo che nel caso dello stack, le funzioni di $Insert$ e $Delete$ si chiamano ri
 
 ## Implementazione in C
 ```C
-
+// da implementare
 ```

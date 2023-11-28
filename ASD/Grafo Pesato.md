@@ -63,11 +63,10 @@ def Relax(u, v, w):
 - #### Lemma 1
 Dato un grafo pesato ed orientato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$ in G,  $\forall \ 1 \leq i  \leq j  \leq k$,  $π_{ij} =v_iv_{i+1}\dots v_j$ è il sotto-percorso  da $v_i$ a $v_j$. 
 Allora $π_{ij}$ è un percorso minimo da $v_i$ a $v_j$.
-
 >[!note] 
 > Ogni percorso minimo tra due o più vertici contiene a sua volta percorsi minimi.
 
-- #### Corollario 1
+#### Corollario 1
 Dato un grafo pesato $G =(V, E, w)$ e sia  $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$ , allora  $\delta(v_1, v_k)\leq\delta(v_1, v_{k-1})+w(v_{k-1}, v_k)$
 
 - #### Lemma 2
@@ -81,7 +80,7 @@ Dato un grafo pesato $G =(V, E, w)$ e  un arco $(u, v) \in E$, immediatamente do
 Dato un grafo pesato $G =(V, E, w)$ e posti $d[v]= \infty$,  $\forall v \in V \setminus \{s\}$ e $d[s] = 0$ lungo una qualsiasi sequenza di operazioni di rilassamento vale sempre: $d[v]\geq \delta(s, v), \ \forall v \in V$
 ##### Dimostrazione
 Dimostrazione per induzione sul numero delle operazioni di rilassamento $i$:
-- Caso base : $i =0$, è ovvio, perchè non viene eseguita nessuna operazione di rilassamento.
+- Caso base : $i =0$, è ovvio, perché non viene eseguita nessuna operazione di rilassamento.
 - Caso induttivo: $i >0$, prima della $i-esima$ operazione vale ,per ipotesi induttiva, che: $\forall v \in V, \ d[v]\geq\delta(s, v)$
 
 Consideriamo un arco $(x, y)\in E$, su cui eseguo $Relax(x, y, w)$; poichè l'operazione di rilassamento modifica soltanto $d[y]$, sicuramente $\forall v \in V \setminus\{y\}$ vale: $d[v]\geq\delta(s, v)$
@@ -113,7 +112,6 @@ def Bellman_Ford(G, s):
 	return True
 ```
 - 
-
 ##### Analisi
 
 ---
@@ -135,6 +133,7 @@ def Dijkstra(G, s):
 		Q = Q - {u}
 		for v in Adj[u]:
 			Relax(u, v, w)
+<<<<<<< HEAD
 ```
 
 - La riga $4$ inizializza la coda a priorità $Q$ con tutti i vertici in $V$.
@@ -145,3 +144,6 @@ def Dijkstra(G, s):
 ##### Analisi
 - Poiché l'algoritmo sceglie sempre il vertice in $Q$ "più vicino" da inserire in $S$, diciamo che esso utilizza una strategia [[greedy]].
 - 
+=======
+```
+>>>>>>> 5df77c892793d7533088ee495fd4f159ec1d9813
