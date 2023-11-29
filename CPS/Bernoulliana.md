@@ -12,4 +12,5 @@ dove con $p$ abbiamo indicato la probabilità che l'esperimento registri un "suc
 >[!definition]
 > Una variabile aleatoria $X$ si dice di *Bernoulli* o bernoulliana se la sua funzione di massa di probabilità è del tipo delle equazioni soprastanti per una scelta opportuna del parametro $p$
 
-In altri termini, una variabile aleatoria è bernoulliana se può assumere se può assumere solo i valori $0$ e $1$. Il suo valore atteso è dato da $$E[X]:= 1 \mathbb{P}(X = 1)+ 0 \mathbb{P}(X = 0)= p$$ ed è quindi pari alla probabilità che la variabile aleatoria assuma il valore di $1$
+In altri termini, una variabile aleatoria è bernoulliana se può assumere se può assumere solo i valori $0$ e $1$. Il suo [[valore atteso]] è dato da $$E[X]:= 1 \mathbb{P}(X = 1)+ 0 \mathbb{P}(X = 0)= p$$ ed è quindi pari alla probabilità che la variabile aleatoria assuma il valore di $1$
+
