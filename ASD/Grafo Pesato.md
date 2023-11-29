@@ -79,13 +79,15 @@ Dato un grafo pesato $G =(V, E, w)$ e  un arco $(u, v) \in E$, immediatamente do
 - #### Lemma 4
 Dato un grafo pesato $G =(V, E, w)$ e posti $d[v]= \infty$,  $\forall v \in V \setminus \{s\}$ e $d[s] = 0$ lungo una qualsiasi sequenza di operazioni di rilassamento vale sempre: $d[v]\geq \delta(s, v), \ \forall v \in V$
 ##### Dimostrazione
-Dimostrazione per induzione sul numero delle operazioni di rilassamento $i$:
-- Caso base : $i =0$, è ovvio, perché non viene eseguita nessuna operazione di rilassamento.
-- Caso induttivo: $i >0$, prima della $i-esima$ operazione vale ,per ipotesi induttiva, che: $\forall v \in V, \ d[v]\geq\delta(s, v)$
+Dimostrazione per ***induzione*** sul ***numero delle operazioni di rilassamento*** $i$:
 
-Consideriamo un arco $(x, y)\in E$, su cui eseguo $Relax(x, y, w)$; poichè l'operazione di rilassamento modifica soltanto $d[y]$, sicuramente $\forall v \in V \setminus\{y\}$ vale: $d[v]\geq\delta(s, v)$
+***Caso base*** : $i =0$, è ovvio, perché non viene eseguita nessuna operazione di rilassamento, e dopo l'inizializzazione vale: $d[v]=\infty$, quindi  $d[v]\geq \delta(s, v)\ \forall \ v\in V\setminus\{s\}$ e $d[s]=0\geq\delta(s,s)$;  in particolare $\delta(s,s)=-\infty$ se $s$ fa parte di un ciclo a peso negativo, altrimenti $\delta(s,s)=0$.
 
-Due casi:
+ ***Caso induttivo:*** $i >0$, prima della $i-esima$ operazione vale ,per ipotesi induttiva, che: $\forall v \in V, \ d[v]\geq\delta(s, v)$. Consideriamo un arco $(x, y)\in E$, su cui eseguo $Relax(x, y, w)$; poiché l'operazione di rilassamento modifica soltanto $d[y]$, sicuramente $\forall \ v \in V \setminus\{y\}$ vale: $d[v]\geq\delta(s, v)$:
+      $1.$ Se prima dell'operazione di rilassamento $d[y]\leq d[x]+w(x,y)$, $Relax(x, y, w)$ non modifica niente, quindi vale $d[y]\geq\delta(s, y)$.
+      $2.$ Se prima dell'operazione di rilassamento $d[y]> d[x] + w(x,y)$ allora $Relax(x, y, w)$ rilassa l'arco: $d[y]=d[x]+w(x,y)$. Quindi dal Lemma 2:
+       $d[x]\geq \delta(s,x)$, e di conseguenza $d[x] +w(x,y)\geq \delta(s,x)+w(x,y)\geq \delta(s,y)$.
+
 
 - #### Corollario 2
 Siano $s,v \in V$ e sia $s$ la sorgente. Se $v$ è raggiungibile da $s$, in ogni momento lungo una sequenza arbitraria di rilassamenti vale: $d[v]=\delta(s, v)$.
@@ -96,31 +98,12 @@ Di conseguenza, se $v$ non è raggiungibile da $s$, allora $\delta(s, v)=\infty$
 - #### Lemma 5
 Dato un grafo pesato $G =(V, E, w)$ e sia $π=v_1v_{2\dots}v_{k-1}v_k$ un percorso minimo da $v_1$ a $v_k$, inizializzando $d[s]= 0,\ d[v]=\infty$. Presa un'arbitraria sequenza di rilassamento che contiene $Relax(v_{k-1},v_k,w)$, se prima dell'esecuzione di $Relax$ $d[v_{k-1}]=\delta(s, v_{k-1})$, allora dopo l'esecuzione di $Relax$ vale: $d[v_k]=\delta(s, v_k)$.
 ---
-#### Algoritmo di Bellman-Ford
-
-L'algoritmo di Bellman-Ford 
-
-```python
-def Bellman_Ford(G, s):
-	Init(G, s)
-	for i == 1 in range (|V|-1):
-		for (u, v) in E:
-			Relax(u, v, w)
-	for (u, v) in E:
-		if d[v] > d[v] + w(u, v):
-			return False
-	return True
-```
-- 
-##### Analisi
-
----
 #### Algoritmo di Dijkstra
-L' [[algoritmo]] di Dijkstra risolve il problema dei cammini minimi con sorgente singola su un grafo orientato e pesato $G =(V, E, w)$, nel caso in cui tutti i pesi degli archi siano non negativi. Assumiamo quindi che $w(u, v)\geq 0, \ \forall \ (u,v)\in E$.
+L' [[algoritmo]] di ***Dijkstra*** risolve il problema dei cammini minimi con sorgente singola su un grafo orientato e pesato $G =(V, E, w)$, nel caso in cui tutti i pesi degli archi siano non negativi. Assumiamo quindi che $w(u, v)\geq 0, \ \forall \ (u,v)\in E$.
 
 L'algoritmo conserva un insieme S, che contiene i vertici il cui peso di cammino minimo è già stato determinato, cioè, per tutti i vertici $v\in S$, vale: $d[v]= \delta(s, v)$. L'algoritmo seleziona ripetutamente il vertice $u\in V\setminus S$ con la minima stima di cammino minimo, inserisce $u$ in $S$, e rilassa tutti gli archi uscenti da $u$.
 
-Inoltre, usa una coda a priorità $Q$, che contiene tutti i vertici in $V\setminus S$, usando come chiave i rispettivi valori delle stime d.
+Inoltre, usa una [[Code a priorità|coda a priorità]] $Q$, che contiene tutti i vertici in $V\setminus S$, usando come chiave i rispettivi valori delle stime d.
 
 ```python
 def Dijkstra(G, s):
@@ -133,17 +116,43 @@ def Dijkstra(G, s):
 		Q = Q - {u}
 		for v in Adj[u]:
 			Relax(u, v, w)
-<<<<<<< HEAD
 ```
-
 - La riga $4$ inizializza la coda a priorità $Q$ con tutti i vertici in $V$.
 - Ogni volta che viene eseguito il ciclo $while$ delle righe $5-10$, un vertice $u$ , con la minima stima tra i vertici di $Q$, viene estratto da $Q = V-S$  e  inserito in $S$. 
 - Le righe $9-10$, rilassano ogni arco uscente da $u$ e se il cammino minimo per $v$ può essere migliorato passando per $u$, aggiornano la stima $d[v]$ e il predecessore $Pred[v]$.
 - Dopo la riga $4$, nessun vertice viene inserito in $Q$, infatti ogni vertice che esce da $Q$ viene inserito in $S$ esattamente una volta, quindi il ciclo $while$ viene eseguito $|V|$ volte.
 
-##### Analisi
-- Poiché l'algoritmo sceglie sempre il vertice in $Q$ "più vicino" da inserire in $S$, diciamo che esso utilizza una strategia [[greedy]].
-- 
-=======
+#### Analisi
+Poiché l'algoritmo sceglie sempre il vertice in $Q$ "più vicino" da inserire in $S$, diciamo che esso utilizza una strategia [[greedy]].
+
+Ogni operazione di $Extract\_Min$ richiede tempo $O(V)$, e ci sono $|V|$ operazioni di questo tipo, quindi il tempo totale richiesto da $Extract\_Min$ è $O(V^2)$.
+
+Ogni vertice $v\in V$  viene inserito in $S$ esattamente una volta e ogni arco in $Adj[v]$ viene esaminato nel ciclo $for$ esattamente una volta. 
+Poiché ogni lista di adiacenza contiene $|E|$ archi, il ciclo $for$ viene eseguito $|E|$ volte, ognuna delle quali richiede tempo $O(1)$.
+
+Quindi il tempo totale di esecuzione dell'algoritmo è di $O(V^{2}+ E)= O(V^2)$.
+
+---
+#### Algoritmo di Bellman-Ford
+
+L'algoritmo di Bellman-Ford risolve il problema dei percorsi minimi con sorgente singola nel caso in cui i pesi degli archi possono essere negativi.
+
+Dato un grafo pesato $G=(V,E,w)$ con sorgente $s$, l'algoritmo restituisce un ***valore booleano*** che indica se esiste oppure no un ciclo a peso negativo raggiungibile dalla sorgente. In caso affermativo, l'algoritmo indica che non esiste nessuna soluzione, altrimenti calcola i percorsi minimi e i loro pesi.
+
+Anche questo algoritmo utilizza la tecnica del rilassamento degli archi, diminuendo progressivamente la stima $d[v],\ \forall \ v \in V$, fino a raggiungere il reale peso del percorso minimo $\delta(s,v)$. L'algoritmo restituisce $True$ solo se non esiste un ciclo a peso negativo raggiungibile dalla sorgente.
+
+```python
+def Bellman_Ford(G, s):
+	Init(G, s)
+	for i == 1 in range (|V|-1):
+		for (u, v) in E:
+			Relax(u, v, w)
+	for (u, v) in E:
+		if d[v] > d[v] + w(u, v):
+			return False
+	return True
 ```
->>>>>>> 5df77c892793d7533088ee495fd4f159ec1d9813
+- Ogni volta che viene eseguito il ciclo $for$ delle righe $3-5$, ogni arco viene rilassato una volta.
+- Le righe $6-9$ controllano l'esistenza di cicli a peso negativo e restituiscono il valore booleano appropriato.
+##### Analisi
+Ogni esecuzione di $Init$ richiede tempo $\Theta(V)$, ogni iterazione del ciclo $for$  alle righe $3-5$ richiede tempo $O(E)$, mentre il ciclo for alle righe $6-9$ richiede anch'esso tempo $O(E)$, quindi il tempo totale di esecuzione dell'algoritmo è $O(VE)$, mentre nel caso peggiore sarà $O(V^3)$.
