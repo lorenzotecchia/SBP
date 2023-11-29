@@ -1,16 +1,23 @@
 ---
-tags: [definition, probability]
+tags: [definition, statistics]
 author: Lorenzo Tecchia
 ---
-Supponendo di avere un insieme $x_{1}, x_{2}, \dots, x_{n}$ di $n$ dati (o come anche si dice, un campione di *ampiezza* o *numerosità* pari a $n$). La ***media campionaria*** è la media aritmetica di questi valori.
->[!definition]
-> Si dice **media campionaria** e si denota con $\bar{x}$, la quantità:$$\bar{x} = \frac{1}{n}\sum\limits_{i=1}^{n}x_{i}$$
+>[!introduction]-
+>Considerando una popolazione di elementi, a ciascuno dei quali è associata una grandezza numerica. La popolazione potrebbe ad esempio essere continua dagli individui adulti facenti parte di una qualche categoria di persone, e la grandezza numerica di interesse potrebbe essere il reddito annuale, la statura, l'età o altro. 
+>Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione di dati estratto da questa popolazione. È comune supporre che i valori numerici associati a ciascuno degli elementi del campione, siano variabili aleatorie indipendenti e identicamente distribuite.
+>Denotiamo con $\mu$ e $\sigma^{2}$ la loro media e la loro varianza, che prendono il nome di *media e varianza della popolazione*. 
 
-Il calcolo manuale di questa grandezza può essere notevolmente semplificato se si note che, prese comunque due costanti $a$ e $b$, se si considera il nuovo insieme di dati $$y_{i}= ax_{i}+b, \qquad i= 1, \dots, n$$
-allora la media campionaria di $y_{1}, y_{2},\dots, y_{n}$ è legata a quella dei dati iniziali della stessa relazione lineare:$$\bar{y}=\frac{1}{n} \sum_{i=1}^n\left(a x_i+b\right)=\frac{1}{n} \sum_{i=1}^n a x_i+\frac{1}{n} \sum_{i=1}^n b=a \bar{x}+b$$
-
->[!example]
-> Si vuole calcolare la media campionaria di questo insieme di dati:$$284 \quad 280 \quad 277\quad 282 \quad 278 \quad 285 \quad 281 \quad 283 \quad 278 \quad 277$$
-> Invece che applicare direttamente la definizione, si può usare la considerazione fatta sopra, costruendo ad esempio il nuovo insieme di dati $y_{i}= x_{i}-$, che é più maneggevole da trattare:$$4 \quad 0 \quad -3\quad 2 \quad -1 \quad 5 \quad 1 \quad 3 \quad -2 \quad -3$$
-> La media campionaria dei dati trasformati si calcola molto facilmente:$$\bar{y}=\frac{4+0-3+2-1+5+1+3-2-3}{10}=\frac{6}{10}$$
-> Ne segue che:$$\bar{x} = \bar{y} + 280 = 280.6$$
+Definiamo la ***media campionaria*** come $$\bar{X}:=\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}$$ Si noti che $\bar{X}$ è una funzione delle variabili aleatorie $X_{1}, X_{2}, \dots, X_{n}$. In quanto tale è una ***statistica***, e in particola è a sua volta una variabile aleatoria. Ha senso quindi domandarsi quanto valgano il valore atteso della media campionaria e la sua varianza. 
+È facile vedere che $$
+\begin{aligned}
+E[\bar{X}] & =E\left[\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right] \\
+& =\frac{E\left[X_{1}\right]+E\left[X_{2}\right]+\cdots+E\left[X_{n}\right]}{n} \\
+& =\frac{n \mu}{n}=\mu
+\end{aligned}$$ e, per la varianza, $$
+\begin{aligned}
+\operatorname{Var}(\bar{X}) & =\operatorname{Var}\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right) \\
+& =\frac{\operatorname{Var}\left(X_{1}\right)+\operatorname{Var}\left(X_{2}\right)+\cdots+\operatorname{Var}\left(X_{n}\right)}{n^{2}} \quad \text { per l'indipendenza } \\
+& =\frac{n \sigma^{2}}{n^{2}}=\frac{\sigma^{2}}{n}
+\end{aligned}$$
+>[!important]
+> La media campionaria ha quindi lo stesso valore atteso della distribuzione da stimare, mentre la sua varianza risulta ridotta ad un fattore $n$. Da questo possiamo dedurre che $\bar{X}$ è centrata attorno a $\mu$, e la sua variabilità si riduce sempre di più con l'aumentare di $n$. 
