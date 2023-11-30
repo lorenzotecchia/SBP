@@ -54,7 +54,7 @@ Per una variabile aleatoria esponenziale, $\lambda$ è il reciproco del valore a
 > Supponiamo che il numero di miglia percorse da una automobile prima che la sua batteria sia esausta sia una variabile aleatoria esponenziale di media $10000$ miglia. Se una persona intende intraprendere un viaggio di $5000$, qual è la probabilità che lo porti a termine senza dover sostituire la batteria? Cosa si può dire quando la distribuzione non è esponenziale?
 > La proprietà di assenza di memoria della distribuzione esponenziale implica che il tempo di vita residuo della batteria dall'inizio del viaggio è esponenziale con intensità $\lambda = 1/10$. La probabilità cercata è data quindi da $$
 \begin{aligned}
-P(\text { vita residua }>5) & =1-F(5) \\
+\mathbb{P}(\text { vita residua }>5) & =1-F(5) \\
 & =e^{-5 \lambda} \\
 & =e^{-0.5} \approx 0.607
 \end{aligned}$$ Se on sapessimo che la distribuzione è esponenziale, la probabilità richiesta sarebbe data da $$
