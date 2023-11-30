@@ -10,7 +10,7 @@ tags:
 Insertion-Sort è un [[algoritmo]]  di [[ordinamento]] abbastanza efficiente per l'ordinamento di array di piccole dimensioni.
 L'idea dell'algoritmo è quella di dividere la sequenza in una parte ordinata e una no.
 
-All'inizio possiamo supporre che la sequenza ordinata sia composta solo dal primo elemento, ed il reato degli elementi contengono la sequenza disordinata.
+All'inizio possiamo supporre che la sequenza ordinata sia composta solo dal primo elemento, ed il resto degli elementi contengono la sequenza disordinata.
 Insertion-Sort prende il primo elemento della parte disordinata (nel nostro caso $j$) e lo inserisce nella giusta posizione nella parte disordinata.
 
 Quindi se $a_{j-1} \leq a_{j}$ allora mantiene la stessa posizione. In caso contrario $a_{j-1}$ andrà in posizione $j$ e dovrà confrontare $a_{j}$ con $a_{j-2}$; anche in questo caso se $a_{j-2} \leq a_{j}$ andrà nella posizione precedentemente liberata ($j-1$), altrimenti è $a_{j-2}$ a spostarsi nella posizione $j-1$.
