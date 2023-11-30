@@ -2,8 +2,8 @@
 author: Lorenzo Tecchia
 tags: [definition, statistics]
 ---
-Se $X$ è una variabile aleatoria che non è mai negativa, allora per ogni $a > 0$: $$\mathbb{P}(X \geq a) \leq \frac{E[X]}{a}$$
-***Dimostrazione***. Diamo la dimostrazione nel caso che $X$ sia continua con densità $f$.
+Se $X$ è una [[variabile aleatoria]] che non è mai negativa, allora per ogni $a > 0$: $$\mathbb{P}(X \geq a) \leq \frac{E[X]}{a}$$
+***Dimostrazione***. Diamo la dimostrazione nel caso che $X$ sia [[ContinuaVA|continua]] con densità $f$.
 $$
 \begin{array}{rlrl}
 E[X] & :=\int_{0}^{\infty} x f(x) d x & \\
@@ -15,4 +15,4 @@ E[X] & :=\int_{0}^{\infty} x f(x) d x & \\
 \end{array}$$
 E l'enunciato segue dividendo i termini per $a$.
 
-Come corollario ricaviamo la [[Disuguaglianza di Chebyshev]]
+Come corollario ricaviamo la [[Disugaglianza di Chebyshev]]
