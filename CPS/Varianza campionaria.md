@@ -2,7 +2,7 @@
 author: Lorenzo Tecchia
 tags: [definition, statistics]
 ---
-Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione aleatorio, proveniente da una distribuzione di media $\mu$ e varianza $\sigma^{2}$. Sia $\bar{X}$ la sua media campionaria. Introduciamo quindi una seconda statistica.
+Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione aleatorio, proveniente da una distribuzione di media $\mu$ e varianza $\sigma^{2}$. Sia $\bar{X}$ la sua [[media campionaria]]. Introduciamo quindi una seconda statistica.
 >[!definition]
 > La statistica $S^{2}$, definita da $$S^{2}:=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}$$ si dice *varianza campionaria*. La sua radice quadrata, $S = \sqrt{S^{2}}$ prende invece il nome di *deviazione standard campionaria*
 
@@ -20,4 +20,4 @@ Prendendo il valore atteso di entrambi i membri di quest'ultima equazione, e ric
 \end{aligned}$$ da cui $$
 E\left[S^{2}\right]=\sigma^{2}$$
 >[!success] Conclusioni
-> Il valore atteso della varianza campionaria coincide con la varianza della popolazione.
+> Il valore atteso della varianza campionaria coincide con la varianza della [[popolazione]].

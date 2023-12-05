@@ -13,7 +13,7 @@ Deriveremo la distribuzione della [[varianza]] campionaria $S^{2}$, ma enunciamo
 Per iniziare si noti che, assegnati dei numeri $x_{1}, x_{2}, \dots, x_{n}$ e posto $y_{i}:= x_{i}- \mu$ per $i=1, 2, \dots, n$ dall'identità $$
 \sum_{i=1}^{n}\left(y_{i}-\bar{y}\right)^{2}=\sum_{i=1}^{n} y_{i}^{2}-n \bar{y}^{2}$$ si deduce che $$
 \sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}=\sum_{i=1}^{n}\left(x_{i}-\mu\right)^{2}-n(\bar{x}-\mu)^{2}$$
-Se applichiamo questa seconda identità ad un [[campione]] $X_{1}, X_{2}, \dots, X_{n}$ di una popolazione normale con media $\mu$ e varianza $\sigma^{2}$, otteniamo che $$
+Se applichiamo questa seconda identità ad un [[campione]] $X_{1}, X_{2}, \dots, X_{n}$ di una [[popolazione]] normale con media $\mu$ e varianza $\sigma^{2}$, otteniamo che $$
 \frac{\sum_{i=1}^{n}\left(x_{i}-\bar{X}\right)^{2}}{\sigma^{2}}=\frac{\sum_{i=1}^{n}\left(X_{i}-\mu\right)^{2}}{\sigma^{2}}-\frac{n(\bar{X}-\mu)^{2}}{\sigma^{2}}$$ o equivalentemente $$
 \sum_{i=1}^{n}\left(\frac{X_{i}-\mu}{\sigma}\right)^{2}=\frac{\sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}}{\sigma^{2}}+\left[\frac{\sqrt{n}(\bar{X}-\mu)}{\sigma}\right]^{2}$$
 
@@ -33,8 +33,8 @@ Se applichiamo questa seconda identità ad un [[campione]] $X_{1}, X_{2}, \dots,
 \end{aligned}$$
 
 >[!important] ### Corollario
-> Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione proveniente da una popolazione gaussiana di media $\mu$. Se $\overline{X}$ e $S^{2}$ denotano la media e la varianza campionaria, allora $$\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t_{n-1}$$
+> Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione proveniente da una [[popolazione]] gaussiana di media $\mu$. Se $\overline{X}$ e $S^{2}$ denotano la media e la varianza campionaria, allora $$\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t_{n-1}$$
 > Quindi, se si normalizza $\overline{X}$ sottraendo la sua media $\mu$ e dividendo per la sua deviazione standard $\sigma/\sqrt{n}$, si ha una [[distribuzione t]] con $n-1$ gradi di libertà.
-> ***Dimostrazione:*** Si ricordi che la $t$ *di Student* con $m$ gradi di libertà, è per definizione, la distribuzione del rapporto $$\frac{Z}{\sqrt{\chi_{m}^{2} / m}}$$ dove $Z \sim \mathcal{N}(0, 1), \chi^{2}_{m}$ è una chi-quadro con $m$ gradi di libertà, e queste due variabile aleatorie sono prese indipendenti. Allora, usando il fatto che $$\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim \mathcal{N}(0,1) \quad(n-1) \frac{S^{2}}{\sigma^{2}} \sim \chi_{n-1}^{2}$$ e inoltre che queste due statistiche sono indipendenti per il teorema soprastante, si ottiene che $$\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sqrt{\frac{\sigma^{2}}{S^{2}} \frac{n-1}{n-1}}=\frac{\bar{X}-\mu}{S }{ \sqrt{n}} \qquad \square $$ è una $t$ *Student* con $n-1$ gradi di libertà.
+> ***Dimostrazione:*** Si ricordi che la $t$ *di Student* con $m$ gradi di libertà, è per definizione, la distribuzione del rapporto $$\frac{Z}{\sqrt{\chi_{m}^{2} / m}}$$ dove $Z \sim \mathcal{N}(0, 1), \chi^{2}_{m}$ è una [[chi-quadro]] con $m$ gradi di libertà, e queste due variabile aleatorie sono prese indipendenti. Allora, usando il fatto che $$\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim \mathcal{N}(0,1) \quad(n-1) \frac{S^{2}}{\sigma^{2}} \sim \chi_{n-1}^{2}$$ e inoltre che queste due statistiche sono indipendenti per il teorema soprastante, si ottiene che $$\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sqrt{\frac{\sigma^{2}}{S^{2}} \frac{n-1}{n-1}}=\frac{\bar{X}-\mu}{S }{ \sqrt{n}} \qquad \square $$ è una $t$ *Student* con $n-1$ gradi di libertà.
 
 

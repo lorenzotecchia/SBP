@@ -8,7 +8,7 @@ Grazie alla [[Disugaglianza di Chebyshev|disuguaglianza di Chebyshev]] possiamo 
 > Tale convergenza si precisa dicendo che scelto un $\varepsilon$ comunque piccolo, la media aritmetica si discosta dal valore atteso per più di $\varepsilon$ con probabilità che tende a zero, quando $n$ tende all'infinito
 > > [!important]
 > >  Sia $X_{1}, X_{2}, \dots$ una successione di variabile aleatoria (indipendenti e identicamente distribuite), tutte con media $E[X_{i}] =: \mu$. Allora per ogni $\varepsilon > 0$.
-> >  $$ P\left(\left|\frac{X_{1}+\cdots+X_{n}}{n}-\mu\right|>\varepsilon\right) \rightarrow 0 \quad \text { quando } n \longrightarrow \infty$$
+> >  $$ \mathbb{P}\left(\left|\frac{X_{1}+\cdots+X_{n}}{n}-\mu\right|>\varepsilon\right) \rightarrow 0 \quad \text { quando } n \longrightarrow \infty$$
 
 ***Dimostrazione:*** proveremo il risultato solo sotto l'ipotesi aggiuntiva che le $X_{i}$ abbiano [[varianza]] finita $\sigma^{2}$. Dalle proprietà di [[Valore atteso#^prop-valoreAtteso|media]] e [[Varianza#^2cf295|varianza]] segue che
 $$E\left[\frac{X_{1}+\cdots+X_{n}}{n}\right]=\mu \quad \text { e } \quad \operatorname{Var}\left(\frac{X_{1}+\cdots+X_{n}}{n}\right)=\frac{\sigma^{2}}{n}$$
@@ -23,7 +23,7 @@ $$
 & =\frac{n \sigma^{2}}{n^{2}}=\frac{\sigma^{2}}{n} & &
 \end{aligned}$$
 Segue allora dalla disuguaglianza di Chebyshev applicata alla variabile aleatoria $\frac{X_{1}+ \dots + X_{n}}{n}$ che $$
-P\left(\left|\frac{X_{1}+\cdots+X_{n}}{n}-\mu\right|>\varepsilon\right) \leq \frac{\sigma^{2}}{n \varepsilon^{2}}$$
+\mathbb{P}\left(\left|\frac{X_{1}+\cdots+X_{n}}{n}-\mu\right|>\varepsilon\right) \leq \frac{\sigma^{2}}{n \varepsilon^{2}}$$
 Poiché il secondo membro tende a zero per $n$ che tende all'infinito, l'enunciato è provato.
 
 

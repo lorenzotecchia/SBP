@@ -11,4 +11,4 @@ Per la distribuzione [[Gaussiana|normale]] standard, se $X$ è una chi-quadro co
 
 >[!example]-
 > Si determini $\mathbb{P}(X \leq 30)$ quando $X$ è una variabile aleatoria chi-quadro con $26$ gradi di libertà.
-> Usando il programma riferito sul libro $$\mathbb{P}(X \leq) \approx 0.7325 \quad \square$$
+> Usando il programma riferito sul libro $$\mathbb{P}(X \leq 30) \approx 0.7325 \quad \square$$

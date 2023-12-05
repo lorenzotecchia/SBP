@@ -2,7 +2,7 @@
 author: Lorenzo Tecchia
 tags: [definition, statistics, probability, aleatoryVariable]
 ---
-Una qualunque statistica il cui scopo sia quello di dare una stima di un parametro $\theta$ si dice stimatore di $\theta$; gli stimatori sono quindi variabili aleatorie. Il valore deterministico assunto da uno stimatore è detto invece *stima*. Ad esempio, la [[Valore atteso|media]] campionaria $\overline{X} := \sum\limits_{i}X_{i}/n$ di un [[campione]] [[Gaussiana|normale]] $X_{1}, X_{2}, \dots, X_{n}$ costituisce lo stimatore abituale della media $\mu$ della [[distribuzione]]. 
+Una qualunque statistica il cui scopo sia quello di dare una stima di un parametro $\theta$ si dice stimatore di $\theta$; gli stimatori sono quindi variabili aleatorie. Il valore deterministico assunto da uno stimatore è detto invece *stima*. Ad esempio, la [[Valore atteso|media]] campionaria $\overline{X} := \sum_{i}X_{i}/n$ di un [[campione]] [[Gaussiana|normale]] $X_{1}, X_{2}, \dots, X_{n}$ costituisce lo stimatore abituale della media $\mu$ della [[distribuzione]]. 
 Consideriamo delle variabili aleatorie $X_{1}, X_{2}, \dots, X_{n}$, la cui distribuzione congiunta sia nota a meno di un parametro incognito $\theta$. Un problema di interesse consiste nello stimare $\theta$ usando i valori che vengono assunti da queste variabili aleatorie. Per esemplificare, potremmo immaginare che le $X_{i}$, siano variabili aleatorie esponenziali e indipendenti, tutte di media $\theta$ incognita. In questo caso la loro densità congiunta sarebbe data da $$
 \begin{array}{rlrl}
 f\left(x_{1}, x_{2}, \ldots, x_{n}\right) & =f_{X_{1}}\left(x_{1}\right) f_{X_{2}}\left(x_{2}\right) \cdots f_{X_{n}}\left(x_{n}\right) & \\
@@ -22,10 +22,10 @@ Nel calcolare il valore di $\theta$ che minimizza $f$, conviene spesso usare il 
 > Supponiamo che vengano realizzare $n$ prove indipendenti, ciascuna con [[probabilità]] $p$ di successo. Qual è lo stimatore di massima verosimiglianza per $p$?
 > I dati a disposizione consistono nei valori di $X_{1}, X_{2}, \dots, X_{n}$, dove $$
 X_{i}= \begin{cases}1 & \text { se la prova } i \text {-esima ha successo } \\ 0 & \text { altrimenti }\end{cases}$$
-> La distribuzione delle $X_{i}$ è determinata da $$P\left(X_{i}=1\right)=p=1-P\left(X_{i}=0\right)$$ o, in maniera più compatta, $$P\left(X_{i}=k\right)=p^{k}(1-p)^{1-k}, \quad k=0,1$$
+> La distribuzione delle $X_{i}$ è determinata da $$\mathbb{P}\left(X_{i}=1\right)=p=1-\mathbb{P}\left(X_{i}=0\right)$$ o, in maniera più compatta, $$\mathbb{P}\left(X_{i}=k\right)=p^{k}(1-p)^{1-k}, \quad k=0,1$$
 > Quindi sfruttando l'indipendenza delle prove, la likelihood (ovvero la funzione di massa congiunta) del campione è data da $$
 \begin{aligned}
-f\left(x_{1}, x_{2}, \ldots, x_{n} \mid p\right): & =P\left(X_{1}=x_{1}, X_{2}=x_{2}, \ldots X_{n}=x_{n} \mid p\right) \\
+f\left(x_{1}, x_{2}, \ldots, x_{n} \mid p\right): & =\mathbb{P}\left(X_{1}=x_{1}, X_{2}=x_{2}, \ldots X_{n}=x_{n} \mid p\right) \\
 & =p_{\mathrm{p}}^{x_{1}}(1-p)^{1-x_{1}} \ldots p^{x_{n}}(1-p)^{1-x_{n}} \\
 & =p^{{ }_{i} x_{i}}(1-p)^{n-{ }^{\mathrm{P}}}{ }_{i} x_{i}, \quad x_{i}=0,1, \quad i=1, \ldots, n
 \end{aligned}$$
@@ -44,7 +44,7 @@ f\left(x_{1}, x_{2}, \ldots, x_{n} \mid p\right): & =P\left(X_{1}=x_{1}, X_{2}=x
 f\left(x_{1}, x_{2}, \ldots, x_{n} \mid \lambda\right) & =\frac{\lambda^{x_{1}} e^{-\lambda}}{x_{1} !} \cdots \frac{\lambda^{x_{n}} e^{-\lambda}}{x_{n} !} \\
 & =\frac{\lambda^{p}{ }^{x_{i}} e^{-n \lambda}}{x_{1} ! \cdots x_{n} !}
 \end{aligned}$$ ovvero, $$
-\log f\left(x_{1}, x_{2}, \ldots, x_{n} \mid \lambda\right)=\sum_{i=1}^{n} x_{i} \log \lambda-n \lambda-\log c$$ dove $c := x_{1}| \dots x_{n}|$ non dipende da $\lamda$. Derivando si trova che $$
+\log f\left(x_{1}, x_{2}, \ldots, x_{n} \mid \lambda\right)=\sum_{i=1}^{n} x_{i} \log \lambda-n \lambda-\log c$$ dove $c := x_{1}| \dots x_{n}|$ non dipende da $\lambda$. Derivando si trova che $$
 \frac{d}{d \lambda} \log f\left(x_{1}, x_{2}, \ldots, x_{n} \mid \lambda\right)=\frac{1}{\lambda} \sum_{i=1}^{n} x_{i}-n$$
 > Uguagliando infine a zero questa espressione si ottiene una formula per la stima $\widehat{\lambda}$ in funzione delle osservazioni $x_{1},x_{2}, \dots, x_{n}$, $$
 \widehat{\lambda}=\frac{1}{n} \sum_{i=1}^{n} x_{i}$$ 
@@ -52,7 +52,7 @@ f\left(x_{1}, x_{2}, \ldots, x_{n} \mid \lambda\right) & =\frac{\lambda^{x_{1}} 
 > >[!important]-
 > > Volendo citare un caso pratico, supponiamo che il numero di persone che ogni giorno entra in un negozio sia un variabile aleatoria di Poisson avente una certa  media $\lambda$ che vogliamo stimare. Se in $20$ giorni il numero totale di persone entrate nel negozio è di $857$, allora la stima di massima verosimiglianza per $\lambda$ è $\frac{857}{20}=42.85$ Quindi stimiamo che in media ogni giorno entreranno $42.85$ persone.
 
->[!example]- Stimatore di massima verosimiglianza per una popolazione normale
+>[!example]- Stimatore di massima verosimiglianza per una [[popolazione]] normale
 > Siano $X_{1}, X_{2}, \dots, X_{n}$ variabili aleatorie normali e indipendenti, con media $\mu$ e deviazione standard $\sigma$, entrambe incognite. La densità congiunta, e quindi la likelihood, è data da $$
 \begin{aligned}
 f\left(x_{1}, x_{2}, \ldots, x_{n} \mid \mu, \sigma\right) & =\prod_{i=1}^{n} \frac{1}{\sqrt{2 \pi} \sigma} \exp \left\{-\frac{\left(x_{i}-\mu\right)^{2}}{2 \sigma^{2}}\right\} \\

@@ -5,7 +5,7 @@ author: Lorenzo Tecchia
 >[!todo]
 > Inserire grafico
 
-Una [[variabile aleatoria]] [[ContinuaVA|continua]] la cui funzione di densità di probabilità è data da: $$f(x) = \begin{cases} \lambda e^{-\lambda x} &se \ x \geq 0\\
+Una [[variabile aleatoria]] [[Continua|continua]] la cui funzione di densità di probabilità è data da: $$f(x) = \begin{cases} \lambda e^{-\lambda x} &se \ x \geq 0\\
 0 & se \ x < 0
 \end{cases}$$
 per un opportuno valore della costante $\lambda > 0$, si dice esponenziale con parametro (*o densità*) $\lambda$.
