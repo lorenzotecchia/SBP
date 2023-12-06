@@ -73,3 +73,36 @@ P(Y>x) & =P\left(\min \left(X_{1}, X_{2}, \ldots, X_{n}\right)>x\right) \\
 & =\prod_{i=1}^{n} e^{-\lambda_{i} x} \\
 & =e^{-x}{ }^{\mathrm{p}}{ }_{i=1} \lambda_{i}
 \end{aligned}$$
+
+---
+### Intervalli di confidenza per la media della distribuzione esponenziale
+Considerando un campione $X_{1}, X_{2}, \dots, X_{n}$ di variabili aleatorie esponenziali i.i.d. tutte con media $\theta$ incognita. È possibile dimostrare che lo stimatore di massima verosimiglianza per $\theta$ è costituito dalla media campionaria $\sum_{i=1}^{n}X_{i}/n$. Per ottenere gli intervalli di confidenza, ricordiamo che $\sum_{i=1}^{n}X_{i}$ ha distribuzione gamma con parametri $n$ e $1/\theta$. Deduciamo allora che
+$$
+\frac{2}{\theta} \sum_{i=1}^{n} X_{i} \sim \chi_{2 n}^{2}
+$$
+quindi per ogni $\alpha \in (0, 1)$,
+$$
+\begin{aligned}
+1-\alpha & =P\left(\chi_{1-\frac{\alpha}{2}, 2 n}^{2}<\frac{2}{\theta} \sum_{i=1}^{n} X_{i}<\chi_{\frac{\alpha}{2}, 2 n}^{2}\right) \\
+& =P\left(\frac{2 \sum_{i=1}^{n} X_{i}}{\chi_{\frac{\alpha}{2}, 2 n}^{2}}<\theta<\frac{2 \sum_{i=1}^{n} X_{i}}{\chi_{1-\frac{\alpha}{2}, 2 n}^{2}}\right)
+\end{aligned}
+$$
+Dopo che il campione di dati viene osservato, e si trova che $X_{i}= x_{i}$, per $i=1, \dots, n$ si può affermare con un livello di confidenza di $1-\alpha$ che 
+$$
+\theta \in\left(\frac{2 \sum_{i=1}^{n} x_{i}}{\chi_{\frac{\alpha}{2}, 2 n}^{2}}, \frac{2 \sum_{i=1}^{n} x_{i}}{\chi_{1-\frac{\alpha}{2}, 2 n}^{2}}\right)
+$$
+
+>[!example]-
+> Si pensa che gli oggetti prodotti da una azienda abbiano tempi di vita in ore che sono variabili aleatorie esponenziali indipendenti di media $\theta$. La loro densità è quindi
+> $$
+f(x)=\frac{1}{\theta} e^{-x / \theta} ; \quad x>0
+> $$
+> Se la somma dei tempi di vita di $10$ esemplati è pari a $1740$ ore, che intervallo di confidenza è pari al $95\%$ ne risulta , per la media della popolazione $\theta$?
+> Scopriamo che:
+> $$
+\chi_{0.025,20}^{2} \approx 34.170, \quad \quad \chi_{0.975,20}^{2} \approx 9.591
+> $$
+> Possiamo quindi concludere che, con il $95\%$ di confidenza, $\theta$ appartiene all'intervallo 
+> $$
+\left(\frac{2 \times 1740}{34.170}, \frac{2 \times 1740}{9.591}\right) \approx(101.84, \quad 362.84)
+> $$
