@@ -1,6 +1,9 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, probability, statistics]
+tags:
+  - definition
+  - statistics
+  - distribution
 ---
 >[!important] # Definizione 
 > Se $Z$ e $C_{n}$ sono variabili aleatorie indipendenti, la prima normale standard e la seconda [[chi-quadro]] con $n$ gradi di libertà, allora la variabile aleatoria $T_{n}$, definita come $$T_{n}:=\frac{Z}{\sqrt{C_{n} / n}}$$ si dice avere *distribuzione* $t$ con $n$ gradi di libertà, cosa che si denota sinteticamente con $$T_{n} \sim t_{n}$$

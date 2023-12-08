@@ -1,7 +1,11 @@
 ---
 author: Lorenzo Tecchia
-tags: [theorem, definition, aleatoryVariable, statistics, to-do]
-alias: [Teorema di Kolmogorov]
+tags:
+  - theorem
+  - statistics
+  - to-do
+aliases:
+  - Teorema di Kolmogorov
 ---
 >[!todo]
 > Da rivedere

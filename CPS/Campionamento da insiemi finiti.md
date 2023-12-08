@@ -1,8 +1,11 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, statistics]
+tags:
+  - definition
+  - statistics
+  - sampling
 ---
-Consideriamo una [[popolazione]] di $N$ elementi. Con il concetto di [[campione]] aleatorio (di numerosità $n$ ) estratto da questa [[popolazione]], si intende la scelta di un sottoinsieme di $n$ elementi, fatta in modo tale che tutti i $\left(\begin{array}{l}N \\ n\end{array}\right)$ sottoinsiemi candidati abbiano le stesse [[probabilità]] di essere selezionati. Per esempio, se la [[popolazione]] di partenza consiste dei tre elementi $a, b \mathrm{e} c$, un campione casuale di due elementi è un sottoinsieme scelto con pari probabilità tra $\{a, b\},\{a, c\} \in\{b, c\}$. Un sottoinsieme casuale può essere individuato in pratica scegliendo uno alla volta i suoi elementi: il primo con pari probabilità tra gli $N$ possibili, il secondo con pari probabilità tra gli $N-1$ restanti, e così via.
+Consideriamo una [[popolazione]] di $N$ elementi. Con il concetto di [[campione]] aleatorio (di numerosità $n$ ) estratto da questa [[popolazione]], si intende la scelta di un sottoinsieme di $n$ elementi, fatta in modo tale che tutti i $\left(\begin{array}{l}N \\ n\end{array}\right)$ sottoinsiemi candidati abbiano le stesse [[probabilità]] di essere selezionati. Per esempio, se la [[popolazione]] di partenza consiste dei tre elementi $a, b \; \mathrm{e}\; c$, un campione casuale di due elementi è un sottoinsieme scelto con pari probabilità tra $\{a, b\},\{a, c\} \in\{b, c\}$. Un sottoinsieme casuale può essere individuato in pratica scegliendo uno alla volta i suoi elementi: il primo con pari probabilità tra gli $N$ possibili, il secondo con pari probabilità tra gli $N-1$ restanti, e così via.
 
 Supponiamo ora che alcuni elementi della [[popolazione]] di partenza abbiano una certa caratteristica, e denotiamo con $p$ la frazione di questi rispetto al totale. Vi sono complessivamente $p N$ elementi che posseggono questa caratteristica e $(1-p) N$ che non ce l'hanno. Selezioniamo un campione casuale di ampiezza $n$, e dopo avere numerato i suoi elementi, poniamo, per $i$ che va da 1 a $n$ :$$X_{i}:= \begin{cases}1 & \text { se l'elemento } i \text { del campione possiede la caratteristica } \\ 0 & \text { altrimenti }\end{cases}$$
 Consideriamo la somma di queste variabili aleatorie,$$X:=X_{1}+X_{2}+\cdots+X_{n}$$

@@ -1,7 +1,12 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, aleatoryVariable, statistics]
-alias: [Collettivo statistico]
+tags:
+  - definition
+  - aleatoryVariable
+  - statistics
+  - sampling
+aliases:
+  - Collettivo statistico
 ---
 Con il termine ***statistica descrittiva*** si intende un insieme di tecniche e strumenti finalizzati ad assolvere uno dei principali compiti assegnati dalla statistica:
 >[!important]

@@ -1,6 +1,8 @@
 ---
 author: Lorenzo Tecchia
-tags: [statistics, definition]
+tags:
+  - statistics
+  - theorem
 ---
 Grazie alla [[Disugaglianza di Chebyshev|disuguaglianza di Chebyshev]] possiamo enunciare e provare la ***legge debole dei grandi numeri***:
 >[!definition]

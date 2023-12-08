@@ -1,5 +1,9 @@
 ---
-tags: [definition, statistics]
+tags:
+  - definition
+  - statistics
+  - basics
+  - sampling
 author: Lorenzo Tecchia
 ---
 >[!introduction]-

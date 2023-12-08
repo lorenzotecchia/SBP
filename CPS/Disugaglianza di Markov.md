@@ -1,6 +1,8 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, statistics]
+tags:
+  - statistics
+  - theorem
 ---
 Se $X$ è una [[variabile aleatoria]] che non è mai negativa, allora per ogni $a > 0$: $$\mathbb{P}(X \geq a) \leq \frac{E[X]}{a}$$
 ***Dimostrazione***. Diamo la dimostrazione nel caso che $X$ sia [[Continua|continua]] con densità $f$.

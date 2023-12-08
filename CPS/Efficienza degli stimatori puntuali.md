@@ -1,6 +1,10 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, statistics]
+tags:
+  - definition
+  - statistics
+  - parametricEstimation
+  - sampling
 ---
 Sia $X := (X_{1}, X_{2}, \dots, X_{n})$ un [[campione]] causale estratto da una [[popolazione]] di [[distribuzione]] nota eccetto che per un parametro incognito $\theta$, e sia $d=d(X)$ uno stimatore di $\theta$. Come possiamo valutare la sua efficacia come stimatore? Un criterio potrebbe essere quello di considerare il quadrato della sua differenza tra $d(X)$ e $\theta$, però $(d(X)-\theta)^{2}$ è una [[variabile aleatoria]], quindi stabiliamo di adoperare $r(d, \theta)$, l'*errore quadratico medio dello stimatore* $d$, che è per definizione
 $$

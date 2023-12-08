@@ -1,6 +1,12 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, aleatoryVariable, probability, statistics]
+tags:
+  - definition
+  - statistics
+  - sampling
+  - probability
+  - parametricEstimation
+  - distribution/normal
 ---
 Sia $X_{1}, X_{2}, \dots, X_{n}$ un [[campione]] estratto da una [[popolazione]] [[Gaussiana|normale]] di [[Valore atteso|media]] incognita $\mu$ e [[varianza]] nota $\sigma^{2}$. Avviamo in precedenza dimostrato che $\overline{X} := \sum_{i}X_{i}/n$ è lo stimatore di massima verosimiglianza per $\mu$. Ciò non significa che  possiamo aspettarci che la [[Valore atteso|media]] sia esattamente uguale  $\mu$, ma solo che le sarà vicina.
 Perciò, rispetto ad uno stimatore puntuale, è a volte preferibile poter produrre un intervallo per il quale abbiamo un certo livello di fiducia (confidenza), che il parametro $\mu$ vi appartenga. Per ottenere un tale ***intervallo di confidenza***, dobbiamo fare uso della [[distribuzione]] di [[probabilità]] dello stimatore puntuale. 

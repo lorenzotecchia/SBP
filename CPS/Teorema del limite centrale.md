@@ -1,11 +1,12 @@
 ---
 tags:
-  - definition
   - statistics
   - theorem
   - probability
 author: Lorenzo Tecchia
-aliases: [TLC, CLT]
+aliases:
+  - TLC
+  - CLT
 ---
 >[!tldr]-
 > La somma di un numero elevato di variabili aleatorie indipendenti, tende ad avere distribuzione approssimativamente normale.[^1]

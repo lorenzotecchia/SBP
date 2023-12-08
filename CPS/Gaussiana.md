@@ -1,6 +1,11 @@
 ---
-alias: Normale
-tags: [aleatoryVariable, definition, statistics, to-do]
+aliases:
+  - Normale
+tags:
+  - definition
+  - statistics
+  - to-do
+  - distribution/normal
 author: Lorenzo Tecchia
 ---
 >[!todo] 

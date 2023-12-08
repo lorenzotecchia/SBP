@@ -1,5 +1,10 @@
 ---
-tags: [aleatoryVariable, definition, probability, to-do]
+tags:
+  - definition
+  - probability
+  - to-do
+  - distribution
+  - example
 author: Lorenzo Tecchia
 ---
 >[!todo]

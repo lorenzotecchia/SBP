@@ -1,6 +1,10 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, statistics, probability, advanced]
+tags:
+  - definition
+  - statistics
+  - probability
+  - advanced
 ---
 La simulazione al calcolatore costituisce un metodo molto potente per valutare gli integrali mono- e multidimensionali. Supponiamo infatti che $f$ sia una funzione $\mathbb{R}^{r}$ in $\mathbb{R}$, e che siamo interessati a stimare la quantità $\theta$, definita da $$
 \theta:=\int_{0}^{1} \int_{0}^{1} \cdots \int_{0}^{1} f\left(y_{1}, y_{2}, \ldots, y_{n}\right) d y_{1} d y_{2} \cdots d y_{n}$$

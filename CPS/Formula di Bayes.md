@@ -1,9 +1,12 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, probability]
+tags:
+  - definition
+  - probability
+  - example
 ---
 Siano $E$ e $F$ due [[Evento|eventi]] qualsiasi. È possibile esprimere $E$ come: $$E = (E \cap F)\cup (E \cap F^{c})$$
-Infatti ogni punto che appartiene all'evento $E$, o sta sia in $E$ sia in $F$, oppure sta sia in $E$ ma non in $F$. Inoltre, visto che $E \cap F$ e $E \cap F^{c}$ sono eventi disgiunti, si ha per l'[[assioma 3]]:
+Infatti ogni punto che appartiene all'evento $E$, o sta sia in $E$ sia in $F$, oppure sta sia in $E$ ma non in $F$. Inoltre, visto che $E \cap F$ e $E \cap F^{c}$ sono eventi disgiunti, si ha per l'[[Assioma Terzo|assioma]]:
 
 $$\begin{align}
 \mathbb{P}(E) &= \mathbb{P}(E \cap F) + \mathbb{P}(E \cap F^{c}) \\

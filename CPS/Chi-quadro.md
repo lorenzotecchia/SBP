@@ -1,5 +1,8 @@
 ---
-tags: [definition, statistics]
+tags:
+  - definition
+  - statistics
+  - example
 author: Lorenzo Tecchia
 ---
 Se $Z_{1}, Z_{2}, \dots, Z_{n}$, sono variabili normali standard e indipendenti, allora la somma dei loro quadrati, $$X:=Z_{1}^{2}+Z_{2}^{2}+\cdots+Z_{n}^{2}$$

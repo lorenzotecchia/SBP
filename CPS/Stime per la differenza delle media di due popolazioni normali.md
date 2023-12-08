@@ -1,6 +1,11 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, probability, statistics, aleatoryVariable]
+tags:
+  - definition
+  - probability
+  - distribution/normal
+  - sampling
+  - parametricEstimation
 ---
 Siano $X_{1}, X_{2}, \dots, X_{n}$ e $Y_{1}, Y_{2}, \dots, Y_{m}$ due campioni estratti da popolazioni normali differenti, e denotiamo con $\mu_{1}$ e $\sigma_{1}^{2}$ i parametri della prima, e con $\mu_{2}$ e $\sigma_{2}^{2}$ quelli della seconda. Supponiamo che che i due campioni siano tra loro indipendenti, e tentiamo di stimare $\mu_{1}-\mu_{2}$.
 Siccome $\overline{X} := \sum\limits_{i=1}^{n}X_{i}/n$ e $\overline{Y} := \sum\limits_{j=1}^{m}Y_{j}/m$ sono gli [[stimatori di massima verosimiglianza]] di $\mu_{1}$ e $\mu_{2}$, sembra ragionevole (e infatti può essere dimostrato) che $\overline{X} - \overline{Y}$ sia lo stimatore di massima verosimiglianza di $\mu_{1}- \mu_{2}$.

@@ -1,6 +1,9 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, aleatoryVariable, probability]
+tags:
+  - definition
+  - probability
+  - distribution
 ---
 In un esperimento di prove ripetute, sia $p$ la [[probabilità]] di successo in ciascuna prova e $q = 1-p$ la [[probabilità]] di insuccesso. Supponiamo di essere interessati al primo successo. 
 Sia, dunque, $X$ la [[variabile aleatoria]] che conta il numero di prove necessarie per vedere il primo successo.

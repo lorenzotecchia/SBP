@@ -1,6 +1,10 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, probability, aleatoryVariable,to-do]
+tags:
+  - definition
+  - probability
+  - to-do
+  - distribution
 ---
 >[!todo] Inserire grafico
 

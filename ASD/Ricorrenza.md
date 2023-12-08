@@ -234,6 +234,4 @@ $$
 \sum_{q=1}^{n-1} \leq\left(\frac{n^2 \log n}{2}-\frac{n \log n}{2}\right)-\sum_{q=1}^{\frac{n}{2}-1} q & =\frac{n^2 \log n}{2}-\frac{n \log n}{2}-\frac{\frac{n}{2}\left(\frac{n}{2}+1\right)}{2}= \\
 & =\frac{n^2 \log n}{2}-\frac{n \log n}{2}-\frac{n^2}{8}+\frac{n}{4} \leq \frac{n^2 \log n}{2}-\frac{n^2}{8}
 \end{aligned}$$
-Poiché $\frac{n\log(n)}{2} \geq \frac{n}{4}$ e quindi $\frac{n}{4} - \frac{n\log(n)}{2} \leq 0$, togliendo un valore negativo la maggioranza resta valida.
-
-
+	Poiché $\frac{n\log(n)}{2} \geq \frac{n}{4}$ e quindi $\frac{n}{4} - \frac{n\log(n)}{2} \leq 0$, togliendo un valore negativo la maggioranza resta valida.

@@ -1,6 +1,9 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, statistics]
+tags:
+  - statistics
+  - theorem
+  - example
 ---
 Se $X$ è una variabile aleatoria con [[Valore atteso|media]] $\mu$ e [[varianza]] $\sigma^{2}$, allora per ogni $r > 0$:$$\mathbb{P}(|X-\mu| \geq r) \leq \frac{\sigma^{2}}{r^{2}}$$
 

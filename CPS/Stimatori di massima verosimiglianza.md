@@ -3,8 +3,8 @@ author: Lorenzo Tecchia
 tags:
   - definition
   - statistics
-  - probability
   - parametricEstimation
+  - sampling
 ---
 Una qualunque statistica il cui scopo sia quello di dare una stima di un parametro $\theta$ si dice stimatore di $\theta$; gli stimatori sono quindi variabili aleatorie. Il valore deterministico assunto da uno stimatore è detto invece *stima*. Ad esempio, la [[Valore atteso|media]] campionaria $\overline{X} := \sum_{i}X_{i}/n$ di un [[campione]] [[Gaussiana|normale]] $X_{1}, X_{2}, \dots, X_{n}$ costituisce lo stimatore abituale della media $\mu$ della [[distribuzione]]. 
 Consideriamo delle variabili aleatorie $X_{1}, X_{2}, \dots, X_{n}$, la cui distribuzione congiunta sia nota a meno di un parametro incognito $\theta$. Un problema di interesse consiste nello stimare $\theta$ usando i valori che vengono assunti da queste variabili aleatorie. Per esemplificare, potremmo immaginare che le $X_{i}$, siano variabili aleatorie esponenziali e indipendenti, tutte di media $\theta$ incognita. In questo caso la loro densità congiunta sarebbe data da $$

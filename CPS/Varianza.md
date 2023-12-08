@@ -1,5 +1,9 @@
 ---
-tags: [definition, aleatoryVariable, statistics]
+tags:
+  - definition
+  - statistics
+  - example
+  - distribution/normal
 author: Lorenzo Tecchia
 ---
 Sia $X$ una [[variabile aleatoria]] con media $\mu$. La ***varianza*** di $X$, che si denota con $Var(X)$, è se esiste la quantità $$Var(X) := E[(X- \mu)^{2}]$$

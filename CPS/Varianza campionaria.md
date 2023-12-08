@@ -1,6 +1,10 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, statistics]
+tags:
+  - definition
+  - statistics
+  - sampling
+  - distribution/normal
 ---
 Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione aleatorio, proveniente da una distribuzione di media $\mu$ e varianza $\sigma^{2}$. Sia $\bar{X}$ la sua [[media campionaria]]. Introduciamo quindi una seconda statistica.
 >[!definition]

@@ -1,5 +1,8 @@
 ---
-tags: [definition, probability, aleatoryVariable]
+tags:
+  - definition
+  - probability
+  - distribution
 author: Lorenzo Tecchia
 ---
 Una [[variabile aleatoria]] [[Discreta|discreta]] che possa assumere un infinità non numerabile di valori, non potrà essere discreta. Si dirà invece ***continua*** se esiste una funzione non negativa $f$, definita su tutto $\mathbb{R}$ avente la proprietà che per ogni insieme $B$ di numeri reali, $$\mathbb{P}(X \in B) = \int_{B}f(x)dx$$
