@@ -1,5 +1,8 @@
 ---
-tags: [definition, probability]
+tags:
+  - definition
+  - probability
+  - basics
 author: Lorenzo Tecchia
 ---
 Supponendo di avere un insieme $x_{1}, x_{2}, \dots, x_{n}$ di $n$ dati (o come anche si dice, un campione di *ampiezza* o *numerosità* pari a $n$). La ***media aritmetica*** è definita come:

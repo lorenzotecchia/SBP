@@ -1,11 +1,15 @@
 ---
-tags: [definition, statistics]
+tags:
+  - definition
+  - statistics
+  - basics
+  - sampling
 author: Lorenzo Tecchia
 ---
 >[!introduction]-
->Considerando una popolazione di elementi, a ciascuno dei quali è associata una grandezza numerica. La popolazione potrebbe ad esempio essere continua dagli individui adulti facenti parte di una qualche categoria di persone, e la grandezza numerica di interesse potrebbe essere il reddito annuale, la statura, l'età o altro. 
->Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione di dati estratto da questa popolazione. È comune supporre che i valori numerici associati a ciascuno degli elementi del campione, siano variabili aleatorie indipendenti e identicamente distribuite.
->Denotiamo con $\mu$ e $\sigma^{2}$ la loro media e la loro varianza, che prendono il nome di *media e varianza della popolazione*. 
+>Considerando una [[popolazione]] di elementi, a ciascuno dei quali è associata una grandezza numerica. La [[popolazione]] potrebbe ad esempio essere continua dagli individui adulti facenti parte di una qualche categoria di persone, e la grandezza numerica di interesse potrebbe essere il reddito annuale, la statura, l'età o altro. 
+>Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione di dati estratto da questa [[popolazione]]. È comune supporre che i valori numerici associati a ciascuno degli elementi del campione, siano variabili aleatorie indipendenti e identicamente distribuite.
+>Denotiamo con $\mu$ e $\sigma^{2}$ la loro media e la loro varianza, che prendono il nome di *media e varianza della [[popolazione]]*. 
 
 Definiamo la ***media campionaria*** come $$\overline{X}:=\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}$$ Si noti che $\bar{X}$ è una funzione delle variabili aleatorie $X_{1}, X_{2}, \dots, X_{n}$. In quanto tale è una ***statistica***, e in particola è a sua volta una variabile aleatoria. Ha senso quindi domandarsi quanto valgano il valore atteso della media campionaria e la sua varianza. 
 È facile vedere che $$
@@ -26,7 +30,7 @@ E[\overline{X}] & =E\left[\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right] \\
 
 ---
 >[!improtant] # Distribuzione approssimata
-> Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione proveniente da una popolazione di media $\mu$ e varianza $\sigma^{2}$. Vediamo come il teorema del limite centrale ci permette di approssimare la distribuzione della media campionaria, $$\overline{X}:=\frac{1}{n} \sum_{i=1}^{n} X_{i}$$
+> Sia $X_{1}, X_{2}, \dots, X_{n}$ un campione proveniente da una [[popolazione]] di media $\mu$ e varianza $\sigma^{2}$. Vediamo come il teorema del limite centrale ci permette di approssimare la distribuzione della media campionaria, $$\overline{X}:=\frac{1}{n} \sum_{i=1}^{n} X_{i}$$
 > Siccome il prodotto di una variabile aleatoria normale per una costante è ancora normale, ne segue che, quando $n$ è grande, $\overline{X}$ è approssimativamente gaussiana. Poiché inoltre la media campionaria ha un valore atteso $\mu$ e deviazione standard $\sigma / \sqrt{n}$, otteniamo che $$\frac{\overline{X}-\mu}{\sigma / \sqrt{n}} \dot{\sim} \mathcal{N}(0,1)$$ 
 
 ^a77156

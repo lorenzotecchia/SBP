@@ -1,7 +1,10 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, statistics]
-alias: [funzione-generatrice]
+tags:
+  - definition
+  - statistics
+aliases:
+  - funzione-generatrice
 ---
 La ***funzione generatrice dei momenti*** o più semplicemente *funzione generatrice* $\phi$, di una variabile aleatoria $X$, è definita, per tutti i $t$ reali per i quali il [[valore atteso]] di $e^{tX}$ ha senso, dall'espressione $$
 \phi(t):=E\left[e^{t X}\right]= \begin{cases}\sum_{x} e^{t x} p(x) & \text { se } X \text { è discreta } \\ \int_{-\infty}^{\infty} e^{t x} f(x) d x & \text { se } X \text { è continua }\end{cases}$$

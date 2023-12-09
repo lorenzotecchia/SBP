@@ -1,5 +1,8 @@
 ---
-tags: [definition, statistics]
+tags:
+  - definition
+  - statistics
+  - example
 author: Lorenzo Tecchia
 ---
 Se $Z_{1}, Z_{2}, \dots, Z_{n}$, sono variabili normali standard e indipendenti, allora la somma dei loro quadrati, $$X:=Z_{1}^{2}+Z_{2}^{2}+\cdots+Z_{n}^{2}$$
@@ -11,4 +14,4 @@ Per la distribuzione [[Gaussiana|normale]] standard, se $X$ è una chi-quadro co
 
 >[!example]-
 > Si determini $\mathbb{P}(X \leq 30)$ quando $X$ è una variabile aleatoria chi-quadro con $26$ gradi di libertà.
-> Usando il programma riferito sul libro $$\mathbb{P}(X \leq) \approx 0.7325 \quad \square$$
+> Usando il programma riferito sul libro $$\mathbb{P}(X \leq 30) \approx 0.7325 \quad \square$$

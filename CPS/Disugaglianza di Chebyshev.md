@@ -1,8 +1,11 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, statistics]
+tags:
+  - statistics
+  - theorem
+  - example
 ---
-Se $X$ è una variabile aleatoria con [[Valore atteso|media]] $\mu$ e [[varianza]] $\sigma^{2}$, allora per ogni $r > 0$:$$P(|X-\mu| \geq r) \leq \frac{\sigma^{2}}{r^{2}}$$
+Se $X$ è una variabile aleatoria con [[Valore atteso|media]] $\mu$ e [[varianza]] $\sigma^{2}$, allora per ogni $r > 0$:$$\mathbb{P}(|X-\mu| \geq r) \leq \frac{\sigma^{2}}{r^{2}}$$
 
 ***Dimostrazione***: Gli eventi $\{|X - \mu| \geq r\}$ e $\{(X -\mu)^{2} \geq r^{2}\}$ coincidono e sono quindi equiprobabili. Visto che $(X - \mu)^{2}$ è una variabile aleatoria non negativa, possiamo applicarle la disuguaglianza di Markov con $a = r^{2}$, ottenendo che: $$
 \begin{aligned}

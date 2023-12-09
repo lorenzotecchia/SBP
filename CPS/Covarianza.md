@@ -1,6 +1,9 @@
 ---
 author: Lorenzo Tecchia
-tags: [definition, statistics]
+tags:
+  - definition
+  - statistics
+  - example
 ---
 >[!important]
 > Per quanto riguarda la varianza la [[Valore atteso#^prop-valoreAtteso|proprietà del valore atteso]] non è valida. Ad esempio $$
