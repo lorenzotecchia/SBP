@@ -133,7 +133,7 @@ r\left(d_{1}, \theta\right) & =\operatorname{Var}\left(d_{1}\right) \\
 > $$
 d_{2}=d_{2}(\boldsymbol{X}):=\max _{i} X_{i}
 > $$
-> Per calcolare l'errore quadratico medio di $d_{2}$ occorre prima conoscere la sua [[Valore atteso|media]] (per ottenere il *bias*) e la sua [[varianza]]. Cerchiamo per cominciare la funzione di ripartizione.
+> Per calcolare l'errore quadratico medio di $d_{2}$ occorre prima conoscere la sua [[Valore atteso|media]] (per ottenere il *bias*) e la sua [[varianza]]. Cerchiamo per cominciare la [[funzione di ripartizione]].
 > $$
 \begin{aligned}
 F_{2}(x) & =P\left(d_{2}(\boldsymbol{X}) \leq x\right) \\
@@ -143,7 +143,7 @@ F_{2}(x) & =P\left(d_{2}(\boldsymbol{X}) \leq x\right) \\
 & =F_{X_{i}}(x)^{n}=\left(\frac{x}{\theta}\right)^{n}, \quad 0 \leq x \leq \theta
 \end{aligned}
 > $$
-> Derivando la funzione di ripartizione si trova la densità di $d_{2}$,
+> Derivando la [[funzione di ripartizione]] si trova la densità di $d_{2}$,
 > $$
 f_{2}(x)=\frac{n x^{n-1}}{\theta^{n}}, \quad 0 \leq x \leq \theta
 > $$

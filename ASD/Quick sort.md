@@ -190,7 +190,7 @@ Seguendo questa logica per $r(x) = 3 \Longrightarrow q = 2, \; r(x) = 4 \Longrig
 Scegliere il pivot equivale dunque a scegliere la dimensione della partizione $q$, ed il nostro algoritmo sceglie proprio il rango dunque le classi di equivalenza esattamente $n$:
 ![[Pasted image 20231122111932.png]]
 >[!note]
-> Intuitivamente $T_{M}^{r}(n)$ rappresenta la funzione che dato il ragno $r$ da il tempo medio delle sequenze di quella classe di equivalenza.
+> Intuitivamente $T_{M}^{r}(n)$ rappresenta la funzione che dato il rango $r$ da il tempo medio delle sequenze di quella classe di equivalenza.
 
 Il tempo medio può essere espresso con una media aritmetica di tutti i tempi delle classi di equivalenza, ovvero:$$T_M(n)=\frac{1}{n}\left(\sum_{r=1}^n T_M^r(n)\right)$$
 Ma dato un certo rango $r$ avremo il seguente albero di ricorrenza:

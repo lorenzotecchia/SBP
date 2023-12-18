@@ -29,4 +29,4 @@ P\left(e^{t X} \in A, e^{t Y} \in B\right) & =P\left(X \in A^{\prime}, Y \in B^{
 \end{aligned}$$
 
 >[!note]-
-> Un ulteriore risultato che mostra l'importanza della funzione generatrice dei momenti è che essa *determina la distribuzione*, nel senso che due variabile aleatorie con identica funzione generatrice hanno necessariamente la stessa legge (e quindi la stessa funzione di ripartizione, e la stessa funzione di massa, ovvero la stessa identità).
+> Un ulteriore risultato che mostra l'importanza della funzione generatrice dei momenti è che essa *determina la distribuzione*, nel senso che due variabile aleatorie con identica funzione generatrice hanno necessariamente la stessa legge (e quindi la stessa [[funzione di ripartizione]], e la stessa funzione di massa, ovvero la stessa identità).

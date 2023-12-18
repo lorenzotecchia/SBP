@@ -15,7 +15,7 @@ Una [[variabile aleatoria]] [[Continua|continua]] la cui funzione di densità di
 \end{cases}$$
 per un opportuno valore della costante $\lambda > 0$, si dice esponenziale con parametro (*o densità*) $\lambda$.
 
-La [[funzione di distribuzione]] di una tale variabile aleatoria è data da:$$\begin{align}
+La [[Funzione di Ripartizione]] di una tale variabile aleatoria è data da:$$\begin{align}
 \mathcal{F}(x) &= \mathbb{P}(X \leq x) \\
 &= \int_{0}^{x}\lambda e^{-\lambda y}dy \\
 &= 1 - e^{- \lambda x}, \;\;\;\;\; x \geq 0

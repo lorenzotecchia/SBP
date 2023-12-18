@@ -16,7 +16,7 @@ aliases:
 
 Si può anche normalizzare la somma precedente in modo da ottenere una distribuzione approssimativamente *normale standard*. Si ha infatti che $$
 \frac{X_{1}+X_{2}+\cdots+X_{n}-n \mu}{\sigma \sqrt{n}} \dot{\sim} \mathcal{N}(0,1)$$ dove con il simbolo $\dot{\sim}$ si intende "è approssimativamente distribuito come". Ciò significa che per $n$ grande  e $x$ qualsiasi vale l'approssimazione $$
-P\left(\frac{X_{1}+X_{2}+\cdots+X_{n}-n \mu}{\sigma \sqrt{n}}<x\right) \approx \Phi(x)$$ dove $\Phi$ denota la funzione di ripartizione della normale standard.
+P\left(\frac{X_{1}+X_{2}+\cdots+X_{n}-n \mu}{\sigma \sqrt{n}}<x\right) \approx \Phi(x)$$ dove $\Phi$ denota la [[funzione di ripartizione]] della normale standard.
 
 >[!example]- Gli ingegneri che stanno studiando un ponte sono convinti che il numero di tonnellate $W$, che una singola campata può sostenere senza subire danni strutturali, sia una variabile aleatoria normale di media $200$ e deviazione standard $20$. Supponiamo che il peso in tonnellate degli autoveicoli che vi passano sia una variabile aleatoria di media $1.5$ e deviazione standard $0.15$. Quante automobili dovrebbero essere contemporaneamente sulla campata, affinché la probabilità di danno strutturale superi il $10\%$?
 > Sia $P_{n}$ la probabilità di un danno strutturale, quando vi sono $n$ autoveicoli.

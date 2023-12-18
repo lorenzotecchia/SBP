@@ -10,7 +10,7 @@ La funzione che compare nella soprastante equazione è la ***funzione di densit�
 
 Tale equazione dice che la probabilità che una ***variabile aleatoria continua*** $X$ appartenga a un insieme $B$ si può trovare integrando la sua densità su tale insieme. Poiché $X$ deve assumere un qualche valore di $\mathbb{R}$ la sua densità deve soddisfare:$$1=\mathbb{P}(X \in \mathbb{R}) = \int_{-\infty}^{+\infty}f(x)dx$$
 
-Una relazione che lega la [[funzione di distribuzione]] $F$ alla densità $f$ è la seguente:$$F(a):=\mathbb{P}(X \in (- \infty, a]) = \int_{\infty}^{a}f(x)dx$$
+Una relazione che lega la [[Funzione di Ripartizione]] $F$ alla densità $f$ è la seguente:$$F(a):=\mathbb{P}(X \in (- \infty, a]) = \int_{\infty}^{a}f(x)dx$$
 Derivando entrambi i membri si ottiene la relazione fondamentale:
 >[!important] La densità è la derivata della funzione di distribuzione
 > $$\frac{d}{da}F(a)=f(a)$$
