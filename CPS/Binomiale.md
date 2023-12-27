@@ -9,8 +9,8 @@ tags:
 ---
 >[!todo] Inserire grafico
 
-Supponiamo di realizzare $n$ ripetizioni indipendenti di un esperimento, ciascuna delle quali può concludersi in un "successo" con probabilità $p$, o in un fallimento con probabilità $1-p$. Se $X$ denota il numero totale di successi, $X$ si dice variabile aleatoria *binomiale* di parametri $(n,p)$
-La funzione di massa di probabilità per una variabile aleatoria binomiale di parametri $(n,p)$ è data da $$\mathbb{P}(X = i) = \binom{n}{i}p^{i}(1-p)^{n-i}, \;\;\;\;\; i = 0,1,\dots$$
+Supponiamo di realizzare $n$ ripetizioni indipendenti di un esperimento, ciascuna delle quali può concludersi in un "successo" con [[probabilità]] $p$, o in un fallimento con probabilità $1-p$. Se $X$ denota il numero totale di successi, $X$ si dice variabile aleatoria *binomiale* di parametri $(n,p)$
+La funzione di massa di probabilità per una [[variabile aleatoria]] binomiale di parametri $(n,p)$ è data da $$\mathbb{P}(X = i) = \binom{n}{i}p^{i}(1-p)^{n-i}, \;\;\;\;\; i = 0,1,\dots$$
 dove ricordiamo il coefficiente binomiale:![[Coefficiente Binomiale]]
 
 >[!important]
@@ -33,7 +33,7 @@ dove ricordiamo il coefficiente binomiale:![[Coefficiente Binomiale]]
 
 ---
 
-Per come è stata definita la variabile aleatoria binomiale di parametri $(n, p)$ (il numero di esperimenti con esito positivo, su $n$ ripetizione indipendenti, ciascuna con probabilità di successo $p$), essa può essere rappresentata come somma di bernoulliane. Più precisamente, se $X$ è binomiale di parametri $(n, p)$, si può scrivere $$X=\sum_{i=1}^{n} X_{i}$$ dove $X_{i}$ è la funzione indicatrice del successo dell' $i-$esimo esperimento: $$X_{i}:= \begin{cases}1 & \text { se la prova } i \text {-esima ha successo } \\ 0 & \text { altrimenti }\end{cases}$$
+Per come è stata definita la variabile aleatoria binomiale di parametri $(n, p)$ (il numero di esperimenti con [[esito]] positivo, su $n$ ripetizione indipendenti, ciascuna con probabilità di successo $p$), essa può essere rappresentata come somma di bernoulliane. Più precisamente, se $X$ è binomiale di parametri $(n, p)$, si può scrivere $$X=\sum_{i=1}^{n} X_{i}$$ dove $X_{i}$ è la funzione indicatrice del successo dell' $i-$esimo esperimento: $$X_{i}:= \begin{cases}1 & \text { se la prova } i \text {-esima ha successo } \\ 0 & \text { altrimenti }\end{cases}$$
 È evidente che le $X_{i}$ sono benoulliane di parametro $p$, quindi abbiamo che $$
 \begin{array}{rlrl}
 E\left[X_{i}\right] & =p & & \text { per la (5.1.2) } \\
@@ -41,7 +41,7 @@ E\left[X_{i}^{2}\right] & =p & & \text { infatti } X_{i} \equiv X_{i}^{2} \\
 \operatorname{Var}\left(X_{i}\right) & =E\left[X_{i}^{2}\right]-E\left[X_{i}\right]^{2} & \\
 & =p-p^{2}=p(1-p)
 \end{array}$$
-Per quanto riguarda $X$, poi dalle proprietà di media e varianza diciamo che $$
+Per quanto riguarda $X$, poi dalle proprietà di [[Valore atteso|media]] e [[varianza]] diciamo che $$
 \begin{aligned}
 E[X] & =\sum_{i=1}^{n} E\left[X_{i}\right]=n p \\
 \operatorname{Var}(X) & =\sum_{i=1}^{n} \operatorname{Var}\left(X_{i}\right) \quad \text { per l'indipendenza delle } X_{i} \\

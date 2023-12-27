@@ -1,6 +1,5 @@
 ---
 tags:
-  - observation
   - probability
   - distribution
 ---

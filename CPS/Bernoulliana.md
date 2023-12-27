@@ -23,7 +23,7 @@ La varianza invece vale: $$\operatorname{Var}(X) = n p (1-p) = npq$$
 ---
 ### Intervalli di confidenza approssimati per la media di una distribuzione normale
 Consideriamo una popolazione di oggetti, ognuno dei quali indipendente da tutti gli altri soddisfa certi requisiti con probabilità incognita $p$. Nel caso vengano testati $n$ di questi oggetti, rilevando quanti di essi raggiungono tali requisiti, come possiamo usare questa grandezza per ottenere un intervallo di confidenza per $p$?
-Se $X$ denota quindi oggetti, sugli $n$ testati, soddisfano i requisiti di interesse, è facile convincersi che $X$ ha distribuzione binomiale di parametri $n$ e $p$. Quindi nel caso $n$ sia un numero elevato, $X$ è approssimativamente normale con media $np$ e varianza $np(1-p)$, e di conseguenza 
+Se $X$ denota quindi oggetti, sugli $n$ testati, soddisfano i requisiti di interesse, è facile convincersi che $X$ ha distribuzione [[binomiale]] di parametri $n$ e $p$. Quindi nel caso $n$ sia un numero elevato, $X$ è approssimativamente normale con media $np$ e varianza $np(1-p)$, e di conseguenza 
 $$
 \frac{X-n p}{\sqrt{n p(1-p)}} \dot{\sim} \mathcal{N}(0,1)
 $$

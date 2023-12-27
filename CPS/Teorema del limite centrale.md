@@ -34,7 +34,7 @@ Z:=\frac{\sum_{i=1}^{n} X_{i}-W-(1.5 n-200)}{\sqrt{0.0225 n+400}}$$ allora $$
 \frac{200-1.5 n}{\sqrt{0.0225 n+400}} \leq 1.28$$ ovvero quando $n \leq 117$ (si trova ricavando $n$, o per tentativi), vi è ameno $1$ probabilità su $10$ che il ponte subisca danni strutturali.
 
 ---
-Una delle dirette applicazioni del teorema del limite centrale riguarda le variabile aleatorie [[Binomiale|binomiali]]. Siccome una binomiale $X$ di parametri $(n, p)$ rappresenta il numero di successi in $n$ prove indipendenti, ciascuna con probabilità $p$ di riuscita, possiamo scrivere $$X=X_{1}+X_{2}+\cdots+X_{n}$$ dove $$ X_{i}:= \begin{cases}1 & \text { se l' } i \text {-esima prova ha successo } \\ 0 & \text { altrimenti }\end{cases}$$ Poiché, come sappiamo, $$
+Una delle dirette applicazioni del teorema del limite centrale riguarda le variabile aleatorie [[Binomiale|binomiali]]. Siccome una [[binomiale]] $X$ di parametri $(n, p)$ rappresenta il numero di successi in $n$ prove indipendenti, ciascuna con probabilità $p$ di riuscita, possiamo scrivere $$X=X_{1}+X_{2}+\cdots+X_{n}$$ dove $$ X_{i}:= \begin{cases}1 & \text { se l' } i \text {-esima prova ha successo } \\ 0 & \text { altrimenti }\end{cases}$$ Poiché, come sappiamo, $$
 E\left[X_{i}\right]=p, \quad \operatorname{Var}\left(X_{i}\right)=p(1-p)$$ segue dal teorem a del limite centrale che, per $n$ grande, $$
 \frac{X-n p}{\sqrt{n p(1-p)}} \dot{\sim} \mathcal{N}(0,1)$$ ovvero vale una *approssimazione normale* delle variabili aleatorie binomiali
 

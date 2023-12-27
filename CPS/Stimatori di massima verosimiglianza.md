@@ -20,7 +20,7 @@ Vi è una classe particolare di stimatori, detti ***stimatori di massima verosim
 >[!tip]
 > La funzione $f(x_{1},x_{2}, \dots, x_{n}|\theta)$ è detta funzione di *likelihood*.
 
-Nel calcolare il valore di $\theta$ che minimizza $f$, conviene spesso usare il fatto che le due funzioni $f(x_{1},x_{2}, \dots, x_{n}|\theta)$ e $\log[f(x_{1},x_{2}, \dots, x_{n}|\theta)]$ assumono il massimo in corrispondenza del valore di $\theta$. Quindi è possibile ottenere $\overline{\theta}$ anche massimizzando $\log[f(x_{1},x_{2}, \dots, x_{n}|\theta)]$, che è detta funzione di *like-likelihood*.
+Nel calcolare il valore di $\theta$ che minimizza $f$, conviene spesso usare il fatto che le due funzioni $f(x_{1},x_{2}, \dots, x_{n}|\theta)$ e $\log[f(x_{1},x_{2}, \dots, x_{n}|\theta)]$ assumono il massimo in corrispondenza del valore di $\theta$. Quindi è possibile ottenere $\overline{\theta}$ anche massimizzando $\log[f(x_{1},x_{2}, \dots, x_{n}|\theta)]$, che è detta funzione di *log-likelihood*.
 
 >[!example]- Stimatore di massima verosimiglianza del parametro di una [[bernoulliana]]
 > Supponiamo che vengano realizzare $n$ prove indipendenti, ciascuna con [[probabilità]] $p$ di successo. Qual è lo stimatore di massima verosimiglianza per $p$?

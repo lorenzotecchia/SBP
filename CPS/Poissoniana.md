@@ -31,7 +31,7 @@ E[X] & =\phi^{\prime}(0)=\lambda \\
 \end{aligned}$$
 Quindi il valore atteso, sia la varianze delle poissoniane coincidono con il parametro $\lambda$
 
-La poissoniana può essere utilizzata come approssimazione di una binomiale di parametri $(n,p)$, quando $n$ è molto grande e $p$ è molto piccolo. Per convincerci di questo fatto, sia $X$ una variabile aleatoria binomiale di parametri $(n,p)$, e si ponga $\lambda = np$. Allora $$\begin{align}
+La poissoniana può essere utilizzata come approssimazione di una [[binomiale]] di parametri $(n,p)$, quando $n$ è molto grande e $p$ è molto piccolo. Per convincerci di questo fatto, sia $X$ una variabile aleatoria binomiale di parametri $(n,p)$, e si ponga $\lambda = np$. Allora $$\begin{align}
 	\mathbb{P}(X = i) =& \frac{i!}{(n-i)!i!}p^{i}(1-p)^{n-i} \\
 	=& \frac{n(n-1)\dots (n-i+1)}{i!}\left(\frac{\lambda}{n}\right)^{i}\left(1-\frac{\lambda}{n}\right)^{n-i} \\
 	=&  \frac{n(n-1)\dots (n-i+1)}{n^{i}}\frac{\lambda^i}{i!}\frac{(1- \lambda/n)^n}{(1- \lambda/n)^i}	 

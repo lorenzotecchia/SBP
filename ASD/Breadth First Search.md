@@ -28,7 +28,7 @@ def Init(G, c):
 - $gr$ Grigio: scoperto ma non visitato
 - $nr$ Nero: visitato
 
-***Init:*** prende in ingresso un [[grafo]] $G$ e un [[Ricerca binaria]] $c$ il quale tiene traccia del colore del nodo $v$ Imposta a bianco di tutti i nodi del grafo $G$
+***Init:*** prende in ingresso un [[grafo]] $G$ e un [[Ricerca binaria|array]] $c$ il quale tiene traccia del colore del nodo $v$ Imposta a bianco di tutti i nodi del grafo $G$
 
 Dato che un grafo non ha un nodo radice dal quale partire, basta quindi un nodo arbitrario v dal quale partire.
 La funzione ***BFS*** quindi prende in ingresso il grafo e il nodo dal quale partire:
