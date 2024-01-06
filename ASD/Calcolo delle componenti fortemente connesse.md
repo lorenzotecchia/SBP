@@ -4,6 +4,8 @@ tags:
   - operation/graph
   - algorithm
   - to-do/implementation
+aliases:
+  - CFC
 ---
 Dato un [[grafo]] [[orientato]] [[Cycle|ciclico]], si richiede di identificare le componenti fortemente connesse e un loro [[Ordinamento Topologico|ordine topologico]].
 

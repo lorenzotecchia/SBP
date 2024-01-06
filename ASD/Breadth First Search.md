@@ -3,6 +3,8 @@ author: Lorenzo Tecchia
 tags:
   - algorithm/search
   - to-do/implementation
+aliases:
+  - BFS
 ---
 **Breadth-first search** (**BFS**) è un [[algoritmo]] per cercare in una [[struttura dati]] [[Graph|grafo]] in [[Visita in ampiezza|ampiezza]] un nodo che soddisfi una certa proprietà.
 ## Funzionamento

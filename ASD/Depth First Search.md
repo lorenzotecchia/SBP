@@ -4,6 +4,8 @@ tags:
   - operation/graph
   - to-do/implementation
 author: Lorenzo Tecchia
+aliases:
+  - DFS
 ---
 ![[Pasted image 20230908170349.png]]
 - Inizialmente tutti i nodi vengono colorati di **bianco**.
