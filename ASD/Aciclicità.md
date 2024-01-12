@@ -7,7 +7,7 @@ tags:
   - to-do/implementation
 ---
 [[Algoritmo]] che determina se un [[grafo]] è ***aciclico*** (non ha [[Cycle|cicli]])
-
+	
 ```python
 def Acyclic(G):
 	c = Init(G)
