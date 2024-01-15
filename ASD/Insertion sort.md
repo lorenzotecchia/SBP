@@ -13,7 +13,7 @@ L'idea dell'algoritmo è quella di dividere la sequenza in una parte ordinata e 
 All'inizio possiamo supporre che la sequenza ordinata sia composta solo dal primo elemento, ed il resto degli elementi contengono la sequenza disordinata.
 Insertion-Sort prende il primo elemento della parte disordinata (nel nostro caso $j$) e lo inserisce nella giusta posizione nella parte disordinata.
 
-Quindi se $a_{j-1} \leq a_{j}$ allora mantiene la stessa posizione. In caso contrario $a_{j-1}$ andrà in posizione $j$ e dovrà confrontare $a_{j}$ con $a_{j-2}$; anche in questo caso se $a_{j-2} \leq a_{j}$ andrà nella posizione precedentemente liberata ($j-1$), altrimenti è $a_{j-2}$ a spostarsi nella posizione $j-1$.
+Quindi se $a_{j-1} \leq a_{j}$ allora mantiene la stessa posizione. In caso contrario $a_{j-1}$ andrà in posizione $j$ e dovrà confrontare $a_{j}$ con $a_{j-2}$; anche in questo caso se $a_{j-2} \leq a_{j}$ andrà nella posizione precedentemente liberata ($j-1$), altrimenti è $a_{j-2}$ a spostarsi nella posizione $j-1$
 
 ![[Pasted image 20231120160145.png|400]]
 

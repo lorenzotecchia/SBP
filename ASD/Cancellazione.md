@@ -32,7 +32,7 @@ Questa è la funzione che verrà chiamata per eliminare il nodo contente il dato
 		1. ceco il MAX del ramo sinistro
 		2. cerco il MIN del ramo destro
 	- In questo caso si procede con il MIN 
-- Sia $Skip$ che [[Minimo-Massimo#$Get &DeleteMIN$|Get&Delete]] restituiscono un nodo a $DeleteNode$  
+- Sia $Skip$ che [[Minimo-Massimo#^get-delete-min|Get&Delete]] restituiscono un nodo a $DeleteNode$  
 - La funzione $DeleteNode$ restituirà un nodo che sarà restituito alla chiamata ricorsiva di $Delete$. Questo verrà inserito al posto del nodo da eliminare
 
 ```python 

@@ -106,10 +106,11 @@ Dati in ingresso un grafo $G$ e tre vertici $s, v, u$ si vuole verificare, in te
 ```python
 def Algo(G, s, u, v):
 	Init(G)
+	color[u] == N
 	color = DFS_Visit(G, s)
-	if color[s] == color[u]:
-		if color[s] != color[v]:
-			return True
+	# sbagliato
+	if color[v] == N:
+		return True
 	return False
 
 def DFS_Visit(G, x):
@@ -126,7 +127,7 @@ def Algo(G, s, u, v)
 	Init(G)
 	color[u] = N
 	BFS(G, s)
-	return color[v] = N
+	return color[v] == N
 ```
 
 ### 2018-07-24
@@ -136,23 +137,24 @@ Sia dato un grafo orientato $G$, rappresentato con liste di adiacenza, e due arr
 ```python
 def Algo(G, A , B) 
 	Z = NULL
-	Init(G, B, color1)
+	Init(G, B, color1) # tutti i colori di bianco tranne b in B di nero
 	for a in A:
 		if color1[a] == B:
 			DFS_Visit(G_t, a, color1)
-	Init(G, A, color2)
+	Init(G, A, color2) # tutti i colori di bianco tranne a in A di nero
 	for b in B:
 		if color2[b] == B:
 			DFS_Visit(G_t, b, color2)
-	for z in Z:
+	for z in V:
 		if color1[z] == N && color2[z] == N:
 			Z.append(z)
 	return Z
 
-
-def Init(G):
-	for v in G.V:
-		colot[v] == B
+def Init(G, A):
+	for v in G.V-A:
+		color[v] == B
+	for x in A:
+		color[x] == N
 
 def DFS_Visit(G, s)
 	color[s] = G
@@ -162,3 +164,95 @@ def DFS_Visit(G, s)
 	color[s] = N
 	return color
 ```
+
+### 2019-07-03
+Sia dato un grafo non orientato $G$, rappresentato con liste di adiacenza. Si scriva lo pseudo-codice di un algoritmo che, dato in ingresso unicamente $G$, verifichi in tempo lineare sulla dimensione di $G$ se è possibile partizionare l'insieme di vertici in due insiemi $V_{1}\subseteq V$ e $V_{2} \subseteq V$ che soddisfano le seguenti condizioni:
+- $V = V_{1} \cup V_{2}$
+- $V_{1} \cap V_{2} = \emptyset$
+- $v \in V_{1}$ se e sole se per ogni arco $(v,u) \in E$ vale $u \in V_{2}$
+In casso affermativo. l'algoritmo deve fornire i due insiemi $V_{1}$ e $V_{2}$ risultanti
+#### Esecuzione
+```python
+def Algo(G):
+	Init(G)
+	for v in G.V:
+		color1 = BFS_Mod(G, v)
+
+def BFS_Mod(G, v):
+	Q = Enqueue(Q, s)
+	while Q != NULL:
+		v = Head(Q)
+	for u in Adj[v]:
+		if color[v] == B:
+			color[u] = N
+		if color[v] == N:
+			color[u] = B
+		Q = Enqueue(Q, u):
+		# DA RIVEDERE
+```
+### 2019-02-12
+Si scriva un algoritmo che, dato in ingresso un grafo orientato $G$, in valore intero $k$, un vertice $s \in V$ e un insieme $A \subseteq V$ rappresentato come array di vertici, verifichi, **in tempo lineare sulla dimensione del grafo**, se è vera la seguente condizione:
+_ogni percorso che parte dal vertice $s$ e raggiunge un qualche vertice di $A$ ha lunghezza maggiore di $k$_
+#### Esecuzione
+```python
+def Algo(G, k, s, A): # dobbiamo verificare che esiste un percorso che parte da s ed arriva ad a 
+	(color,discovery) = BFS(G, s)
+	for a in A:
+		if color[a] == N && discovery[a] <= k:
+			return False
+	return True
+
+def BFS(G, v):
+	Init(G, color, discovery) # inizializziamo discovery[v]
+	Q = Enqueue(v):
+	while Q != NULL:
+		v = Head(Q)
+		for u in Adj[v]:
+			if color[v] == B:
+				Q = Enqueue(Q, u)
+				color[u] = G
+				discovery[u] = discovery[v] + 1
+		color[v] = N
+	return discovery, color
+		
+```
+
+### 13-01-2021
+
+ Sia dato un grafo orientato  $G$, rappresentato con liste di adiacenza, e un vertice $s$
+ e due insiemi di vertici $B \subseteq V$ e $C \subseteq V$, rappresentati come array.
+ Si scriva un algoritmo che, dati in ingresso $G, s, B, C$, collezioni in tempo lineare
+ sulla dimensione di $G$ in una lista $L$ tutti i vertici $v$ che soddisfano  entrambe
+ le seguenti condizioni:
+ - $v$ appartiene a $B$ e può raggiungere $s$ tramite un percorso
+ - esiste anche un percorso da $s$ a $v$ che non passa per alcun vertice di $C$
+
+#### Esecuzione
+```python
+def Algo(G, s, B, C)
+	L = NULL
+	Init(G, color1, color2) # in color2 tutti a bianco tranne per ogni c in C imposto i colori a Nero
+	G_t = Transpose(G)
+	color1 = DFS_visit(G_t, s)
+	color2 = DFS_visit(G, s)
+	for b in B:
+		if color1[b] == N && color2[b] == N:
+			L.append(b)
+	return L
+
+def DFS_Visit(G, s)
+	color[s] = G
+	for v in Adj[s]:
+		if color[v] == B:
+			color = DFS_Visit(G, v)
+	color[s] = N
+
+def Transpose(G):
+	G_t.V = G.V
+	for v in G.V:
+		for w in Adj[v]:
+			E_t = Insert(E_t, (w, v))
+	return G_t
+```
+
+### 22-02-2021

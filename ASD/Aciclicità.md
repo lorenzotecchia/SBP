@@ -13,7 +13,7 @@ def Acyclic(G):
 	c = Init(G)
 	for v in V:
 		if c(v) == bn:
-			acyclic = DFSAcyclicc(G, v)
+			acyclic = DFSAcyclic(G, v)
 			if !acyclic:
 				return False
 	return True

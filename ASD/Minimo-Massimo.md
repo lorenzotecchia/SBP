@@ -13,6 +13,8 @@ def Min(x):
 	else
 		return Min(x.sx)	
 ```
+^min-rec
+
 ###### Minimo Iterativo
 ```python
 def Min(x):
@@ -20,6 +22,8 @@ def Min(x):
 		x = x.sx
 	return x
 ```
+^min-iter
+
 ###### Massimo Ricorsivo
 ```python
 def Max(x):
@@ -29,6 +33,8 @@ def Max(x):
 		return Max(x.dx)
 
 ```
+^max-rec
+
 ###### Massimo Iterativo
 ```python
 def Max(x):
@@ -36,6 +42,7 @@ def Max(x):
 		x = x.dx
 	return x
 ```
+^max-iter
 
 ---
 ### $GetAndDeleteMIN$
@@ -54,8 +61,8 @@ def GetAndDeleteMin(x):
 		return(d, r)		
 		
 ```
-
 ^get-delete-min
+
 - Le istruzioni $4,5,6$ definiscono una funzione chiamata $\textbf{SkipRight}$
 - Il padre $skippa$ al figlio destro rispetto ad $a$.
 	- Sostituisce suo figlio sinistro, con il figlio destro del sinistro, questo succede solo al nodo che contiene il minimo 
