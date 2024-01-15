@@ -27,7 +27,6 @@ def Init(G, c):
 ```
 #### Colori
 - $bn$ Bianco: non scoperto
-- $gr$ Grigio: scoperto ma non visitato
 - $nr$ Nero: visitato
 
 ***Init:*** prende in ingresso un [[grafo]] $G$ e un [[Ricerca binaria|array]] $c$ il quale tiene traccia del colore del nodo $v$ Imposta a bianco di tutti i nodi del grafo $G$
