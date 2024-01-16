@@ -34,7 +34,8 @@ def Algo(G, A, B, k):
 	return True
 
 def BFS(G, v):
-	Init(G); Q = Enqueue(Q, v)
+	Init(G); 
+	Q = Enqueue(Q, v)
 	color[v] = G
 	discovery[v] = 0
 	while Q != NULL:
@@ -54,17 +55,17 @@ Sia dato un grafo orientato $G = <V, E>$, rappresentato con liste di adiacenza, 
 #### Esecuzione-Lorenzo
 ```python
 def Algo(G, A, v):
+	Init(G, color1, color2)
 	Z = NULL	
 	G_t = Transpose(G)
-	color1 = DFS(G)
-	color2 = DFS_Visit(G_t, v)
+	DFS(G, color1)
+	DFS_Visit(G_t, v, color2)
 	for a in A:
 		if color1[a] == color2[a]:
 			Z.append(a)
 	return Z
 
 def DFS(G):
-	Init(G)
 	for v in G.V:
 		if color[v] == B:
 			color = DFS_Visit(G, v)
