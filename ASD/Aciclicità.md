@@ -28,7 +28,7 @@ def DFSAciclic(G,v):
 			if !aciclic:
 				c(v) = nr
 				return False
-		else if c(v) = gr:
+		else if c(w) = gr:
 			return False
 	c(v) = nr
 	return True				

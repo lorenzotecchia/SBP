@@ -61,7 +61,6 @@ def GetAndDeleteMin(x):
 		return(d, r)		
 		
 ```
-^get-delete-min
 
 - Le istruzioni $4,5,6$ definiscono una funzione chiamata $\textbf{SkipRight}$
 - Il padre $skippa$ al figlio destro rispetto ad $a$.
@@ -105,6 +104,7 @@ def GetAndDeleteMin(x, p):
 	else
 		return GetAndDeleteMin(x.sx, x)
 ```
+^get-delete-min
 
 ```python
 def SwapChild(p, x, y):
