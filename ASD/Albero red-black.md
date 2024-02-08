@@ -19,6 +19,18 @@ Inoltre i dati sono presenti solo nei nodi interni:
 3. Se un nodo è rosso, allora entrambi i figli sono neri. Ossia i nodi **rossi** non possono avere figli **rossi**:([[Path|path]])
 $$\forall x \in T, \exists h \in \mathbb{N}: \forall \pi \in Path(x) \lvert \pi \rvert = h$$
 4. Ogni cammino dalla radice ad una foglia deve contenere lo stesso numero di nodi **neri**.
+>[!important]
+> Il miglior modo per costruire un **RB** è a partire dal percorso più breve
+> I nodi di tale percorso vanno colorati tutti di nero per massimizzare il più possibile i nodi neri
+> 
+> Se nel percorso più breve mettessi dei nodi rossi allora non è detto di poter garantire la proprietà **4**.
+> 
+> Una volta effettuato questa operazione ed aver determinato il numero di nodi neri di ogni percorso inizierò a colorare i percorsi restanti cercando di non violare la proprietà 3 e continuando a rispettare la proprietà **4**.
+> 
+> La colorazione di un albero non è necessariamente unica:
+> Un esempio è l’albero pieno che ha il numero maggiore possibile di differenti colorazioni (posso farlo tutto nero, o alternando un livello nero con uno rosso, o ancora un livello rosso per ogni 2 neri, e così via) e man mano che sbilancio l’albero le variazioni di colorazione diminuiscono fino ad arrivare ad uno sbilanciamento tale da non permettere ulteriori colorazioni.
+> > [!danger]
+> > Ogni albero AVL è RB
 ---
 ### [[Altezza]] nera 
 Definiamo altezza nera di un nodo $x$, indicata con $bh(x)$ (black height), il numero di nodi neri lungo un [[Cammino semplice|cammino semplice]] che inizia dal nodo $x$ e finisce a una foglia.
