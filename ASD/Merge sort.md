@@ -94,9 +94,10 @@ T_{M S}(n)=\Theta(1) \cdot n+\sum_{i=0}^{\log n-} \Theta(n)=\Theta(n)+\Theta(n) 
 
 
 #### Analisi
-![[appuntiIngenito.pdf#page=13]]
+![[appuntiIngenito.pdf#page=15]]
 
 ---
 ## Implementazione in C
 ```C
+// da implementare
 ```

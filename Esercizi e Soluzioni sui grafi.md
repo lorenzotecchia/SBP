@@ -218,7 +218,7 @@ def BFS(G, v):
 		
 ```
 
-### 13-01-2021
+### 2021-13-01
 
  Sia dato un grafo orientato  $G$, rappresentato con liste di adiacenza, e un vertice $s$
  e due insiemi di vertici $B \subseteq V$ e $C \subseteq V$, rappresentati come array.

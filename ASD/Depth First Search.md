@@ -1,8 +1,9 @@
 ---
 tags:
   - definition
-  - operation/graph
   - to-do/implementation
+  - algorithm/graph/search
+  - graph
 author: Lorenzo Tecchia
 aliases:
   - DFS

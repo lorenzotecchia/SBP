@@ -2,7 +2,7 @@
 author: Lorenzo Tecchia
 tags: [definition, dataStructure, to-do]
 ---
-Definiamo oltre altri tipi di [[List|liste]]:
+Definiamo oltre altri tipi di [[Lista|liste]]:
 - **Lista doppiamente puntata** $\rightarrow$ Insieme dinamico in cui ogni elemento ha:
 	- Una chiave;
 	- Un riferimento (*next*) all'elemento successivo dell'insieme;

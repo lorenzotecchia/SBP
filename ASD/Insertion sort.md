@@ -52,7 +52,7 @@ A prescindere dalla condizione di terminazione del ciclo `while`(riga $6$), la r
 ## Analisi
 Studiamo solo il ciclo `while` in quanto unico a determinare il comportamento asintotico dell'algoritmo.
 
-Questo ciclo può essere diverso per istanze con stessa dimensione a causa del confronto $\text{elem} \geq A|i|$ (questo è il motivo della preferenza del ciclo for)
+Questo ciclo può essere diverso per istanze con stessa dimensione a causa del confronto $\text{elem} \geq A[i]$ (questo è il motivo della preferenza del ciclo for)
 
 Ne consegue che no possiamo associare un valore a $T(n)$ poiché non è detto che abbia lo stesso tempo di ogni istanza di $n$ elementi.
 
@@ -84,7 +84,8 @@ T(N)=2 N+2(N-1)+2(N-1)+4 \sum_{j=2}^N t_j+3 \sum_{j=2}^N\left(t_j-1\right)+\sum_
 ### Caso peggiore
 Se la seconda condizione del `while` è sempre verificata è chiaro che $i=0$(poiché all'inizio $i=j-1$) si verifica dopo $j$ iterazioni (uscendo quindi dal `while`)
 Pertanto non è possibile eseguire più di $j$ iterazioni (questo corrisponde al nostro caso peggiore).
-Bisogna ora verificare che esista un input tale per cui $\forall j, t_{j}=j$. Questo input esiste ed è la ***sequenza decrescente***:$$
+Bisogna ora verificare che esista un input tale per cui $\forall j,\; t_{j}=j$. 
+Questo input esiste ed è la ***sequenza decrescente***:$$
 \begin{aligned}
 & T_{\max }(N)=9 N-7+4 \sum_{j=2}^N(j-1)=9 N-7+4\left(\sum_{j=1}^N j=1\right)+4 \sum_{j=1}^{N-1}(j-1)= \\
 & =9 N-7+4\left(\sum_{j=1}^{N-1} j-1+N\right)+4 \sum_{j=1}^{N-1}(j-1)=9 N-7-4+4 N+8 \sum_{j=1}^{N-1} j-4 \sum_{j=1}^{N-1} 1= \\

@@ -24,11 +24,11 @@ Di conseguenza, se si segue il percorso dei predecessori a ritroso, si ricava il
 - Se $(v, u) \notin Reach(G)$ allora restituisce uno **stack** vuoto, dato che non è possibile costruire il percorso minimo.
 
 ```python
-def BuildMinimalPath(Sπ, p, v, u):
-	(Sπ) = Push(Sπ, u)
+def BuildMinimalPath(S, p, v, u):
+	(S) = Push(S, u)
 	if u != v:
-		Sπ = BuildMinimalPath(Sπ, p, v, p(u))
-	return Sπ
+		S = BuildMinimalPath(S, p, v, p(u))
+	return S
 ```
 
 - $S_{\pi}\;\;$ Stack di vertici raffiguranti il percorso

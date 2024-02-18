@@ -1,12 +1,12 @@
-## 2023-03-17
+## 2023-03-17-
  Si scriva un algoritmo ricorsivo che, presi in ingresso un albero binario $T$ contenente dati interi e un intero positivo $k$, restituisca il valore della massima profondità dei nodi con valore di chiave multiplo di $k$. Nel caso l'insieme di tali nodi fosse vuoto, è richiesta la restituzione del valore di default $-1$. L'algoritmo dovrà essere efficiente e non far uso né di variabili globali né di parametri passati per riferimento. Infine, si scriva un algoritmo iterativo che simuli precisamente l'algoritmo ricorsivo di cui sopra.
 
-## 2022-10-19
+## 2022-10-19-
 
 Si scriva un algoritmo ricorsivo che, dati in ingresso un albero binario di ricerca $T$ e un intero positivo $k$, cancelli da $T$ tutti i nodi che si trovano in posizioni multiple di $k$ nell'ordinamento totale delle chiavi dell'albero. Tale algoritmo dovrà essere efficiente e non far uso né di variabili globali né di parametri passati per riferimento. Infine, si scriva un algoritmo iterativo che simuli precisamente l' algoritmo ricorsivo di cui sopra.
 
-## 2022-07-21
-Si scriva un algoritmo ricorsivo che, dati in ingresso un albero binario di ricerca su interi $T$ e due valori $k_{1}, k_{2} \in N$, cancelli da $T$ le chiavi $k$ comprese tra $k_{1}$ e $k_{2}$ $(k_{2}\leq k \leq k_{2})$. Tale algoritmo dovrà essere efficiente e non far uso né di variabili globali né di parametri passati per riferimento. Infine, si scriva un algoritmo iterativo che simuli precisamente l'algoritmo ricorsivo di cui sopra.
+## 2022-07-21-
+Si scriva un algoritmo ricorsivo che, dati in ingresso un albero binario di ricerca su interi $T$ e due valori $k_{1}, k_{2} \in N$, cancelli da $T$ le chiavi $k$ comprese tra $k_{1}$ e $k_{2}$ $(k_{1}\leq k \leq k_{2})$. Tale algoritmo dovrà essere efficiente e non far uso né di variabili globali né di parametri passati per riferimento. Infine, si scriva un algoritmo iterativo che simuli precisamente l'algoritmo ricorsivo di cui sopra.
 
 ## 2022-06-21
 Si scriva un algoritmo ricorsivo che, dati in ingresso un albero binario di ricerca su interi $T$ e due valori $k_1, k_{2} \in N$, inserisca ni una lista $\mathcal{L}$  chiavi $k$ contenute in $T$ comprese tra $k_{1}$ e $k_{2} ( k_{1} \leq k ≤ k_{2})$ , in modo che al termine $\mathcal{L}$ contenga valori ordinati in modo decrescente. Tale algoritmo dovrà avere complessità lineare nella dimensione dell'albero. Infine, si scriva un algoritmo iterativo che simuli precisamente l'algoritmo ricorsivo di cui sopra.
@@ -64,9 +64,8 @@ Sia dato un Albero binario Parzialmente Ordinato $T,$ in cui ogni nodo ha chiave
 - contiene una chiave $k$ di valore compreso  tra $k_{1}$ e $k_{2}$ ed  è radice di un albero che contiene al massimo $x$ nodi con chiavi comprese tra $k_{1}$ e $k_{2}$
 
 ## 2012-09-11
-3. Sia dato un albero binario di ricerca T, i cui nodi contengano esclusivamente una chiave intera, un puntatore al figlio sinistro e uno al figlio destro. Si definisca un algoritmo ricor- sivo efficiente che, dati cinque valori interi h1 ≥ 1, h2 ≥ 1, n1 ≥ 0, n2 ≥ 0 e k, cancelli dall’albero T tutti i nodi che, nell’albero in ingresso, soddisfano la seguente propriet`a:
-    
-    ha chiave pari minore di k, la sua distanza dalla radice `e compresa tra i valori h1 e h2 ed `e radice di un sottoalbero i cui nodi con chiave minore di k sono in numero compreso tra n1 e n2 .
+Sia dato un albero binario di ricerca $T,$ i cui nodi contengano esclusivamente una chiave intera, un puntatore al figlio sinistro e uno al figlio destro. Si definisca un algoritmo ricorsivo efficiente che, dati cinque valori interi $h_1 ≥ 1, h_2 ≥ 1, n_1 ≥ 0, n_2 ≥ 0$ e $k,$ cancelli dall’albero $T$ tutti i nodi che, nell’albero in ingresso, soddisfano la seguente proprietà:
+- ha chiave pari minore di $k,$ la sua distanza dalla radice è compresa tra i valori $h_1$ e $h_2$ ed è radice di un sottoalbero i cui nodi con chiave minore di $k$ sono in numero compreso tra $n_1$ e $n_2$ .
 
 ## 2013-09-09
 Sia dato un albero binaro T(i cui nodi contengono esclusivamente un campo chiave intero, un campo figlio sinistro e un campo figlio destro).
@@ -99,4 +98,4 @@ Sia dato un albero binario di ricerca T (i cui nodi contengono esclusivamente un
 Scrivere un algoritmo iterativo efficiente che costruisca una lista ordinata (in ordine cres- cente), contenente tuti inodi di Tel cui chiavi siano contenute nell'intervallo di interi [ky,]ak eche is trovino aprofondità comprese nel'intervalo di interi [/1a/]4,d(ove ,T kyka,. h, ezh sono tutti parametri di input dell'algoritmo).
 
 ## 2016-03-23
-Sia dato un albero binaro di ricerca T ( i c u i n o d i contengono esclusivamente un campo chiave, un campo figlio sinistroeuncampofigliodestro)eunarrayordinato Acontenente m chiavi. Scrivere un algoritmo ricorsivo efficiente che inserisca nell'albero T tutti le chiavi di Ache non siano già presenti in T.
+Sia dato un albero binaro di ricerca $T$ ( i c u i n o d i contengono esclusivamente un campo chiave, un campo figlio sinistroeuncampofigliodestro)eunarrayordinato Acontenente m chiavi. Scrivere un algoritmo ricorsivo efficiente che inserisca nell'albero T tutti le chiavi di Ache non siano già presenti in T.

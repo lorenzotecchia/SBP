@@ -37,7 +37,7 @@ Questa è la funzione che verrà chiamata per eliminare il nodo contente il dato
 
 ```python 
 def Delete(x, d)
-	if x = NULL:  # dato non trovato
+	if x == NULL:  # dato non trovato
 		return NULL
 	# cerco il nodo che contiene il dato
 	if d > x.dato:
@@ -51,9 +51,9 @@ def Delete(x, d)
 
 ```python
 def DeleteNode(x):
-	if x.sx = NULL:
+	if x.sx == NULL:
 		return SkipRight(x)
-	else if x.dx = NULL:
+	else if x.dx == NULL:
 		return SkipLeft(x)
 	else
 		x.dato = GetAndDeleteMin(x.dx, x)

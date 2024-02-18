@@ -4,6 +4,7 @@ tags:
   - algorithm
   - operation/graph
   - to-do/implementation
+  - graph
 ---
 ## Funzionamento
 ```python

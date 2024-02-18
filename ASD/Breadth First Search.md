@@ -1,8 +1,8 @@
 ---
 author: Lorenzo Tecchia
 tags:
-  - algorithm/search
   - to-do/implementation
+  - algorithm/graph/search
 aliases:
   - BFS
 ---
@@ -15,7 +15,7 @@ def BFS(G, v):
 	while isNotEmpty(Q):
 		(Q,v) = HeadAndDequeue(Q)
 		for u in Adj[v]:
-			if c(v) = bn:
+			if c(u) = bn:
 				(Q, c(u)) = (Enqueue(Q, u), gr)
 		c(v) = nr	
 ```
@@ -24,6 +24,29 @@ def BFS(G, v):
 def Init(G, c):
 	for v in V:
 		c(v) = bn
+```
+
+```python
+# BFS con calcolo delle distanza da sorgente
+def BFS_Modified(G, v):
+	for u in V-{v}:
+		color[u] = B
+		pred[u] = NULL
+		dist[u] = \infty
+	color[v] = G
+	dist[v] = 0
+	pred[v] = NULL
+	Q = Enqueue(Q, v)
+	while isNotEmpty(Q):
+		(Q,v) = Head&Dequeue(Q)
+		for w in Adj[v]:
+			if color[w] = B:
+				color[w] = G
+				pred[w] = v
+				dist[w] = dist[v] + 1
+				Q = Enqueue(Q, w)
+		Dequeue(Q, v)
+		color[v] = N
 ```
 #### Colori
 - $bn$ Bianco: non scoperto
@@ -42,11 +65,11 @@ La funzione ***BFS*** quindi prende in ingresso il grafo e il nodo dal quale par
  
 4. Devo visitare la stella uscente del nodo $v$ in testa alla coda, quindi lo estraggo. per visitarlo.
     
-5. Dovrò visitare ogni nodo u adiacente al nodo v appena estratto, a patto che questo sia bianco. Quindi, se u è bianco, lo inserisco in coda e imposto il suo colore a grigio.
+5. Dovrò visitare ogni nodo $u$ adiacente al nodo $v$ appena estratto, a patto che questo sia bianco. Quindi, se $u$ è bianco, lo inserisco in coda e imposto il suo colore a grigio.
     
-6. Una volta tutta la stella uscente di v, ho finito di visitarlo, quindi imposto il colore a nero.
+6. Una volta tutta la stella uscente di $v$, ho finito di visitarlo, quindi imposto il colore a nero.
     
-Quindi una semplice **BFS** ci permette di calcolare solo ciò che il nodo di partenza v raggiunge nel grafo G.
+Quindi una semplice **BFS** ci permette di calcolare solo ciò che il nodo di partenza $v$ raggiunge nel grafo $G$.
 Lo si può capire guardando i colori dei nodi alla fine della funzione.  
 I nodi colorati di ***nero*** saranno quelli che il nodo di partenza v raggiunge nel grafo.$$\forall u \in V \;\;\; c(u)=nr \iff (u,v)\in Reach(G)$$
 >[!note] 

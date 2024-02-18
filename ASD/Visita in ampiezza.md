@@ -4,6 +4,7 @@ tags:
   - definition
   - operation/graph
   - to-do/implementation
+  - graph
 ---
 Dato un [[grafo]] $G = (V,E)$ e un vertice distinto $s$, detto **sorgente**, la ***visita in ampiezza*** ispeziona sistematicamente gli archi di $G$ per "scoprire" tutti i vertici che sono raggiungibili da $s$.
 [[Calcolo delle distanze|Calcola la distanza]](il numero minimo di archi) da $s$ a ciascun vertice raggiungibile.

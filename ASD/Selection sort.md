@@ -29,6 +29,7 @@ def Max(A, i):
 	for j = 1 in range(i):
 		if A[m] < A[j]:
 			m = j
+	return m
 ```
 Visto che sappiamo che la scelta del massimo non può essere effettuata con un algoritmo meno che lineare (deve obbligatoriamente controllare tutti gli elementi) sembrerebbe che questa sia la soluzione migliore.
 Tuttavia questo è un chiaro esempio di come utilizzare soluzione ottime per sotto-problemi non rende l'algoritmo così definito ***ottimale***.

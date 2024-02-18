@@ -13,6 +13,8 @@ Ricordiamo la definizione di Componenti fortemente connesse:
 ![[Strongly connected components]]
 
 ---
+>[!note]- Nota sui grafi connessi
+> Per verificare che un grafo sia connesso, possiamo effettuare una [[Depth First Search|DFS]] (o una [[Breadth First Search|BFS]]) e verificare che nell'array dei predecessori non vi esistano due vertici con predecessori a `NULL`.
 
 In questo esempio sono cerchiate le componenti fortemente connesse.
 ![[Pasted image 20230910163001.png]]
@@ -27,7 +29,7 @@ e la includerebbe nella sua , formando quindi un'unica componente, il che è sba
 Bisogna quindi seguire tre step:
 1. Eseguire una prima $\textbf{DFS}$ per ottenere in uno stack l'ordine inverso di visita dei nodi
 2. Calcolare il grafo trasposto $G^T$ di $G$
-3. Eseguire una $\textbf{DFS}$ leggermente modificata su $G^T$ e sullo [[stack]] $S$ restituito dall’ordinamento topologico
+3. Eseguire una $\textbf{DFS}$ leggermente modificata su $G^T$ e sullo [[stack]] $S$ restituito dalla prima $\textbf{DFS}$.
 
 La prima $\textbf{DFS}$ restituisce anche uno stack $S$ con i vertici ordinati in modo decrescente per tempo di fine visita, ovvero dall’ultimo che finisce al primo che finisce.
 

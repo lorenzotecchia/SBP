@@ -97,7 +97,7 @@ def SkipLeft(x):
 
 ```python
 def GetAndDeleteMin(x, p):
-	if x.sx = NULL:
+	if x.sx == NULL:
 		d = x.dato
 		SwapChild(p, x, x.dx)
 		return d
@@ -108,7 +108,7 @@ def GetAndDeleteMin(x, p):
 
 ```python
 def SwapChild(p, x, y):
-	if p.sx = x:
+	if p.sx == x:
 		p.sx = y
 	else
 		p.dx = y

@@ -4,6 +4,7 @@ tags:
   - definition
   - operation/graph
   - theorem
+  - graph
 ---
 Un ***ordinamento topologico*** di un $\textbf{DAG}$ ($\textbf{Directed Acyclic Graph}$) è un ordinamento lineare di tutti i suoi vertici tale che se $\textbf{G}$ contiene un arco $(v, w)$, allora $v$ appare prima di $w$ nell’ordinamento.
 
