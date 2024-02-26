@@ -6,6 +6,7 @@ tags:
   - to-do/implementation
 aliases:
   - CFC
+  - scc
 ---
 Dato un [[grafo]] [[orientato]] [[Cycle|ciclico]], si richiede di identificare le componenti fortemente connesse e un loro [[Ordinamento Topologico|ordine topologico]].
 
@@ -66,7 +67,7 @@ def DFS1(G):
 def DFS1_Visit(G, v, Stack):
 	c(v) = gr
 	for w in Adj[v]:
-		if w == bn:
+		if c(w) == bn:
 			Stack = DFS1_Visit(G, w, Stack)
 	c(v) = nr
 	Push(v, Stack)

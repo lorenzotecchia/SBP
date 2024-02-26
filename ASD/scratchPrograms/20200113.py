@@ -34,6 +34,7 @@ def Algo(T , k1, k2, P):
                     cT = cT -> dx
             start = False
             last = cT
+            acc = ret
         else: # start = False
             cT = top(stT); cP = top(stP)
             if cT -> k < k1:
@@ -54,7 +55,6 @@ def Algo(T , k1, k2, P):
                         pop(stT); pop(stP)
                         last = cT
                     else: # devo fare la chiamata ricorsiva a riga 11
-                        push(cT, stT); push(stP)
                         cP = cT; cT = cT -> sx
                         start = True
                 else: # sto tornando dalla chiamamta ricorsiva  a riga 11
