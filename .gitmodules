@@ -1,0 +1,3 @@
+[submodule "LSOProgetto/Diocane"]
+	path = LSOProgetto/Diocane
+	url = https://github.com/JeffreytheCoder/Simple-HTTP-Server.git
