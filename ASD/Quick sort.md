@@ -29,6 +29,7 @@ Qualsiasi livello di [[ricorsione]] avrà da una parte una sequenza di $q$ eleme
 def algorithmQuickSort(A, n):
 	QuickSort(A, 0, n-1)
 ```
+^Algorithm-QuickSort
 
 ```python
 def QuickSort(A, p, r):
@@ -42,6 +43,7 @@ def QuickSort(A, p, r):
 		QuickSort(A, p, q)
 		QuickSort(A, q+1, r)
 ```
+^QuickSort
 
 Dopo le chiamate ricorsive non c'è bisogno di fare altro poiché questo algoritmo garantisce per transitività l'ordinamento totale della sequenza.
 
@@ -97,7 +99,9 @@ def Partition(A, p, r):
 			Swap(A, i, j)
 	until(j <= i)
 	return j
-``` 
+```
+^Partition
+
 ### Correttezza
 Per confermare la correttezza di questo algoritmo si veda se all'instante in cui viene eseguita la linea $15$ si ha $p \leq j < r$ poiché questo ci assicurerà la validità della prima proprietà necessaria per la correttezza di `QuicSort`, ovvero $p \leq j < r$
 

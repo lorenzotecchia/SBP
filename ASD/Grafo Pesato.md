@@ -59,6 +59,7 @@ def Relax(u, v, w):
 		d[v] = d[u] + w(u, v)   # aggiorno la stima
 		Pred[v] = u
 ```
+^Relax
 
 - Viene eseguita in tempo costante
 
@@ -121,6 +122,8 @@ def Dijkstra(G, s):
 		for v in Adj[u]:
 			Relax(u, v, w)
 ```
+^Dijkstra
+
 - La riga $4$ inizializza la coda a priorità $Q$ con tutti i vertici in $V$.
 - Ogni volta che viene eseguito il ciclo $while$ delle righe $5-10$, un vertice $u$ , con la minima stima tra i vertici di $Q$, viene estratto da $Q = V-S$  e  inserito in $S$. 
 - Le righe $9-10$, rilassano ogni arco uscente da $u$ e se il cammino minimo per $v$ può essere migliorato passando per $u$, aggiornano la stima $d[v]$ e il predecessore $Pred[v]$.
@@ -156,6 +159,8 @@ def Bellman_Ford(G, s):
 			return False
 	return True
 ```
+^Bellman-Ford
+
 - Ogni volta che viene eseguito il ciclo $for$ delle righe $3-5$, ogni arco viene rilassato una volta.
 - Le righe $6-9$ controllano l'esistenza di cicli a peso negativo e restituiscono il valore booleano appropriato.
 #### Analisi

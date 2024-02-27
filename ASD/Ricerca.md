@@ -19,6 +19,7 @@ def Search(x, d):
 		else
 			return x
 ```
+^Ricerca-ABR
 
 - Se il nodo attuale è `NULL`
 	- allora non ho trovato l’elemento e restituisco `NULL`.  

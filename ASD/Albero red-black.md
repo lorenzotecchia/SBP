@@ -149,7 +149,7 @@ Il figlio destro del fratello del **doppio nero**, è **rosso**
 >[!tip] `NULLRB` è il puntatore al nodo foglia di un albero **red-black**, che è unico per evitare sprechi di memoria.
 #### Algoritmo di inserimento
 ```python
-def RBInser(x, d):
+def R-B-Insert(x, d):
 	if x = NULL:
 		return BuildNodeRB(d)
 	else
@@ -161,22 +161,23 @@ def RBInser(x, d):
 			x = RInsBalanceRB(x)
 	return x
 ```
+^R-B-Insert
 
 ```python
-def LInsBalanceRB(x):
+def L-Ins-BalanceRB(x):
 	if x.sx != NULL:
 		switch LInsViolationRB(x):
 			case 1: x = LInsBalanceRB1(x)
 			case 2: x = LInsBalanceRB2(x)
 			case 3: x = LInsBalanceRB3(x)
 	return x
-			
 ```
+^L-Ins-BalanceRB
 
 >[!important] Esiste anche il duale $RInsBalanceRB$
 
 ```python
-def LInsViolationRB(x):
+def L-Ins-ViolationRB(x):
 	v = 0, l =x.sx, r = x.dx
 	if l.cl = R:
 		if r.cl = R:
@@ -189,6 +190,8 @@ def LInsViolationRB(x):
 				v = 3
 	return v
 ```
+^L-Ins-ViolationRB
+
 #### Algoritmo di cancellazione
 
 ```python
@@ -204,6 +207,7 @@ def DeleteRB(x):
 			x = DeleteNodeRB(x)
 	return x		
 ```
+^DeleteRB
 
 ```python
 def DeleteNodeRB(x):
@@ -216,6 +220,7 @@ def DeleteNodeRB(x):
 		x = RDelBalanceRB(x)
 	return x
 ```
+^DeleteNodeRB
 
 ```python
 def GetAndDeleteMinRB(x, p):
@@ -228,6 +233,7 @@ def GetAndDeleteMinRB(x, p):
 	SwapChild(p, x, y)
 	return d
 ```
+^GetAndDeleteMinRB
 
 ```python
 def SkipRightRB(x):
@@ -235,12 +241,13 @@ def SkipRightRB(x):
 		PropagateBlackRB(x.dx)
 	return SkipRight(x)
 ```
+^SkipRightRB
 
 - Se il colore di x è rosso, diventa nero  
 - Se il colore di x è nero, diventa doppio nero
 
 ```python
-def LDelBalanceRB(x):
+def L-Del-BalanceRB(x):
 	if x.sx != NULL:
 		switch LDelViolationRB(x):
 			case 1: x = LDelBalanceRB1(x)
@@ -249,9 +256,10 @@ def LDelBalanceRB(x):
 			case 4: x = LDelBalanceRB4(x)
 	return x
 ```
+^L-Del-BalanceRB
 
 ```python
-def LDelViolationRB(x):
+def L-Del-ViolationRB(x):
 	v = 0, l = x.sx, r = x.dx
 	if l.cl = BB:
 		if r.cl = R:
@@ -264,8 +272,8 @@ def LDelViolationRB(x):
 			else
 				v = 2
 	return v
-	
 ```
+^L-Del-ViolationRB
 
 ---
 ### Problemi che risolve un albero red-black

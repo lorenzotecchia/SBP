@@ -22,6 +22,7 @@ def SelectionSort(A, n):
 		m = Max(A, i)
 		Swap(A, i, n)
 ```
+^SelectionSort
 
 ```python
 def Max(A, i):
@@ -31,6 +32,8 @@ def Max(A, i):
 			m = j
 	return m
 ```
+^Max-SelectionSort
+
 Visto che sappiamo che la scelta del massimo non può essere effettuata con un algoritmo meno che lineare (deve obbligatoriamente controllare tutti gli elementi) sembrerebbe che questa sia la soluzione migliore.
 Tuttavia questo è un chiaro esempio di come utilizzare soluzione ottime per sotto-problemi non rende l'algoritmo così definito ***ottimale***.
 Questo non implica che l'idea sopra descritta sia pessima $\rightarrow$ Infatti, a seconda di come viene implementata quest algoritmo avrà tempi di esecuzioni molto diversi (Sarà possibile arrivare ad un algoritmo che abbia $T(n) = \Theta(n \log(n)$)

@@ -23,6 +23,7 @@ Avere una sequenza ordinata permette, come appena visto, di ottenere un algoritm
 Andiamo ad implementare l'algoritmo nel seguente modo:
 - `RicercaBinaria(S, p, r, k)` che restituisce l'indice dove dovrebbe trovarsi $k$ e implementerà il ragionamento visto precedentemente ($p$ e $r$ sono gli indici di inizio e fine sequenza);
 - `Ricerca(S, k)`, che restituisce l'indice giusto se $k \in S$ altrimenti un valore non valido.
+
 ```python
 def RicercaBinaria(S, p, r, k):
 	if p < r:
@@ -37,8 +38,10 @@ def RicercaBinaria(S, p, r, k):
 		ret = p
 	return ret
 ```
+^BinarySearch
 
 1.  Restituiamo $p$ poiché $r$ non è detto che appartenga all'array essendo che $q + 1$ potrebbe essere un indice al di fuori delle sequenza infatti $p \leq q < r \Longrightarrow q + 1 \leq r$ (dopo $i$ operazioni potrebbe esserci la chiamata `RicercaBinaria(S, n, n + 1, k)` che restituirebbe $n + 1$); quindi con $p$ sono sicuro di non andare mai in *segmentation fault*.
+
 ```python
 def Ricerca(S, k):
 	i = RicercaBinaria(S, 1, n, k)
@@ -48,5 +51,6 @@ def Ricerca(S, k):
 		ret = -1
 	return ret
 ```
+^General-Search
 
 Tutto quello di cui abbiamo discusso finora ci dice che il problema della ricerca è risolvibile in un tempo **esponenzialmente** minore di lineare (ovvero logaritmico). Ma array ordinati hanno anche argomenti a sfavore poiché operazioni di inserimenti e/o cancellazione sono lineari, anche se in realtà ad essere problematico non è il vincolo dell'orientamento ma il fatto di avere una struttura sequenziale.

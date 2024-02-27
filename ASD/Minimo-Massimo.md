@@ -6,6 +6,7 @@ tags:
   - to-do/implementation
 ---
 ###### Minimo Ricorsivo
+
 ```python
 def Min(x):
 	if x.sx = NULL:
@@ -16,6 +17,7 @@ def Min(x):
 ^min-rec
 
 ###### Minimo Iterativo
+
 ```python
 def Min(x):
 	while x.sx != NULL:
@@ -25,6 +27,7 @@ def Min(x):
 ^min-iter
 
 ###### Massimo Ricorsivo
+
 ```python
 def Max(x):
 	if x.dx = NULL:
@@ -36,6 +39,7 @@ def Max(x):
 ^max-rec
 
 ###### Massimo Iterativo
+
 ```python
 def Max(x):
 	while x.dx != NULL:
@@ -61,6 +65,7 @@ def GetAndDeleteMin(x):
 		return(d, r)		
 		
 ```
+^GetAndDeleteMin-ABR
 
 - Le istruzioni $4,5,6$ definiscono una funzione chiamata $\textbf{SkipRight}$
 - Il padre $skippa$ al figlio destro rispetto ad $a$.
@@ -76,6 +81,7 @@ def SkipRight(x):
 	Deallocate(x)
 	return tmp
 ```
+^SkipRightABR
 
 - Salvo il figlio destro in $tmp$
 - $Deallocate(x)$
@@ -88,6 +94,7 @@ def SkipLeft(x):
 	Deallocate(x)
 	return tmp
 ```
+^SkipLeft
 
 - Salvo il figlio sinistro in $tmp$
 - $Deallocate(x)$
@@ -104,7 +111,7 @@ def GetAndDeleteMin(x, p):
 	else
 		return GetAndDeleteMin(x.sx, x)
 ```
-^get-delete-min
+^get-delete-min-PerRiferimento
 
 ```python
 def SwapChild(p, x, y):
@@ -114,6 +121,7 @@ def SwapChild(p, x, y):
 		p.dx = y
 	Deallocate(x)
 ```
+^SwapChild
 
 - Rispetto alla versione precedente, non c’è bisogno di restituire il padre ma lo si passa per riferimento.
  - $SwapChild$ scambia il figlio $x$ (di $p$) con un certo nodo $y$ . L’if controlla se $x$ è il figlio sinistro o destro di $p$  

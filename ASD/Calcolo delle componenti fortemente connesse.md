@@ -62,6 +62,7 @@ def DFS1(G):
 			StackRET = DFS1_Visit(G, v, StackRET)
 	return StackRET
 ```
+^DFS-Stack
 
 ```python
 def DFS1_Visit(G, v, Stack):
@@ -73,6 +74,7 @@ def DFS1_Visit(G, v, Stack):
 	Push(v, Stack)
 	return Stack
 ```
+^DFS-Visit-Stack
 
 ```python 
 def Transpose(G):
@@ -82,6 +84,7 @@ def Transpose(G):
 			EGt = Insert(EGt, (w,v))
 	return (VGt, EGt)
 ```
+^Transpose
 
 - I vertici rimangono gli stessi, quindi faccio una semplice copia.
 - Gli archi sono rappresentati dagli adiacenti di un vertice, in questo caso da $v$ a $w$.
@@ -105,6 +108,7 @@ def DFS_SCC(G, S):
 			(c,scc) = DFS_SCC_Visit(G,c,scc,v,v)
 	return scc
 ```
+^DFS-SCC
 
 - $Init$ imposta i colori dei vertici a bianco e dichiara un vettore $scc$
 - Scorre i vertici dello stack, ovvero i vertici dell’ordinamento topologico ordinati in ordine inverso sul tempo di fine visita, ed esegue una $\textbf{DFS}$ su di essi.
@@ -117,6 +121,7 @@ def DFS_SCC_Visit(G, c, scc, v, w)
 	c(w) = nr
 	return (c, scc)
 ```
+^DFS-SCC-Visit
 
 - Il parametro $v$ è il vertice rappresentante della componente.
 - Il parametro $w$ è il vertice attuale.

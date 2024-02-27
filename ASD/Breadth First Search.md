@@ -19,6 +19,7 @@ def BFS(G, v):
 				(Q, c(u)) = (Enqueue(Q, u), gr)
 		c(v) = nr	
 ```
+^BFS
 
 ```python
 def Init(G, c):

@@ -15,12 +15,14 @@ def HeapSort(A, n):
 		Swap(A, 0, i)   # il max sta in A[0] perchè è un heap
 		Heapify(A, i, 0)
 ```
+^HeaSort
 
 ```python
 def BuildHeap(A, n):
 	for i = (n/2)-1 in range (0)
 		Heapify(A, n, i)
 ```
+^BuildHeap
 
 ```python
 def Heapify(A, n, i):
@@ -35,6 +37,7 @@ def Heapify(A, n, i):
 		Swap(A, max, i)
 		Heapify(A, n, max)
 ```
+^Heapify
 
 Un [[Ricerca binaria]] è già rappresentato in memoria come un [[Tree|albero]] quindi è possibile passare da una [[Struttura dati|struttura]] all'altra.
 

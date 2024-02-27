@@ -25,6 +25,7 @@ Definiamo per tanto in questo modo il nostro algoritmo:
 def algorithmMergeSort(A, n):
 	MergeSort(A, 0, n-1)
 ```
+^Algorithm-MergeSort
 
 ```python
 def MergeSort(A, p, r):
@@ -34,6 +35,7 @@ def MergeSort(A, p, r):
 		MergeSort(A, q + 1, r)
 		Merge(A, p, q, r)
 ```
+^MergeSort
 
 Tramite il concetto di [[dividi et impera]] le due chiamate ricorsive, dividono la sequenza a metà.
 
@@ -45,6 +47,7 @@ Essendo la nostra ipotesi proprio $p < r$ (condizione dell'`if`) abbiamo dimostr
 r-p+1>r-\frac{p+r}{2} \Longrightarrow-p>-\left(\frac{p+r}{2}+1\right) \Longrightarrow 2 p<p+r+2 \Longrightarrow p<r+2$$
 Resta da dimostrare che, per qualsiasi input, l'algoritmo faccia un numero finito di chiamate ricorsive e che quindi, prima o poi, raggiungerà il caso base; quando `r` è molto vicino a `p`(ovvero quando $r < p +1$) è evidente che sarà $q = | \frac{p+r}{2}| = p$ e quindi entrambe le chiamate ricorsive non verranno effettuate (la condizione dell'`if` sarà dalla prima chiamata $p < p$ e alla seconda $p + 1 < r$, condizioni entrambe false).
 ### Occupazione in memoria
+
 ```python
 def Merge(A, p, q, r):
 	L = Copy(A, p, q)      # Copia nell'array L, l'intervallo [p,q] di A
@@ -58,6 +61,8 @@ def Merge(A, p, q, r):
 			A[k] = R[i]
 			j++
 ```
+^Merge
+
 Il tempo di **Merge** è lineare poiché vado ad effettuare almeno $n$ scritture in memoria. È interessante notare che è stato necessario utilizzare un altro vettore $\rightarrow$ Questo significa che **MergeSort** ha bisogno di uno spazio aggiuntivo in memoria anch'esso lineare (un vettore pari all'input del programma oltre alle variabili locali) a causa dell'algoritmo **Merge**.
 
 Anche senza considerare **Merge** l'algoritmo MergeSort ha bisogno di uno spazio aggiuntivo a causa delle chiamate ricorsive $\rightarrow$ Per ogni chiamata ricorsiva, prima di chiamare alla chiamata figlia, è necessario salvare i dati sullo stack di attivazione.
@@ -87,11 +92,6 @@ T_{M S}(n)=\Theta(1) \cdot \# \text { foglie }+\sum_{i=0}^{\# \text { livelli in
 
 $$
 T_{M S}(n)=\Theta(1) \cdot n+\sum_{i=0}^{\log n-} \Theta(n)=\Theta(n)+\Theta(n) \sum_{i=0}^{\log n-} 1=\Theta(n)+\Theta(n)(\log n-1)=\Theta(n \log n)$$
-
-
-
-
-
 
 #### Analisi
 ![[appuntiIngenito.pdf#page=15]]

@@ -70,6 +70,7 @@ def TopologicalOrdering(G):
 		π = Append(π, v)
 	return π	
 ```
+^Topological-Ordering
 
 - In coda entrano solo i nodi senza archi entranti.
 - Estraggo il nodo $v$ in coda e diminuisco il grado entrante di tutti i suoi adiacenti.
@@ -85,6 +86,7 @@ def EnteringDegree(G):
 			ge(w) = ge(w) + 1
 	return ge
 ```
+^Entering-Degree
 
 - Imposta prima tutti i gradi a $0$.
 - Successivamente se un nodo $w$ è adiacente di un altro nodo $v$, allora $w$ ha l’arco entrante $(v, w)$ quindi il grado di $w$ aumenta di $1$
@@ -96,6 +98,7 @@ def InitQueue(G, ge):
 			Q = Enqueue(Q, v)
 	return Q
 ```
+^Init-Queue-OT
 
 - Inserisce in coda solo i nodi che non hanno archi entranti.
 ---
@@ -113,6 +116,7 @@ def TopologicalOrdering(G):
 			S = DFSTopologicalOrdering(G, S, v, c)
 	return S
 ```
+^TopologicalOrdering-Depth
 
 ```python
 def DFSTopologicalOrdering(G, S, v, c):
@@ -123,3 +127,5 @@ def DFSTopologicalOrdering(G, S, v, c):
 	(c(v), S) = (nr, Push(S,v))
 	return S
 ```
+^DFS-TopologicalOrdering
+

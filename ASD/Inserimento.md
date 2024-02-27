@@ -7,6 +7,7 @@ tags:
 ---
 È importante che la struttura di [[Albero binario di ricerca|BST]] persista anche dopo l’inserimento.  
 Per semplicità non considereremo anche il caso dei duplicati; dato che se ci fossero, basterebbe tener traccia di quanti valori duplicati ci sono con un contatore nel nodo in questione.
+
 ```python
 def Insert(x, d):
 	if x = NULL:
@@ -18,6 +19,7 @@ def Insert(x, d):
 			x.sx = Insert(x.sx, d)
 		return x	
 ```
+^InsertABR
 
 $BuildNode(d)\rightarrow$ Crea un nuovo nodo con dato $d$
 Va a sx o a dx a seconda se il dato è maggiore o minore del nodo alla ricorsione corrente, fino ad arrivare ad un nodo `NULL` dove verrà inserito il nuovo nodo.

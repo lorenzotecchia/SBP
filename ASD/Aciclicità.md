@@ -18,6 +18,7 @@ def Acyclic(G):
 				return False
 	return True
 ```
+^acyclic
 
 ```python
 def DFSAciclic(G,v):
@@ -34,6 +35,8 @@ def DFSAciclic(G,v):
 	return True				
 			
 ```
+^dfs-acyclic
+
 ### La struttura è identica ad una $\textbf{DFS}$.
 - Inizializza il colore di tutti i vertici a **bianco**.  
 - Controlla ogni vertice non scoperto (**bianco**) del grafo, se solo uno di questi trova un **ciclo**, il grafo non è **aciclico** e restituisce `FALSE`.

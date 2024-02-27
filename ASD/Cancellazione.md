@@ -48,6 +48,7 @@ def Delete(x, d)
 		return DeleteNode(x)
 	return x
 ```
+^DeleteABR
 
 ```python
 def DeleteNode(x):
@@ -59,6 +60,7 @@ def DeleteNode(x):
 		x.dato = GetAndDeleteMin(x.dx, x)
 		return x
 ```
+^DeleteNodeABR
 
 [[Minimo-Massimo#^get-delete-min|Get&DeleteMin]]
 

@@ -22,18 +22,23 @@ Ripetendo questo processo posso arrivare a confrontare $a_{j}$ con $a_1$:
 - In caso contrario andrà in posizione $1$ ed $a_{1}$ in posizione $2$ (questi spostamenti hanno ovviamente un costo loro).
 
 ###### Algoritmo Ricorsivo
+
 ```python
 def InsertionSort(A, n):
 	if n > 1:
 		InsertionSort(A, n-1)
 		Insert(A, n-1)
 ```
+^InsertionSortRecursiva
+
 ###### Algoritmo Iterativo
+
 ```python
 def InsertionSort(A, n):
 	for i = 1 in range(n-1):
 		Insert(A, i)
 ```
+^InsertionSort-Iterative
 
 ```python
 def Insert(A, i):
@@ -44,6 +49,7 @@ def Insert(A, i):
 		j--
 	A[j+1] = x
 ```
+^Insert
 
 A prescindere dalla condizione di terminazione del ciclo `while`(riga $6$), la riga $9$ è sempre la stessa infatti:
 ![[Pasted image 20231120160415.png]]

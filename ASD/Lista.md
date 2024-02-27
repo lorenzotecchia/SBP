@@ -9,6 +9,7 @@ Una ***lista*** $L$ è un oggetto con le seguenti proprietà:
 1. O è un insieme vuoto di nodi $\rightarrow L = \emptyset$
 2. Oppure contiene un nodo con un dato e un riferimento ad un oggetto $L'$ dove $L'$ è una lista (non c'è ambiguità poiché $|L'| < |L|$ per definizione)
 Da questa definizione induttiva risulta naturale scrivere algoritmi ricorsivi per implementare le operazioni sulla lista; infatti, per l'operazione di ricerca possiamo implementare il seguente algoritmi:
+
 ```python
 def Ricerca(L, k):
 	L != NULL:
@@ -18,6 +19,7 @@ def Ricerca(L, k):
 			ret = L
 	return ret
 ```
+^Ricerca-Lista
 
  Poiché ogni elemento della lista è indipendente dagli altri e non sono disposti in. maniera contigua in memoria, l'inserimento di un nuovo nodo in testa risulta banale
  
@@ -25,7 +27,7 @@ def Ricerca(L, k):
  # L'algoritmo è costante, ma se si volesse inserire il nodo in una determinata posizione (con una conseguente ricerca) in una lista costante
  # L'algorimto risulta comunque lineare anche se il nodo viene aggiunto e creato in tempo costante
 
-def Inser(L, k):
+def Insert(L, k):
 	tmp = crea_nodo()
 	tmp -> key = k
 	tmp -> next = L
@@ -42,6 +44,7 @@ def OrdInsert(L, k):
 		L = tmp
 	return L
  ```
+ ^Insert-Lista
  
  Una ricerca risulta necessaria anche nel caso in cui volessi avere una lista senza duplicati:
  
@@ -56,11 +59,13 @@ def InsertUnica(L, k):
 		L -> next = InsertUnica(L -> next, k)
 	return L
 ```
+^Insert-Unique-Lista
 
 Per la cancellazione di un elemento è necessario la ricerca. Inoltre i casi ricorsivi da gestire sono due (si fa sempre affidamento alla definizione della lista):
 - La lista è vuota
 - La lista contiene un nodo con una chiave ed un riferimento ad un'altra lista
 Da questo ne deriva il seguente algoritmo lineare:
+
 ```python
 def Cancella(L, k):
 	if L != NULL:
@@ -71,6 +76,7 @@ def Cancella(L, k):
 			L -> next = Cancella(L -> next, k)
 	return L
 ```
+^Cancella-Lista
 
 ```python
 # Cancella gli elementi pari
@@ -84,6 +90,7 @@ def CancellaPari(L):
 		dealloca(L)
 	return L
 ```
+^Cancella-Pari
 
 ```python
 # Restituisce il numero degli elementi pari cancellati
@@ -99,6 +106,7 @@ def CancellaPariConta(L, Prev):
 	   counter += 1
 	return counter
 ```
+^Cancella-Pari-Conta
 
 ```python
 def CacncellaPariContaTesta(L):
@@ -110,4 +118,4 @@ def CacncellaPariContaTesta(L):
 		counter += 1
 	return counter
 ```
-
+^CacncellaPariContaTesta

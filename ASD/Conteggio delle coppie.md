@@ -9,6 +9,7 @@ Vogliamo descrivere un algoritmo che accetta come input un intero $n \geq 1$ e p
 > Output $\rightarrow  10$
 
 Una possibile soluzione potrebbe essere la seguente:
+
 ```python
 def contaCoppie(N):
 	ris = 0
@@ -18,6 +19,7 @@ def contaCoppie(N):
 				ris = ris + 1
 	return ris
 ```
+^Conta-Coppie1
 
 >[!note] La correttezza di questo [[algoritmo]] è ovvia, intuitivamente è la soluzione peggiore per poter risolvere il problema, generiamo anche coppie inutili.
 > Parliamo, appunto di ***soluzione naive***.
@@ -45,6 +47,7 @@ Ora non ci resta che analizzare la complessità totale:$$\begin{align}T_1(n) &= 
 
 ### Soluzione 2
 Visto che una coppia vale come contributo al risultato solo quando il secondo elemento è maggiore del primo è evidente che possiamo migliorare il precedente algoritmo nel seguente modo:
+
 ```python
 def contaCoppie(n):
 	ris = 0
@@ -52,6 +55,7 @@ def contaCoppie(n):
 		for j = i in range(n):
 			ris = ris + 1
 ```
+^Conta-Coppie2
 
 Analizziamo la complessità
 
@@ -70,6 +74,7 @@ Ciò però non implica che impieghino lo stesso tempo, ma sul lungo periodo, il 
 
 ### Soluzione 3
 Dalle precedenti analisi abbiamo notato che, fissato $i$, eseguiamo l'istruzione di incremento del risultato tante volte quanto il valore totale (che abbiamo calcolato) da aggiungere a `RIS`. Risulta pertanto logico aggiungere direttamente il risultato totale, scrivendo il seguente algoritmo:
+
 ```python
 def contaCoppie(n):
 	ris = 0 # (-> 1)
@@ -77,6 +82,8 @@ def contaCoppie(n):
 		ris = ris + (n - i + 1) # (sum from i to n of 5 = 5n)
 	return ris # (-> 1)
 ```
+^Conta-Coppie3
+
 Di conseguenza avremo che:$$T_{3}(n) = 7n + 4$$
 Questo tipo di funzione cresce linearmente e quindi è nettamente migliore rispetto ai precedenti algoritmi poiché, per la stessa crescita di $\mathbb{N}$, questa soluzione cresce più lentamente.
 
@@ -85,11 +92,14 @@ Il problema permette di ridurre ulteriormente il tempo di esecuzione.
 Infatti sappiamo che per $i=1$, il risultato è $n -1 +1$.
 Per $i=1$ il risultato è $n-2+1$ e così via, fino ad arrivare ad $n$ a cui dobbiamo sommare a $1$ ai precedenti risultati. Pertanto:$$RIS = \sum\limits_{i=1}^{n}i = \frac{n(n+1)}{2}$$
 Pertanto il nostro algoritmo si riduce a:
+
 ```python
 def contaCoppie(n):
 	ris = (n(n+1)) / 2
 	return ris
 ```
+^Conta-Coppie4
+
 Ne deduciamo che il problema di partenza è risolvibile a tempo costante, più precisamente in $T_{4}(n) = 6$ . Ciò significa che **qualsiasi istanza** è risolta con lo stesso tempo.
 Era possibile arrivare a questo soluzione anche geometricamente, infatti le coppie possono essere considerate come le celle di una matrice quadrata.
 Le celle totali (ovvero tutte le coppie possibili) sono $\mathbb{N} \times \mathbb{N}$, ma quelle di nostro interesse sono tutte quelle sopra la ***diagonale principale***(diagonale compresa).
