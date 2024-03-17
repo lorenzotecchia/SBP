@@ -50,7 +50,7 @@ def Successor(x, d, s):
 		else
 			return Successor(x.sx, d, x)
 ```
-^SuccessorABR-Iterative
+^SuccessorABR-Recursive
 
 Viene passata la stima $s$ come parametro la quale verrà aggiornata solo se si scende a sinistra.  
 Nella prima chiamata sarà $\bot$ 

@@ -46,6 +46,7 @@ def Init(G, s):
 		Pred[v] = NULL	
 	d[s] = 0	
 ```
+^Init-GrafoPesato
 
 - La stima del vertice sorgente viene inizializzata a 0, mentre per ogni vertice $v\in V$, viene inizializzata a $\infty$.
 - Il vettore $Pred[v]$ contiene il predecessore di $v$ nel percorso minimo.

@@ -27,6 +27,8 @@ def Init(G, c):
 		c(v) = bn
 ```
 
+^Init
+
 ```python
 # BFS con calcolo delle distanza da sorgente
 def BFS_Modified(G, v):
@@ -49,6 +51,8 @@ def BFS_Modified(G, v):
 		Dequeue(Q, v)
 		color[v] = N
 ```
+^BFS-Modified
+
 #### Colori
 - $bn$ Bianco: non scoperto
 - $nr$ Nero: visitato

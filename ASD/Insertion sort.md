@@ -29,7 +29,7 @@ def InsertionSort(A, n):
 		InsertionSort(A, n-1)
 		Insert(A, n-1)
 ```
-^InsertionSortRecursiva
+^InsertionSortRecursive
 
 ###### Algoritmo Iterativo
 

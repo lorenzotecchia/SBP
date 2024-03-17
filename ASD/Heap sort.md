@@ -15,7 +15,7 @@ def HeapSort(A, n):
 		Swap(A, 0, i)   # il max sta in A[0] perchè è un heap
 		Heapify(A, i, 0)
 ```
-^HeaSort
+^HeapSort
 
 ```python
 def BuildHeap(A, n):

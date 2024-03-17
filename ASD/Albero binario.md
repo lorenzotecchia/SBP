@@ -19,7 +19,7 @@ Un'[[Tree|albero]] si dice **binario** se ogni nodo ha al massimo due figli.
 ### Scorrimento
 È possibile scorrere un **albero binario** principalmente in due modi:
 - In **[[Ampiezza]]** (Breadth First Visit)
-- In **[[Profondità]]** (Depth First Visit):
+- In **[[Depth First Search|Profondità]]** (Depth First Visit):
 	- **[[Order-pre|pre-order]]**: viene visato prima il padre, poi il sinistro, poi il destro
 	- **[[Order-in|in-order]]**: viene visitato prima il figlio sinistro, poi il padre, poi il destro
 	- **[[Order-post|post-order]]**: viene visato prima il figlio sinistro, poi il destro, poi il padre

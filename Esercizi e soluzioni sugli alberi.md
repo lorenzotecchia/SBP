@@ -1,11 +1,11 @@
-## 2023-03-17-
+## 2023-03-17
  Si scriva un algoritmo ricorsivo che, presi in ingresso un albero binario $T$ contenente dati interi e un intero positivo $k$, restituisca il valore della massima profondità dei nodi con valore di chiave multiplo di $k$. Nel caso l'insieme di tali nodi fosse vuoto, è richiesta la restituzione del valore di default $-1$. L'algoritmo dovrà essere efficiente e non far uso né di variabili globali né di parametri passati per riferimento. Infine, si scriva un algoritmo iterativo che simuli precisamente l'algoritmo ricorsivo di cui sopra.
 
-## 2022-10-19-
+## 2022-10-19
 
 Si scriva un algoritmo ricorsivo che, dati in ingresso un albero binario di ricerca $T$ e un intero positivo $k$, cancelli da $T$ tutti i nodi che si trovano in posizioni multiple di $k$ nell'ordinamento totale delle chiavi dell'albero. Tale algoritmo dovrà essere efficiente e non far uso né di variabili globali né di parametri passati per riferimento. Infine, si scriva un algoritmo iterativo che simuli precisamente l' algoritmo ricorsivo di cui sopra.
 
-## 2022-07-21-
+## 2022-07-21
 Si scriva un algoritmo ricorsivo che, dati in ingresso un albero binario di ricerca su interi $T$ e due valori $k_{1}, k_{2} \in N$, cancelli da $T$ le chiavi $k$ comprese tra $k_{1}$ e $k_{2}$ $(k_{1}\leq k \leq k_{2})$. Tale algoritmo dovrà essere efficiente e non far uso né di variabili globali né di parametri passati per riferimento. Infine, si scriva un algoritmo iterativo che simuli precisamente l'algoritmo ricorsivo di cui sopra.
 
 ## 2022-06-21
