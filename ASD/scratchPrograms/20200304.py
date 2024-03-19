@@ -1,4 +1,4 @@
-# Algoritmo Ricorsivo
+k# Algoritmo Ricorsivo
 def Algo(T, h, k):
     ret = 0
     if T != NULL & & h > 0:
