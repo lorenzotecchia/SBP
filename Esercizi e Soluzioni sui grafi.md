@@ -218,7 +218,7 @@ def BFS(G, v):
 		
 ```
 
-### 2019-09-4
+### 2019-09-04
 Dato $G$ e $A \subseteq V$ calcola l'insieme $Z \subseteq A$ t.c. $\forall z \in A \;\; z \in Z \iff$ ogni percorso che parte da $u$ e raggiunge  $v$ non passa per $z$
 
 #### Esecuzione

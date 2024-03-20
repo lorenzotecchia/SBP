@@ -54,7 +54,7 @@ Come prima, lavoriamo con il MIN del ramo destro e definiamo la funzione che res
 
 ```python
 def GetAndDeleteMin(x):
-	if x.sx = NULL:
+	if x.sx == NULL:
 		d = x.dato
 		r = x.dx
 		Deallocate(x)

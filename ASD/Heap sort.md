@@ -26,9 +26,9 @@ def BuildHeap(A, n):
 
 ```python
 def Heapify(A, n, i):
-	max = i
-	l = L(i)   # L(i) = 2i + 1   indice del figlio sinistro
-	r = R(i)   # R(i) = 2i + 1   indice del figlio destro
+	max = i 
+	l = L(i)   # L(i) = 2i + 1   indice del figlio sinistro se l'indice parte da 1
+	r = R(i)   # R(i) = 2i + 2   indice del figlio destro
 	if (l < n) and (A[max] < A[l]):
 		max = l
 	if (r < n) and (A[max] < A[r]):
