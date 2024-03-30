@@ -3,10 +3,11 @@ Si scriva un algoritmo ricorsivo che, dati in ingresso un albero binario $T$ con
 
 ### Esecuzione
 ```python
-def Algo(T, l1, l2, p):
+def Algo(T, l1, l2):
 	if T != NULL:
 		s = Algo(T -> sx, l1 --, l2--)
 		s = s + Algo(T -> dx, l1--, l2--)
+		if l1 >= 0 && l2 <= 0 && T -> key % 2 == 0:
 			s = s + T -> key
 		return s
 ```
@@ -79,5 +80,3 @@ def Algo(T , k1, k2, L):
         L = Algo(T -> dx, k1, k2, L)
     return L
 ```
-
-

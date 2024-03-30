@@ -4,11 +4,14 @@ tags:
   - definition
   - dataStructure/abr
   - to-do/implementation
+aliases:
+  - rb
+  - RB
 ---
 >[!todo] 
 >- [ ] Implementazione in C
 
-Un albero **red-black** è un [[albero binario di ricerca]] con un bit aggiuntivo di memoria per ogni nodo: il colore del nodo, che può essere RED o BLACK.
+Un albero **red-black** è un [[albero binario di ricerca]] con un bit aggiuntivo di memoria per ogni nodo: il colore del nodo, che può essere `RED` o `BLACK`.
 
 Inoltre i dati sono presenti solo nei nodi interni:
 - Le foglie non contengono dati (contengono il valore `NULL`), sono quindi tutte identiche

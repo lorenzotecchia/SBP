@@ -257,7 +257,7 @@ def Algo(G, A, v, u):
 
 
 ### 2019-03-29B
-Dato $G$ e $B \subseteq V$ e due vertici $u,v$ e un intero $k$, scrivere un algoritmo che determini l'insieme $B' \subseteq B$ t.c. $\\forall b \in B$
+Dato $G$ e $B \subseteq V$ e due vertici $u,v$ e un intero $k$, scrivere un algoritmo che determini l'insieme $B' \subseteq B$ t.c. $\forall b \in B$
 $b \in B'\iff b$ è raggiungibile da $v$ senza passare per $u$ e $b$ raggiunge $u$ con un percorso lungo $< k$
 
 #### Esecuzione

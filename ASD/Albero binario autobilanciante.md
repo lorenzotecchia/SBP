@@ -4,6 +4,9 @@ tags:
   - definition
   - dataStructure/abr
   - to-do/implementation
+aliases:
+  - avl
+  - AVL
 ---
 Gli ***AVL*** sono [[Albero binario di ricerca|alberi binari di ricerca]] auto bilancianti. Per cui le proprietà:
 - $\forall x \in T, \lvert h(T_{x.sx})- h(T_{x.dx})\rvert \leq 1$ dove $T$ è l'albero, ossia l'[[altezza]] dei sotto alberi differisce al più di uno. 

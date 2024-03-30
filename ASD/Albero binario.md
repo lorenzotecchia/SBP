@@ -35,8 +35,8 @@ Un'[[Tree|albero]] si dice **binario** se ogni nodo ha al massimo due figli.
 ---
 ### Albero binario completo
 Un albero binario si dice anche **completo** se: 
-- è pieno, ossia tutti i nodi hanno entrambi i figli.
-- ogni sua foglia ha la stessa profondità. 
+- Tutte le foglie sono al livello h o al livello h - 1
+- Tutti i nodi interni hanno grado 2 tranne al più 1
 
 >[!note]
 > Un nodo si dice foglia quando non ha figli _alternativamente quando il suo grado è uguale a 1_

@@ -15,7 +15,7 @@ def BFS(G, v):
 	while isNotEmpty(Q):
 		(Q,v) = HeadAndDequeue(Q)
 		for u in Adj[v]:
-			if c(u) = bn:
+			if c(u) == B:
 				(Q, c(u)) = (Enqueue(Q, u), gr)
 		c(v) = nr	
 ```

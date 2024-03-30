@@ -104,7 +104,7 @@ def DFS_SCC(G, S):
 	(c,scc) = Init(G)
 	while isNotEmpty(S):
 		(S,v) = TopAndPop(S)
-		if c(v) = bn:
+		if c(v) == B:
 			(c,scc) = DFS_SCC_Visit(G,c,scc,v,v)
 	return scc
 ```
@@ -116,9 +116,9 @@ def DFS_SCC(G, S):
 def DFS_SCC_Visit(G, c, scc, v, w)
 	(c(w), scc(w)) = (gr , v)
 	for z in Adj[w]:
-		if c(z) = bn:
+		if c(z) == B:
 			(c,scc) = DFS_SCC_Visit(G, c, scc, v, z)
-	c(w) = nr
+	c(w) = N
 	return (c, scc)
 ```
 ^DFS-SCC-Visit
