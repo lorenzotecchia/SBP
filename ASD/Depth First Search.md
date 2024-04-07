@@ -7,6 +7,7 @@ tags:
 author: Lorenzo Tecchia
 aliases:
   - DFS
+  - dfs
 ---
 ![[Pasted image 20230908170349.png]]
 - Inizialmente tutti i nodi vengono colorati di **bianco**.

@@ -41,7 +41,7 @@ def QuickSort(A, p, r):
 	# --r--
 		q = Partition(A, p, r)
 		QuickSort(A, p, q)
-		QuickSort(A, q+1, r)
+		QuickSort(A, q + 1, r)
 ```
 ^QuickSort
 
@@ -62,8 +62,8 @@ Ed è chiaro che queste proprietà siano fondamentali sia per il ragionamento di
 > Vediamo di dimostrare che le prime due assunzioni, che possono essere rappresentate da un'unica equazione matematica:$$p \leq q < r$$
 > Infatti se questo è il caso è evidente che $$r-p+1 < q-p+1 \;\land\;r-p+1<r-q+1$$
 > La precedenti proprietà se non fosse soddisfatte distruggerebbero l'algoritmo.
-> Supponiamo che $q = p-1$, avremmo una chiamata ricorsiva(`QuickSort(A,p,p-1)`) ovvero un'istanza di $0$ elementi.
-> Questa chiamata terminerebbe senza aver effettuato nulla (caso base), ma ciò comporta che la seconda chiamata, ovvero (`QuickSort(A,p + 1 -1, r)`, avrà tutti gli elementi della chiamata di partenza con la conseguenza che la suddetta chiamata si ripeterà in infinito e l'algoritmo non terminerà
+> Supponiamo che $q = p-1$, avremmo una chiamata ricorsiva(`QuickSort(A, p, p - 1)`) ovvero un'istanza di $0$ elementi.
+> 	Questa chiamata terminerebbe senza aver effettuato nulla (caso base), ma ciò comporta che la seconda chiamata, ovvero (`QuickSort(A, p + 1 -1, r)`, avrà tutti gli elementi della chiamata di partenza con la conseguenza che la suddetta chiamata si ripeterà in infinito e l'algoritmo non terminerà
 > Caso analogo per $q = r\rightarrow$`QuickSort(A,p,r)` sarà la chiamata che manderà in loop e l'algoritmo `QuickSort(A, r+1, r)` la sequenza vuota.
 > Quindi `Partition` deve garantire $2$ proprietà:
 > 1. $p \leq q < r$ (per il motivo descritto precedentemente)
@@ -97,13 +97,13 @@ def Partition(A, p, r):
 		until (A[i] >= x)
 		if i < j:
 			Swap(A, i, j)
-	until(j <= i)
+	until (j <= i)
 	return j
 ```
 ^Partition
 
 ### Correttezza
-Per confermare la correttezza di questo algoritmo si veda se all'instante in cui viene eseguita la linea $15$ si ha $p \leq j < r$ poiché questo ci assicurerà la validità della prima proprietà necessaria per la correttezza di `QuicSort`, ovvero $p \leq j < r$
+Per confermare la correttezza di questo algoritmo si veda se all'instante in cui viene eseguita la linea $15$ si ha $p \leq j < r$ poiché questo ci assicurerà la validità della prima proprietà necessaria per la correttezza di `QuickSort`, ovvero $p \leq j < r$
 
 A tal proposito, dobbiamo dimostrare che i casi $j < p$ e $j \geq r$ siano impossibili; per fare ciò basta controllare che non si verificano i casi $j=p-1$ (essendo $i=p-1$ è l'unico $j<p$ che potrebbe verificarsi vista la scrittura del nostro algoritmo) e $j = r$(anche se $h=r+1$ all'inizio, viene per forza decrementato una volta).
 

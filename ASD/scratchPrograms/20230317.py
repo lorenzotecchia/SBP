@@ -29,6 +29,7 @@ def AlgoIterative(T, k):
             cT = top(stT)
             if last == cT -> sx: # torno da riga 3
                 l = ret
+                r = -1
                 if cT -> dx != NULL: # devo fare la chiamata a riga 4
                     cT = cT -> dx; start = False
                 else:
