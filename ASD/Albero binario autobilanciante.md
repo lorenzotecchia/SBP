@@ -171,7 +171,7 @@ def L-D-AVLRotation(T):
 
 ```python
 def L-BalanceAVL(T):
-	if HgtAVL(T ->sx) - HgtAVL(x.dx) = 2:
+	if HgtAVL(T ->sx) - HgtAVL(T -> dx) = 2:
 		if HgtAVL(T -> sx -> dx) < HgtAVL(T -> sx -> sx):
 			T = L-R-AVLRotation(T)
 		else

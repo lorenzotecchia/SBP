@@ -50,16 +50,25 @@ Resta da dimostrare che, per qualsiasi input, l'algoritmo faccia un numero finit
 
 ```python
 def Merge(A, p, q, r):
-	L = Copy(A, p, q)      # Copia nell'array L, l'intervallo [p,q] di A
-	R = Copy(A, q + 1, r)  # Copia nell'array R, l'intervallo [q+1,r] di A
-	i, j = 0
-	for k = p in range(r):
-		if (i <= q - p) and ((j <= r - q) or (L[i] <= R[j])):
-			A[k] = L[i]
-			i++
-		else
-			A[k] = R[i]
-			j++
+	k = p # Indice che scorre la posizione di B
+	i = p
+	j = q + 1
+	while i <= q && j <= r:
+		if A[i] <= A[j]:
+			B[k] = A[i]
+			i = i + 1
+		else:
+			B[k] = A[j]
+			j = j + 1 
+	if i < q:
+		j = i
+# Restano da copiare gli elementi della sequenza sinistra
+# In caso contrario non modifico j visto che l'indice è già corretto
+	while k <= r:
+		B[k] = A[j]
+		j = j + 1
+		k = k + 1
+# A questo punto andrebbero copiati gli elementi di B nuovamente in A
 ```
 ^Merge
 
