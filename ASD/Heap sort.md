@@ -26,16 +26,21 @@ def BuildHeap(A, n):
 
 ```python
 def Heapify(A, n, i):
-	max = i 
-	l = L(i)   # L(i) = 2i + 1   indice del figlio sinistro se l'indice parte da 1
-	r = R(i)   # R(i) = 2i + 2   indice del figlio destro
-	if (l < n) and (A[max] < A[l]):
-		max = l
-	if (r < n) and (A[max] < A[r]):
-		max = r
-	if(max != i):
-		Swap(A, max, i)
-		Heapify(A, n, max)
+	# Definiamo il figli della radice
+	l = 2i + 1
+	r = 2i + 2
+	#  Suppoiamo che heapsize sia una variable globale che tenga traccia
+	# della dimensione corrente dell'albero
+	# (Nell'algoritmo pricipale abbiamo visto che dobbiamo cancellare i nodi)
+	if l <= n && A[i] < A[sx]:
+	   max = l
+	else:
+		max = i
+	if r <= n && A[max] < A[dx]:
+	   max = dx
+	if max != i:
+		Swap(A, i, max)
+		Heapify(A, max)
 ```
 ^Heapify
 
