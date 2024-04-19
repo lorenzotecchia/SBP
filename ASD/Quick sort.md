@@ -51,7 +51,7 @@ Se `Partition`, si comporta come descritto, **QuickSort** è corretto sotto le s
 >[!important]
 > - La partizione da $p$ a $q$  è strettamente minore in dimensione della sequenza da $p$ a $r$
 > - La partizione da $q$ a $r$ è strettamente minore della sequenza da $p$ a $r$
-> - Al termine di `Partition(A, p, r)` vake che:$$
+> - Al termine di `Partition(A, p, r)` vale che:$$
 \forall i: p \leq i \leq q \wedge \forall j: q+1 \leq j \leq r, A[i] \leq A[j]$$
 >> [!note]
 >> qualunque elemento prendo a sinistra, esso è minore o uguale di qualunque elemento che prendo a destra

@@ -197,7 +197,7 @@ def AVLInsert(T, k):
 			T = R-Balance(T)
 		if T -> key > k:
 			T -> sx = AVLInsert(T -> dx, k)
-			R = L-Balance(T)
+			T = L-Balance(T)
 	else:
 		T = BuildNodeAVL()
 		T -> key = k
@@ -215,12 +215,12 @@ def AVLInsert(T, k):
 ```python
 def AVLDelete(T, k):
 	if T != NULL:
-		if k < T -> dato:
+		if T -> key > k:
 			T -> sx = AVLDelete(T -> sx, k)
-			T = RBalanceAVL(x)
-		else if k > T -> dato:
+			T = R-BalanceAVL(T)
+		else if T -> key < k:
 			T -> dx = AVLDelete(T -> dx, k)
-			T = LBalanceAVL(T)
+			T = L-BalanceAVL(T)
 		else
 			T = deleteNodeAVL(T)
 	return T
@@ -235,24 +235,24 @@ def AVLDelete(T, k):
 ```python
 def DeleteNodeAVL(T):
 	if T -> sx = NULL:
-		T = SkipRight(x)
+		T = SkipRight(T)
 	else if T -> dx = NULL:
 		T = SkipLeft(T)
 	else
-		T -> dato = GetDeleteMinAVL(T -> dx, x)
-		T = LBalanceAVL(T)
+		T -> key = GetDeleteMinAVL(T -> dx, x)
+		T = L-BalanceAVL(T)
 	return T
 ```
 ^DeleteNodeAVL
 
 ```python
 def GetDeleteMinAVL(T, p):
-	if T -> sx = NULL:
-		d = T -> dato
+	if T -> sx == NULL:
+		d = T -> key
 		y = SkipRight(T)
 	else
-		d = GetDeleteMinAVL(T -> sx, x)
-		y = RBalanceAVL(T)
+		d = GetDeleteMinAVL(T -> sx, T)
+		y = R-BalanceAVL(T)
 	SwapChild(p, T, y)
 	return d
 ```

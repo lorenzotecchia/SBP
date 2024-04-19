@@ -42,7 +42,7 @@ def Successor(x, d):
 
 ```python
 def Successor(x, d, s):
-	if x = NULL:
+	if x == NULL:
 		return s
 	else
 		 if d >= x.dato:

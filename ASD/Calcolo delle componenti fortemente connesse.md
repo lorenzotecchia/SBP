@@ -55,7 +55,7 @@ Se non avessimo trasposto il grafo, nella prima visita, il nodo $a$ avrebbe trov
 
 ```Python
 def DFS1(G):
-	Init(G)
+	c = Init(G) # c is for color
 	StackRET = NULL
 	for v in V:
 		if c(v) == bn:

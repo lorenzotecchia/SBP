@@ -21,7 +21,7 @@ Inoltre i dati sono presenti solo nei nodi interni:
 1. Tutti i nodi sono o **rossi** o **neri**
 2. Tutte le foglie sono **nere**
 3. Se un nodo è rosso, allora entrambi i figli sono neri. Ossia i nodi **rossi** non possono avere figli **rossi**:([[Path|path]])
-$$\forall T \in T, \eTists h \in \mathbb{N}: \forall \pi \in Path(T) \lvert \pi \rvert = h$$
+$$\forall \; T \in T, \;\exists \; h\; \in \mathbb{N}:\; \forall \;\pi\; \in \;Path(T) \; \lvert \; \pi \; \rvert = h$$
 4. Ogni cammino da un nodo interno ad una foglia deve contenere lo stesso numero di nodi **neri**.
 >[!important]
 > Il miglior modo per costruire un **RB** è a partire dal percorso più breve
@@ -95,71 +95,71 @@ Ovvero, il figlio del nodo da eliminare (a seconda del caso $SkipRight$ o $SkipL
 
 Cosi facendo, l’altezza rimane bilanciata.  
 Il colore doppio nero però va rimosso; sono $4$ i casi possibili:
-1. il fratello $z$, del doppio nero $y$, è rosso  
-2. il fratello $z$, del doppio nero $y$, è nero e $z$ ha entrambi i figli neri  
-3. il fratello $z$, del doppio nero $y$, è nero e $z$ ha il sinistro rosso e il destro nero
-4. il fratello $z$, del doppio nero $y$, è nero e $z$ ha il destro rosso
-
-### Caso $1$
-- coloro T di rosso
-- coloro z di nero
-- RLRotation(T)
-- ![[Pasted image 20230901101836.png|600]]
-### Caso $2$
-- coloro $z$ di rosso
-- coloro $y$ di nero (tolgo il doppio nero)
-- se $T$ è rosso, diventa nero; se $T$ è nero, diventa doppio nero
-
-Se z ha entrambi i figli neri, basterà colorarlo di rosso e togliere il doppio nero ad y. Cosi facendo le altezze nere dei figli di T sono corrette.
-
-Il problema su y è risolto, al più viene spostato più in alto e passato adT ->   
-T potrebbe essere nero ma anche rosso (visto che entrambi i figli sono neri), va quindi ricolorato.
-
-Mi basta aggiungere un livello di altezza nera ad T perché  
-• Avendo tolto il doppio nero a sinistra, l’altezza nera a sinistra si abbassa di 1  
-• Avendo colorato di rosso il figlio destro di T, l’altezza nera a destra si abbassa di 1
-
-Se T dovesse essere ricolorato come doppio nero, il problema verrà risolto risalendo la ricorsione.
-
-![[Pasted image 20230902153330.png]]
-### Caso $3$
-L’obiettivo è di spostare il figlio sinistro rosso (del fratello del nodo doppio nero), a destra per ricondurci al caso $4$
-- $LRRotation(z)$
-- Coloro u di nero e z di rosso
->[!Obiettivo]
->Questo sia per bilanciare l’[[Albero red-black#Altezza nera|altezza nera]], sia per non avere il problema rosso-rosso con il padre $T$ nel caso fosse rosso, ma anche perché è l’obiettivo (avere il rosso a destra).
+> [!warning]- ### Caso 1: il fratello $z$, del doppio nero $y$, è rosso  
+> - coloro $x$ di rosso
+> - coloro $z$ di nero
+> - RLRotation($x$)
+> - ![[Pasted image 20230901101836.png|600]]
 
 
-![[Pasted image 20230902153659.png]]
-### Caso $4$
-1. $RLRotation(T)$
-2. Scambio i colori di $T$ e di $z$
-	- Ovvero coloro $T$ di nero e $z$ di **rosso/nero** 
-3. Coloro il figlio di destro di $z$ di nero altrimenti avrei l’altezza nera sbilanciata e un probabile **rosso-rosso**
-4. Rimuovo il **doppio nero**
-	- sul percorso sinistro di **z** c’è infatti un **nero** in più
-![[Pasted image 20230902154007.png]]
-Il figlio destro del fratello del **doppio nero**, è **rosso**
->[!note] I valori delle altezze nere sono solo un esempio per capire come variano passo dopo passo.
+> [!warning]- ### Caso 2: il fratello $z$, del doppio nero $y$, è nero e $z$ ha entrambi i figli neri  
+> - coloro $z$ di rosso
+> - coloro $y$ di nero (tolgo il doppio nero)
+> - se $x$ è rosso, diventa nero; se $T$ è nero, diventa doppio nero
+> 
+> Se $z$ ha entrambi i figli neri, basterà colorarlo di rosso e togliere il doppio nero ad $y$. Cosi facendo le altezze nere dei figli di $x$ sono corrette.
+> 
+> Il problema su $y$ è risolto, al più viene spostato più in alto e passato a $x$, il quale potrebbe essere nero ma anche rosso (visto che entrambi i figli sono neri), va quindi ricolorato.
+> 
+> Mi basta aggiungere un livello di altezza nera ad $x$ perché  
+> • Avendo tolto il doppio nero a sinistra, l’altezza nera a sinistra si abbassa di $1$  
+> • Avendo colorato di rosso il figlio destro di $x$, l’altezza nera a destra si abbassa di $1$
+> 
+> Se $x$ dovesse essere ricolorato come doppio nero, il problema verrà risolto risalendo la ricorsione.
+> 
+> ![[Pasted image 20230902153330.png]]
 
-![[Pasted image 20230902154116.png]]
 
->[!note] L’albero in $T$ abbia a sinistra un nero in più rispetto a destra.
+> [!warning]- ### Caso 3: il fratello $z$, del doppio nero $y$, è nero e $z$ ha il sinistro rosso e il destro nero
+> L’obiettivo è di spostare il figlio sinistro rosso (del fratello del nodo doppio nero), a destra per ricondurci al caso $4$
+> - $LRRotation(z)$
+> - Coloro $u$ di nero e $z$ di rosso
+> 
+> >[!Obiettivo]
+> >Questo sia per bilanciare l’[[Albero red-black#Altezza nera|altezza nera]], sia per non avere il problema rosso-rosso con il padre $T$ nel caso fosse rosso, ma anche perché è l’obiettivo (avere il rosso a destra).
+> 
+> ![[Pasted image 20230902153659.png]]
 
->[!note] $z$ **(rosso/nero)** non crea problemi nel caso in cui sia **rosso**, inizialmente $T$ era **rosso/nero**. Se il problema non c’era prima, non ci sarà neanche dopo.
+> [!warning]- ### Caso 4: il fratello $z$, del doppio nero $y$, è nero e $z$ ha il destro rosso
+> 1. $RLRotation(x)$
+> 2. Scambio i colori di $x$ e di $z$
+> 	- Ovvero coloro $x$ di nero e $z$ di **rosso/nero** 
+> 3. Coloro il figlio di destro di $z$ di nero altrimenti avrei l’altezza nera sbilanciata e un probabile **rosso-rosso**
+> 4. Rimuovo il **doppio nero**
+> 	- sul percorso sinistro di **z** c’è infatti un **nero** in più
+>
+> ![[Pasted image 20230902154007.png]]
+> Il figlio destro del fratello del **doppio nero**, è **rosso**
+> 
+> >[!note] I valori delle altezze nere sono solo un esempio per capire come variano passo dopo passo.
+>
+> ![[Pasted image 20230902154116.png]]
+> 
+> >[!note] L’albero in $T$ abbia a sinistra un nero in più rispetto a destra.
+>>  $z$ **(rosso/nero)** non crea problemi nel caso in cui sia **rosso**, inizialmente $T$ era **rosso/nero**. Se il problema non c’era prima, non ci sarà neanche dopo.
 
 ## Algoritmi
 ### Algoritmi di inserimento e cancellazione
 >[!tip] `NULLRB` è il puntatore al nodo foglia di un albero **red-black**, che è unico per evitare sprechi di memoria.
 #### Algoritmo di inserimento
 ```python
-def R-B-Insert(T, d):
+def R-B-Insert(T, k):
 	if T != NULL:
-		if T -> key > d:
-			T -> sx = R-B-Insert(T -> sx, d)
-			T = RB-Balance-sx(T)
+		if T -> key > k:
+			T -> sx = R-B-Insert(T -> sx, k)
+			T = L-Ins-BalanceRB(T)
 		else if T -> key < k:
-			T -> dx = R-B-Insert(T -> dx, d)
+			T -> dx = R-B-Insert(T -> dx, k)
 	else:
 		x = RB-CreateNode()
 		x -> key = k
@@ -220,8 +220,8 @@ def LInsBalanceRB2(T):
 
 ```python
 def LInsBalanceRB3(T):
-	A = T -> sT
-	b = T -> dT
+	A = T -> sx
+	b = T -> dx
 	beta = B -> sx
 	B -> sx = A
 	A -> dx = beta
@@ -289,7 +289,7 @@ def GetAndDeleteMinRB(T, p):
 
 ```python
 def SkipRightRB(T):
-	ifT -> cl = B:
+	if T -> cl = B:
 		PropagateBlackRB(T -> dx)
 	return SkipRight(T)
 ```
@@ -300,7 +300,7 @@ def SkipRightRB(T):
 
 ```python
 def L-Del-BalanceRB(T):
-	ifT -> sT != NULL:
+	if T -> sT != NULL:
 		switch LDelViolationRB(T):
 			case 1: T = LDelBalanceRB1(T)
 			case 2: T = LDelBalanceRB2(T)
@@ -316,7 +316,7 @@ def L-Del-ViolationRB(T):
 	if S -> c == DN:
 		if D -> c == R:
 			v = 1
-		else if (D -> dx) -> c == N&& (D -> sx) -> sx == N:
+		else if (D -> dx) -> c == N && (D -> sx) -> sx == N:
 			v = 2
 		else if (D -> dx) -> c == N:
 			v = 3

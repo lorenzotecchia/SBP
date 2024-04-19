@@ -8,32 +8,32 @@ tags:
 ###### Minimo Ricorsivo
 
 ```python
-def Min(x):
-	if x.sx = NULL:
-		return x
+def Min(T):
+	if T -> sx = NULL:
+		return T
 	else
-		return Min(x.sx)	
+		return Min(T -> sx)	
 ```
 ^min-rec
 
 ###### Minimo Iterativo
 
 ```python
-def Min(x):
-	while x.sx != NULL:
-		x = x.sx
-	return x
+def Min(T):
+	while T.sx != NULL:
+		T = x.sx
+	return T
 ```
 ^min-iter
 
 ###### Massimo Ricorsivo
 
 ```python
-def Max(x):
-	if x.dx = NULL:
-		return x
+def Max(T):
+	if T -> dx = NULL:
+		return T
 	else
-		return Max(x.dx)
+		return Max(T -> dx)
 
 ```
 ^max-rec
@@ -41,10 +41,10 @@ def Max(x):
 ###### Massimo Iterativo
 
 ```python
-def Max(x):
-	while x.dx != NULL:
-		x = x.dx
-	return x
+def Max(T):
+	while T -> dx != NULL:
+		T = T -> dx
+	return T
 ```
 ^max-iter
 
@@ -53,17 +53,13 @@ def Max(x):
 Come prima, lavoriamo con il MIN del ramo destro e definiamo la funzione che restituisce il minimo ed [[Cancellazione|elimina]] il nodo.
 
 ```python
-def GetAndDeleteMin(x):
-	if x.sx == NULL:
-		d = x.dato
-		r = x.dx
-		Deallocate(x)
-		return(d, r)
-	else
-		(d, r) = GetAndDeleteMin(x.sx)
-		x.sx = r
-		return(d, r)		
-		
+def GetAndDeleteMin(T, p):
+	if T -> sx == NULL:
+		d = T -> key
+		SwapChild(p, T, T -> dx)
+		return d
+	else:
+		return GetAnDeleteMin(T -> sx, T)
 ```
 ^GetAndDeleteMin-ABR
 
@@ -99,19 +95,7 @@ def SkipLeft(x):
 - Salvo il figlio sinistro in $tmp$
 - $Deallocate(x)$
 - Restituisco $tmp$
----
-### $\textbf{GetAndDeleteMIN}$ (Versione con il padre $p$ passato per riferimento)
 
-```python
-def GetAndDeleteMin(x, p):
-	if x.sx == NULL:
-		d = x.dato
-		SwapChild(p, x, x.dx)
-		return d
-	else
-		return GetAndDeleteMin(x.sx, x)
-```
-^get-delete-min-PerRiferimento
 
 ```python
 def SwapChild(p, x, y):

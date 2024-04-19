@@ -10,10 +10,10 @@ tags:
 	
 ```python
 def Acyclic(G):
-	c = Init(G)
+	color = Init(G)
 	for v in V:
-		if c(v) == bn:
-			acyclic = DFSAcyclic(G, v)
+		if color(v) == bn:
+			acyclic = DFSAcyclic(G, v, color)
 			if !acyclic:
 				return False
 	return True
@@ -21,17 +21,17 @@ def Acyclic(G):
 ^acyclic
 
 ```python
-def DFSAciclic(G,v):
-	c(v) = gr
+def DFSAciclic(G,v, color):
+	color(v) = gr
 	for w in Adj[v]:
-		if c(w) = bn:
-			acyclic = DFSAciclic(G,v)
+		if color(w) = bn:
+			acyclic = DFSAciclic(G,v, c)
 			if !aciclic:
 				c(v) = nr
 				return False
 		else if c(w) = gr:
 			return False
-	c(v) = nr
+	color(v) = nr
 	return True				
 			
 ```
