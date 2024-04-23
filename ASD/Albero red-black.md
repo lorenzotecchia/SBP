@@ -289,7 +289,7 @@ def GetAndDeleteMinRB(T, p):
 
 ```python
 def SkipRightRB(T):
-	if T -> cl = B:
+	if T -> c == B:
 		PropagateBlackRB(T -> dx)
 	return SkipRight(T)
 ```

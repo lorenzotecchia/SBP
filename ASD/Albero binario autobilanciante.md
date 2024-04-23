@@ -171,7 +171,7 @@ def L-D-AVLRotation(T):
 
 ```python
 def L-BalanceAVL(T):
-	if HgtAVL(T ->sx) - HgtAVL(T -> dx) = 2:
+	if HgtAVL(T ->sx) - HgtAVL(T -> dx) == 2:
 		if HgtAVL(T -> sx -> dx) < HgtAVL(T -> sx -> sx):
 			T = L-R-AVLRotation(T)
 		else
@@ -192,12 +192,12 @@ def L-BalanceAVL(T):
 ```python
 def AVLInsert(T, k):
 	if T != NULL:
+		if T -> key > k:
+			T -> sx = AVLInsert(T -> sx, k)
+			T = L-Balance(T)
 		if T -> key < k:
 			T -> dx = AVLInsert(T -> dx, k)
 			T = R-Balance(T)
-		if T -> key > k:
-			T -> sx = AVLInsert(T -> dx, k)
-			T = L-Balance(T)
 	else:
 		T = BuildNodeAVL()
 		T -> key = k

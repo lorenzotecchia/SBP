@@ -65,7 +65,7 @@ def TopologicalOrdering(G):
 		(Q, v) = HeadAndDequeue(Q)
 		for w in Adj[v]:
 			ge(w) = ge(w) - 1
-			if ge(w) = 0:
+			if ge(w) == 0:
 				Q = Enqueue(Q, w)
 		π = Append(π, v)
 	return π	
@@ -94,7 +94,7 @@ def EnteringDegree(G):
 ```python
 def InitQueue(G, ge):
 	for v in V:
-		if ge(v) = 0:
+		if ge(v) == 0:
 			Q = Enqueue(Q, v)
 	return Q
 ```

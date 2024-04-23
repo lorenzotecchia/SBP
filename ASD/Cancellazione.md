@@ -36,29 +36,28 @@ Questa è la funzione che verrà chiamata per eliminare il nodo contente il dato
 - La funzione $DeleteNode$ restituirà un nodo che sarà restituito alla chiamata ricorsiva di $Delete$. Questo verrà inserito al posto del nodo da eliminare
 
 ```python 
-def Delete(x, d)
-	if x == NULL:  # dato non trovato
-		return NULL
-	# cerco il nodo che contiene il dato
-	if d > x.dato:
-		x.dx = Delete(x.dx, d)
-	else if d < x.dato:
-		x.sx = Delete(x.sx, d)
-	else   # nodo trovato  
-		return DeleteNode(x)
-	return x
+def Delete(T, k)
+	if T != NULL:  # dato non trovato
+		# cerco il nodo che contiene il dato
+		if T -> key > k:
+			T -> sx = Delete(T -> sx, k)
+		else if T -> key < k:
+			T -> dx = Delete(T -> dx, k)
+		else   # nodo trovato  
+			return DeleteNode(T)
+	return T
 ```
 ^DeleteABR
 
 ```python
-def DeleteNode(x):
-	if x.sx == NULL:
-		return SkipRight(x)
-	else if x.dx == NULL:
-		return SkipLeft(x)
+def DeleteNode(T):
+	if T -> sx == NULL:
+		return SkipRight(T)
+	else if T -> dx == NULL:
+		return SkipLeft(T)
 	else
-		x.dato = GetAndDeleteMin(x.dx, x)
-		return x
+		T -> dato = GetAndDeleteMin(T -> dx, T)
+		return T
 ```
 ^DeleteNodeABR
 

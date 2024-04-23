@@ -1,5 +1,8 @@
 ---
 author: Lorenzo Tecchia
+tags:
+  - algorithm
+  - graph
 ---
 ### 2017-07-18
 Si scriva un algoritmo che, dato come unico input un grafo orientato $G=(V, E)$, verifichi in tempo lineare sulla dimensione di $G$ se esistono tre vertici $a,b,c \in V$ tali che **almeno una** delle seguenti condizioni è verificata:

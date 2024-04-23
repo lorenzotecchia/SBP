@@ -1,3 +1,9 @@
+---
+author: Unknown
+tags:
+  - algorithm
+  - dataStructure/abr
+---
 ## 2024-01-17
 Si scriva un algoritmo ricorsivo che, dati in ingresso un albero binario $T$ contenente numeri interi e due numeri naturali $l_{1} \leq l_{2}$, restituisca la somma dei valori $d$ di tutti quei nodi con $d$ pari e la cui profondità $p$ non sia compresa tra $l_{1}$ e $l_{2}$. Tale algoritmo dovrà essere efficiente e non far uso né di variabili globali, né di di parametri passati per riferimento. Si scriva infine un algoritmo iterativo che simuli precisamente l'algoritmo ricorsivo di cui sopra.
 
