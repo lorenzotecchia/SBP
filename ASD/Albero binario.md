@@ -38,6 +38,8 @@ Un albero binario si dice anche **completo** se:
 - Tutte le foglie sono al livello h o al livello h - 1
 - Tutti i nodi interni hanno grado 2 tranne al più 1
 
+^albero-binario-completo
+
 >[!note]
 > Un nodo si dice foglia quando non ha figli _alternativamente quando il suo grado è uguale a 1_
 

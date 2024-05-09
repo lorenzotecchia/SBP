@@ -21,7 +21,7 @@ def Acyclic(G):
 ^acyclic
 
 ```python
-def DFSAciclic(G,v, color):
+def DFSAciclic(G, v, color):
 	color(v) = gr
 	for w in Adj[v]:
 		if color(w) = bn:

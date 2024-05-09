@@ -191,9 +191,7 @@ T\left(\frac{n}{2}\right)+T\left(\frac{n}{3}\right)+n \text { se } n>1
 > Per quanto siano molto vicine queste funzioni hanno **esponente diverso**$\rightarrow$ Per tanto la relazione:
 > $$T^{\prime}(n) \leq T(n) \leq T^{\prime \prime}(n)$$
 > Possiamo soltanto dire che $T(n)=\Omega\left(n^{\log \left(\frac{4}{3}+1\right)}\right)$ e $T(n)=O\left(n^{\log \left(\frac{4}{3}+1\right)}\right)$(nulla di più).
-# Validare equazioni di ricorrenza
-[[Quick sort]]
-Dimostriamo che $T_{M}(n) = O(n)$ così da confermare $T_{M}(n) = \Theta(n \log(n))$; bisogna verificare (utilizzando l'induzione) che 
+
 ### Sostituzione
 Nel ***metodo di sostituzione***, ipotizziamo un limite e poi usiamo l'induzione matematica per dimostrare che la nostra ipotesi sia corretta $$
 \exists c, n_0>0: \forall n \geq n_0, T_M(n) \leq c(n \log n)$$
