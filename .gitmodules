@@ -1,6 +1,3 @@
 [submodule "LSOProgetto/Diocane"]
 	path = LSOProgetto/Diocane
 	url = https://github.com/JeffreytheCoder/Simple-HTTP-Server.git
-[submodule "LSOProgetto/ProgettoImportato"]
-	path = LSOProgetto/ProgettoImportato
-	url = https://github.com/JeffreytheCoder/Simple-HTTP-Server.git

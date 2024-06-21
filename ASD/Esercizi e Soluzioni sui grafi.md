@@ -194,6 +194,7 @@ def Algo(G):
 def GeneratoreInsiemeCasuale(V):
 	return V/2
 ```
+
 ### 2019-02-12
 Si scriva un algoritmo che, dato in ingresso un grafo orientato $G$, in valore intero $k$, un vertice $s \in V$ e un insieme $A \subseteq V$ rappresentato come array di vertici, verifichi, **in tempo lineare sulla dimensione del grafo**, se è vera la seguente condizione:
 _ogni percorso che parte dal vertice $s$ e raggiunge un qualche vertice di $A$ ha lunghezza maggiore di $k$_
@@ -257,7 +258,6 @@ def Algo(G, A, v, u):
 					A' = A' + {a}
 	return A'
 ```
-
 
 ### 2019-03-29B
 Dato $G$ e $B \subseteq V$ e due vertici $u,v$ e un intero $k$, scrivere un algoritmo che determini l'insieme $B' \subseteq B$ t.c. $\forall b \in B$
@@ -530,6 +530,7 @@ Dato un grafo $G$ e due vertici $u,v$ e un insieme $A \subseteq V$, calcoli l'in
 - $z \in A$
 - Ogni percorso che parte da $u$ e raggiunge $v$ non passa per $z$
 
+#### Esecuzione
 ```python
 def Algo(G, u, v, A):
 	Z = A
@@ -686,14 +687,13 @@ Dato $G$ e $A \subseteq V$ scrivere un algoritmo che verifichi l'esistenza di un
 
 #### Esecuzione
 ```python
-def Algo(G, A):
-	color = Init(G, A) # tutti a nero tranne i vertici di A
+def Algo(G, A): color = Init(G, A) # tutti a nero tranne i vertici di A
 	for a in A:
-		if DFS_Visit(G, a, a):
+		if DFS_Visit(G, a, color):
 			return True
 	return False
 
-def DFS_Visit(G, v, a):
+def DFS_Visit(G, v, color):
 	color(v) = G
 	for u in Adj[v]:
 		if color(u) == B:

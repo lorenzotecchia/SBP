@@ -61,7 +61,7 @@ def GetAndDeleteMin(T, p):
 	else:
 		return GetAnDeleteMin(T -> sx, T)
 ```
-^GetAndDeleteMin-ABR
+^Get-Delete-Min
 
 - Le istruzioni $4,5,6$ definiscono una funzione chiamata $\textbf{SkipRight}$
 - Il padre $skippa$ al figlio destro rispetto ad $a$.

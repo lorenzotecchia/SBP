@@ -59,6 +59,9 @@ Il numero di nodi interni è: (Internal Nodes) $IN(T) \geq 2^{bh(h)}-1$
 
 ---
 ## Inserimento di un nodo
+
+^9e556b
+
 ![[Pasted image 20230901100200.png|300]]
 L’inserimento avviene come in un qualsiasi **[[Albero binario di ricerca|BST]]**, successivamente si colora il nodo di rosso per evitare di aumentare l’altezza nera solo su quel percorso, il che avrebbe portato alla violazione di una proprietà.
 
